@@ -12,6 +12,7 @@ public class UIAnimations : MonoBehaviour
     [SerializeField] private List<GameObject> goldImageList = new List<GameObject>();
     [SerializeField] private GameObject Canvas;
     [SerializeField] private GameObject goldIconTarget;
+    private int i = 0;
     private void Start()
     {
        InvokeRepeating("doPunchUI",1,0.5f);
@@ -28,14 +29,8 @@ public class UIAnimations : MonoBehaviour
         for (int i = 0; i < goldImageList.Count; i++)
         {
             goldImageList[i].transform.DOMove(goldIconTarget.transform.position, 2);
-            delay();
         }
+        
     }
-
-    private IEnumerator delay()
-    {
-        yield return new WaitForSeconds(2);
-    }
-
-
+    
 }
