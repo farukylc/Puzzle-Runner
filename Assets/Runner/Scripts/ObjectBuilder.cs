@@ -26,7 +26,8 @@ public class ObjectBuilder : MonoBehaviour
                 sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
                     0.25f)).OnComplete((() =>
                     //newParent.transform.DOMove(new Vector3(newParent.transform.position.x,newParent.transform.position.y+10f,newParent.transform.position.z + 10f),2)
-                        winPanel.SetActive(true)
+                        StartCoroutine("delay")
+                        
 
                     ));
             
@@ -50,5 +51,11 @@ public class ObjectBuilder : MonoBehaviour
                 scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
                 break;
         }
+    }
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        winPanel.SetActive(true);
     }
 }
