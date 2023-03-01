@@ -37,7 +37,7 @@ public class PlayerCollect : MonoBehaviour
         playerCollectScript = this;
         InvokeRepeating("qmAnimation",1,1);
     }
-
+    
     private void Update()
     {
         if (targetScore <= collectedLegos)
