@@ -40,7 +40,7 @@ public class PlayerCollect : MonoBehaviour
 
     private void Update()
     {
-        if (targetScore < collectedLegos)
+        if (targetScore <= collectedLegos)
         {
             CancelInvoke("qmAnimation");
            qmImage.sprite = winObject;

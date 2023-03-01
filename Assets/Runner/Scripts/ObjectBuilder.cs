@@ -45,7 +45,7 @@ public class ObjectBuilder : MonoBehaviour
         {
             case "Player":
                 buildFunction();
-                Debug.Log(":(");
+                Debug.Log("Alana girildi");
                 break;
         }
     }
