@@ -10,6 +10,6 @@ public class LegoAnimation : MonoBehaviour
     }
     private void rotateTrap()
     {
-        transform.Rotate(new Vector3(1f,0f,0f));
+        transform.Rotate(new Vector3(0f,0f,1f));
     }
 }
