@@ -14,7 +14,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private GameObject legoIcon;
     //[SerializeField] private GameObject targetPoint;
     private bool isPunch = false;
-   // [SerializeField] private GameObject smoke;
+    [SerializeField] private GameObject smoke;
 
 
     [SerializeField] private Slider scoreSlider;
@@ -60,7 +60,7 @@ public class PlayerCollect : MonoBehaviour
         switch (other.tag)
         {
             case "CollectableLego":
-               // GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
+                GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
                 other.gameObject.SetActive(false);
                 
                 collectedLegos = collectedLegos + 1;

@@ -2465,6 +2465,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb9d3b21bdb14b62bd9e4bf65d2f776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &5258952845073554055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5258952844299559212, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_Name
+      value: SmokeExplosionWhite
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258952844299858612, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
 --- !u!1 &5912857999577774885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 124534528582347465, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
@@ -2788,6 +2845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedLegos: 0
   legoIcon: {fileID: 1480670815}
+  smoke: {fileID: 5258952844299559212, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
   scoreSlider: {fileID: 1034420694}
   maxScore: 12
   targetScore: 6
