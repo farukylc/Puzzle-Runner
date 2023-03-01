@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isStart = false;
     private Animator anim;
     [SerializeField]
-    public int speed;
+    public int speed = 15;
 
     [SerializeField] private CinemachineVirtualCamera mainCamera;
     
