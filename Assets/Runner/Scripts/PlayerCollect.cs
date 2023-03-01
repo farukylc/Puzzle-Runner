@@ -22,7 +22,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Image qmImage;
-   // [SerializeField] private Sprite winObject;
+   [SerializeField] private Sprite winObject;
 
     [SerializeField] private TextMeshProUGUI targetScoreText;
     [SerializeField] private TextMeshProUGUI bonusScoreText;
@@ -43,7 +43,7 @@ public class PlayerCollect : MonoBehaviour
         if (targetScore < collectedLegos)
         {
             CancelInvoke("qmAnimation");
-           // qmImage.sprite = winObject;
+           qmImage.sprite = winObject;
         }
            
     }
