@@ -1,20 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class UIAnimations : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform uıDoubleImage;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        
+       InvokeRepeating("doPunchUI",1,0.5f);
     }
     
+    private void doPunchUI()
+    {
+        
+        uıDoubleImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.49f, 1, 1f);
+        
+    }
    
 }
