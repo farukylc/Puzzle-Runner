@@ -6,8 +6,8 @@ using DG.Tweening;
 public class PuzzleControl : MonoBehaviour
 {
     GameManager _gameManager;
-    [SerializeField] private GameObject targetPoint;
-    [SerializeField] private float xScale, yScale, zScale;
+    GameObject targetPoint;
+    float xScale, yScale, zScale;
     public float speed = 1f;
     bool isMoving = false;
     public int puzzlePieceIndex;
