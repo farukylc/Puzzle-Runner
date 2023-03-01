@@ -42,7 +42,7 @@ public class DogController : MonoBehaviour
     {
         _gameManager.dogWithAnim.transform.DORotate(new Vector3(0,360,0),0.5f,RotateMode.LocalAxisAdd).SetLoops(3,LoopType.Restart).SetEase(Ease.Linear).OnComplete(()=>
             {
-                Instantiate(_gameManager.smoke,_gameManager.dogWithAnim.transform.position+new Vector3(0,4,0),Quaternion.identity);
+                Instantiate(_gameManager.smoke,_gameManager.dogWithAnim.transform.position+new Vector3(0,5,0),Quaternion.identity);
                 _gameManager.dogWithAnim.SetActive(false);
             });
     }

@@ -8,7 +8,7 @@ public class PuzzleControl : MonoBehaviour
     GameManager _gameManager;
     GameObject targetPoint;
     float xScale, yScale, zScale;
-    public float speed = 1f;
+    //public float speed = 1f;
     bool isMoving = false;
     public int puzzlePieceIndex;
     GameObject currentPiece;
@@ -36,9 +36,9 @@ public class PuzzleControl : MonoBehaviour
         currentPiece.layer = 0;
         currentPiece.transform.SetParent(_gameManager.dog.transform);
 
-        currentPiece.transform.DOMove(targetPoint.transform.position,speed);
-        currentPiece.transform.DORotateQuaternion(targetPoint.transform.rotation,speed);
-        currentPiece.transform.DOScale(new Vector3(xScale,yScale,zScale)*3, speed).OnComplete((() =>
+        currentPiece.transform.DOMove(targetPoint.transform.position,_gameManager.puzzleMoveSpeed);
+        currentPiece.transform.DORotateQuaternion(targetPoint.transform.rotation,_gameManager.puzzleMoveSpeed);
+        currentPiece.transform.DOScale(new Vector3(xScale,yScale,zScale)*3, _gameManager.puzzleMoveSpeed).OnComplete((() =>
         {
             targetPoint.SetActive(false);
             if(_gameManager.currentPuzzlePiece==_gameManager.puzzlePieces.Length-1)//son puzzle parcasi yerine gitti ise

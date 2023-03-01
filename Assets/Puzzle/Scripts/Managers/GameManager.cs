@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject dog,dogWithAnim,smoke;
     public bool isPuzzleComplate = false;
     public float rotationSpeed = 0.1f;
+    public float puzzleMoveSpeed = 0.8f;
 
     public void Awake() 
     {
