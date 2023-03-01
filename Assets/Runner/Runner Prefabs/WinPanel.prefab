@@ -32,7 +32,7 @@ RectTransform:
   m_Children:
   - {fileID: 3111622784850052923}
   m_Father: {fileID: 5702312077018477479}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -108,7 +108,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5702312077018477479}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -243,7 +243,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5702312077018477479}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -547,17 +547,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5702312076629957056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15243903, y: 0.15243903, z: 0.15243903}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5702312077018477479}
-  m_RootOrder: 2
+  m_Father: {fileID: 5702312077626662082}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -439}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -98.9}
   m_SizeDelta: {x: 1080, y: 253.1566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5702312076629957059
@@ -588,7 +588,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kennel
+  m_text: 'You Unlocked
+
+    Kennel !'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35c4f566c6beb43b4a91fd4de68bf284, type: 2}
   m_sharedMaterial: {fileID: 4194722547623754374, guid: 35c4f566c6beb43b4a91fd4de68bf284, type: 2}
@@ -689,7 +691,6 @@ RectTransform:
   m_Children:
   - {fileID: 5702312076150344534}
   - {fileID: 5702312077626662082}
-  - {fileID: 5702312076629957057}
   - {fileID: 6296408842289795565}
   - {fileID: 5702312077481860382}
   - {fileID: 2280974509543689096}
@@ -775,7 +776,7 @@ RectTransform:
   - {fileID: 6164623930144939523}
   - {fileID: 2514465205969674324}
   m_Father: {fileID: 5702312077018477479}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -888,7 +889,7 @@ GameObject:
   - component: {fileID: 5702312077626662084}
   - component: {fileID: 5702312077626662083}
   m_Layer: 5
-  m_Name: Kennel
+  m_Name: Kennel Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,7 +906,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.56, y: 6.56, z: 6.56}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 5702312076629957057}
   m_Father: {fileID: 5702312077018477479}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
