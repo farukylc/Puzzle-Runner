@@ -11,7 +11,7 @@ public class ObjectBuilder : MonoBehaviour
     //[SerializeField] private GameObject particle;
     //[SerializeField] private GameObject newParent;
     [SerializeField] private GameObject winPanel;
-
+    [SerializeField] private GameObject scoreBar;
     private void buildFunction()
     {
 
@@ -24,9 +24,10 @@ public class ObjectBuilder : MonoBehaviour
             {
                 //objectPiece.transform.SetParent(newParent.transform);
                 sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
-                    0.25f)).OnComplete((() => 
-                        //newParent.transform.DOMove(new Vector3(newParent.transform.position.x,newParent.transform.position.y+10f,newParent.transform.position.z + 10f),2)
+                    0.25f)).OnComplete((() =>
+                    //newParent.transform.DOMove(new Vector3(newParent.transform.position.x,newParent.transform.position.y+10f,newParent.transform.position.z + 10f),2)
                         winPanel.SetActive(true)
+
                     ));
             
                 pieceIndex++;
@@ -46,6 +47,7 @@ public class ObjectBuilder : MonoBehaviour
             case "Player":
                 buildFunction();
                 Debug.Log("Alana girildi");
+                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
                 break;
         }
     }
