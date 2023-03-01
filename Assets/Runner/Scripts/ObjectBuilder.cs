@@ -55,5 +55,7 @@ public class ObjectBuilder : MonoBehaviour
         goldAmountText.text = PlayerCollect.playerCollectScript.bonusScore.ToString();
         yield return new WaitForSeconds(1.5f);
         winPanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        UIAnimations.UIAnimationsScript.goldAnimation();
     }
 }
