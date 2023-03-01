@@ -12,6 +12,8 @@ public class UIAnimations : MonoBehaviour
     [SerializeField] private List<GameObject> goldImageList = new List<GameObject>();
     [SerializeField] private GameObject Canvas;
     [SerializeField] private GameObject goldIconTarget;
+    [SerializeField] private GameObject tapToPlayText;
+    [SerializeField] private GameObject tapToPlay;
     private int i = 0;
     private void Start()
     {
@@ -22,6 +24,21 @@ public class UIAnimations : MonoBehaviour
     private void doPunchUI()
     {
         uıDoubleImage.transform.DOPunchScale(Vector3.one * 0.25f, 0.49f, 1, 1f);
+
+        if (tapToPlay.activeSelf == true)
+        {
+            tapToPlayText.transform.DOPunchScale(Vector3.one * 0.25f, 0.49f, 1, 1f);
+            tapToPlay.transform
+                .DORotate(
+                    new Vector3(transform.localRotation.x, transform.localRotation.y, transform.localPosition.z + 44f),
+                    2).OnComplete((() => 
+                        tapToPlay.transform
+                            .DORotate(
+                                new Vector3(transform.localRotation.x, transform.localRotation.y, transform.localPosition.z - 90f),
+                                2)
+                    ));
+            //tapToPlay.transform.d
+        }
     }
 
     public void goldAnimation()

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public int speed = 15;
 
     [SerializeField] private CinemachineVirtualCamera mainCamera;
+    [SerializeField] private GameObject tapToPlay;
     
     private void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isStart = true; 
+            tapToPlay.SetActive(false);
             anim.SetBool("isStarted",true);
         }
         
