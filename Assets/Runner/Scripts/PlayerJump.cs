@@ -23,8 +23,6 @@ public class PlayerJump : MonoBehaviour
                 anim.SetBool("isJumping", true);
                 transform.DOJump(transform.position + new Vector3(0, 0, 15f), 3, 1, 1, false).SetEase(Ease.Linear);
                 break;
-            
-            
         }
     }
 

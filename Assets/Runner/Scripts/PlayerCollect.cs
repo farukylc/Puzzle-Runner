@@ -77,7 +77,6 @@ public class PlayerCollect : MonoBehaviour
                 
                 scoreSlider.value = collectedLegos;
                 
-                
                 if (!isPunch && collectedLegos < targetScore)
                 {
                     isPunch = true;
