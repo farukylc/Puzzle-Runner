@@ -16,6 +16,7 @@ public class PlayerCollect : MonoBehaviour
     private bool isPunch = false;
     [SerializeField] private GameObject smoke;
 
+    [SerializeField] private int goldAmount = 0;
 
     [SerializeField] private Slider scoreSlider;
     [SerializeField] private int maxScore;
@@ -27,7 +28,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private TextMeshProUGUI targetScoreText;
     [SerializeField] private TextMeshProUGUI bonusScoreText;
 
-    private int bonusScore = 0;
+    [SerializeField] public int bonusScore = 0;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class PlayerCollect : MonoBehaviour
         if (targetScore <= collectedLegos)
         {
             CancelInvoke("qmAnimation");
-           qmImage.sprite = winObject;
+            qmImage.sprite = winObject;
         }
            
     }

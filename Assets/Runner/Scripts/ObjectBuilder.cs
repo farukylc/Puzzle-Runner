@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class ObjectBuilder : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class ObjectBuilder : MonoBehaviour
     //[SerializeField] private GameObject newParent;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject scoreBar;
+
+    [SerializeField] private TextMeshProUGUI goldAmountText;
     private void buildFunction()
     {
 
@@ -55,6 +58,7 @@ public class ObjectBuilder : MonoBehaviour
 
     IEnumerator delay()
     {
+        goldAmountText.text = PlayerCollect.playerCollectScript.bonusScore.ToString();
         yield return new WaitForSeconds(1.5f);
         winPanel.SetActive(true);
     }
