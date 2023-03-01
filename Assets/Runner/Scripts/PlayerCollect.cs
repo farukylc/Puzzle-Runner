@@ -10,24 +10,18 @@ public class PlayerCollect : MonoBehaviour
 {
     public static PlayerCollect playerCollectScript;
     [SerializeField] public int collectedLegos = 0;
-    
     [SerializeField] private GameObject legoIcon;
-    //[SerializeField] private GameObject targetPoint;
     private bool isPunch = false;
     [SerializeField] private GameObject smoke;
-
     [SerializeField] private int goldAmount = 0;
-
     [SerializeField] private Slider scoreSlider;
     [SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Image qmImage;
-   [SerializeField] private Sprite winObject;
-
+    [SerializeField] private Sprite winObject;
     [SerializeField] private TextMeshProUGUI targetScoreText;
     [SerializeField] private TextMeshProUGUI bonusScoreText;
-
     [SerializeField] public int bonusScore = 0;
 
     private void Start()
