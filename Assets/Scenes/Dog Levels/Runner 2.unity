@@ -5214,6 +5214,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1258024418}
     m_Modifications:
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 900458109}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToCatPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RunnerButtons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 221907121059303616, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7567075916433906228, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
