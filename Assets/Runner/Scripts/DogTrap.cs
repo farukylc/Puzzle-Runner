@@ -20,14 +20,4 @@ public class DogTrap : MonoBehaviour
                 break;
         }
     }
-
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     switch (other.tag)
-    //     {
-    //         case "Cat":
-    //             anim.SetBool("isCatOnArea",false);
-    //             break;
-    //     }
-    // }
 }
