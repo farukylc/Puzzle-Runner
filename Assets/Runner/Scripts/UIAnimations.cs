@@ -40,14 +40,26 @@ public class UIAnimations : MonoBehaviour
             //tapToPlay.transform.d
         }
     }
-
+    private int currentImageIndex = 0;
     public void goldAnimation()
     {
-        for (int i = 0; i < goldImageList.Count; i++)
-        {
-            goldImageList[i].transform.DOMove(goldIconTarget.transform.position, 2);
-        }
         
+        // for (int i = 0; i < goldImageList.Count; i++)
+        // {
+        //     goldImageList[i].transform.DOMove(goldIconTarget.transform.position, 2);
+        // }
+
+        goldImageList[currentImageIndex].transform.DOMove(goldIconTarget.transform.position, 0.2f).OnComplete((() =>
+                {
+                    
+                    currentImageIndex++;
+                    if (currentImageIndex < goldImageList.Count)
+                    {
+                        goldAnimation();
+                    }
+                }
+            ));
+
     }
     
 }
