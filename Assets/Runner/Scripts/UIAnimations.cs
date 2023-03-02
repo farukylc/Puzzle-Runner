@@ -14,6 +14,7 @@ public class UIAnimations : MonoBehaviour
     [SerializeField] private GameObject goldIconTarget;
     [SerializeField] private GameObject tapToPlayText;
     [SerializeField] private GameObject tapToPlay;
+   
     private int i = 0;
     private void Start()
     {
@@ -43,12 +44,6 @@ public class UIAnimations : MonoBehaviour
     private int currentImageIndex = 0;
     public void goldAnimation()
     {
-        
-        // for (int i = 0; i < goldImageList.Count; i++)
-        // {
-        //     goldImageList[i].transform.DOMove(goldIconTarget.transform.position, 2);
-        // }
-
         goldImageList[currentImageIndex].transform.DOMove(goldIconTarget.transform.position, 0.2f).OnComplete((() =>
                 {
                     
@@ -59,7 +54,7 @@ public class UIAnimations : MonoBehaviour
                     }
                 }
             ));
-
     }
-    
+
+   
 }
