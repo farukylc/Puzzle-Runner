@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public int speed = 15;
 
-    [SerializeField] private CinemachineVirtualCamera mainCamera;
+    //[SerializeField] private CinemachineVirtualCamera mainCamera;
     [SerializeField] private GameObject tapToPlay;
     
     private void Start()
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             case "Finish":
                 speed = 0;
                 anim.SetBool("isStarted", false);
-                mainCamera.transform.gameObject.SetActive(false);
+                //mainCamera.transform.gameObject.SetActive(false);
                 break;
         }
     }

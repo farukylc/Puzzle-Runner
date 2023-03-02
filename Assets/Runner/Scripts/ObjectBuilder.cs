@@ -44,7 +44,13 @@ public class ObjectBuilder : MonoBehaviour
         {
             case "Player":
                 buildFunction();
-                Debug.Log("Alana girildi");
+                Debug.Log("Köpek Alana Girdi");
+                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
+                break;
+            
+            case "Cat":
+                buildFunction();
+                Debug.Log("Kedi Alan Girdi");
                 scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
                 break;
         }
