@@ -7,12 +7,18 @@ using TMPro;
 
 public class ObjectBuilder : MonoBehaviour
 {
+    public static ObjectBuilder objectBuilderScript;
     [SerializeField] private List<GameObject> objectPieces = new List<GameObject>();
     [SerializeField] private List<GameObject> targetPositionObject = new List<GameObject>();
-    [SerializeField] private GameObject winPanel;
+    [SerializeField] public GameObject winPanel;
     [SerializeField] private GameObject scoreBar;
-
     [SerializeField] private TextMeshProUGUI goldAmountText;
+
+    private void Start()
+    {
+        objectBuilderScript = this;
+    }
+
     private void buildFunction()
     {
         if (PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore)
@@ -63,5 +69,7 @@ public class ObjectBuilder : MonoBehaviour
         winPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         UIAnimations.UIAnimationsScript.goldAnimation();
+        
+        
     }
 }
