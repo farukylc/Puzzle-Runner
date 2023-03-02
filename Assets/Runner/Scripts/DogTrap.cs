@@ -1,18 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DogTrap : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator anim;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        switch (other.tag)
+        {
+            case "Cat":
+                anim.SetBool("isCatOnArea",true);
+                break;
+        }
     }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     switch (other.tag)
+    //     {
+    //         case "Cat":
+    //             anim.SetBool("isCatOnArea",false);
+    //             break;
+    //     }
+    // }
 }

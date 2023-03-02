@@ -19,6 +19,12 @@ public class Trap : MonoBehaviour
                     other.transform.position.z - 10f), 0.5f);
                 break;
             
+            case "Cat":
+                
+                Debug.Log("Collision detected");
+                other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
+                    other.transform.position.z - 10f), 0.5f);
+                break;
         }
     }
 }
