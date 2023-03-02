@@ -2675,6 +2675,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &975636283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 137798399142813093, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+  m_PrefabInstance: {fileID: 221907120255939757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &999576858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7117523435178195129, guid: 62be2d974f183984da41ee12d1686c5b, type: 3}
@@ -6813,6 +6818,10 @@ PrefabInstance:
       propertyPath: "u\u0131DoubleImage"
       value: 
       objectReference: {fileID: 2514465205809552274}
+    - target: {fileID: 5829277951605565466, guid: 574b724186b8a4e63afde7725fdc228c, type: 3}
+      propertyPath: newCharacterUnlocked
+      value: 
+      objectReference: {fileID: 975636283}
     - target: {fileID: 5829277951605565466, guid: 574b724186b8a4e63afde7725fdc228c, type: 3}
       propertyPath: goldImageList.Array.data[0]
       value: 
