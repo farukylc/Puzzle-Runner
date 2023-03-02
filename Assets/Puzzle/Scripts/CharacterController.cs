@@ -46,7 +46,11 @@ public class CharacterController : MonoBehaviour
             {
                 Instantiate(_gameManager.smoke,_gameManager.characterWithAnim.transform.position+new Vector3(0,5,0),Quaternion.identity);
                 _gameManager.characterWithAnim.SetActive(false);
-                _gameManager.characterWithAnim.transform.DOMove(Vector3.zero,0.4f).OnComplete(()=>_sceneManager.NextLevel());
+                _gameManager.characterWithAnim.transform.DOMove(Vector3.zero,0.4f).OnComplete(()=>
+                { 
+                    _gameManager.isCharacterComplate = true;
+                    _sceneManager.NextLevel();
+                });
             });
     }
 }

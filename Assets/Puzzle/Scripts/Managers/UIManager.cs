@@ -7,13 +7,15 @@ public class UIManager : MonoBehaviour
 {
     GameManager _gameManager;
     SceneControlManager _sceneManager;
+    public GameObject nextPreviousButtons;
     void Start()
     {
         _gameManager = GameManager.instance; 
         _sceneManager = SceneControlManager.instance;
+        if(_gameManager.isCharacterComplate)
+            nextPreviousButtons.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

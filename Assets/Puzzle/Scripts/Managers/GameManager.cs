@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int currentPuzzlePiece = 0;
     public GameObject character,characterWithAnim,smoke;
     public bool isPuzzleComplate = false;
+    public bool isCharacterComplate = false;
     public float rotationSpeed = 0.1f;
     public float puzzleMoveSpeed = 0.8f;
 
