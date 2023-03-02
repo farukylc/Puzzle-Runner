@@ -38,7 +38,7 @@ public class PuzzleControl : MonoBehaviour
 
         currentPiece.transform.DOMove(targetPoint.transform.position,_gameManager.puzzleMoveSpeed);
         currentPiece.transform.DORotateQuaternion(targetPoint.transform.rotation,_gameManager.puzzleMoveSpeed);
-        currentPiece.transform.DOScale(new Vector3(xScale,yScale,zScale)*3, _gameManager.puzzleMoveSpeed).OnComplete((() =>
+        currentPiece.transform.DOScale(new Vector3(xScale,yScale,zScale)*2, _gameManager.puzzleMoveSpeed).OnComplete((() =>
         {
             targetPoint.SetActive(false);
             if(_gameManager.currentPuzzlePiece==_gameManager.puzzlePieces.Length-1)//son puzzle parcasi yerine gitti ise

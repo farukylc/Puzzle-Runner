@@ -7,13 +7,16 @@ public class UIManager : MonoBehaviour
 {
     GameManager _gameManager;
     SceneControlManager _sceneManager;
-    public GameObject nextPreviousButtons;
+    public GameObject nextPreviousButtons,characterObjects;
     void Start()
     {
         _gameManager = GameManager.instance; 
         _sceneManager = SceneControlManager.instance;
         if(_gameManager.isCharacterComplate)
+        {
             nextPreviousButtons.SetActive(true);
+            characterObjects.SetActive(true);
+        }   
     }
 
     void Update()
