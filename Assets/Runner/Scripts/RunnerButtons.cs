@@ -18,4 +18,9 @@ public class RunnerButtons : MonoBehaviour
         SceneManager.LoadScene(5);
 
     }
+
+    public void nextScene()
+    {
+        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
