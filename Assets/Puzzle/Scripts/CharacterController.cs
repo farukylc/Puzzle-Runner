@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class DogController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     GameManager _gameManager;
     private Touch touch;
@@ -38,12 +38,12 @@ public class DogController : MonoBehaviour
             prevPos = Input.mousePosition;
         }
     }
-    public void DogRotate()
+    public void CharacterRotate()
     {
-        _gameManager.dogWithAnim.transform.DORotate(new Vector3(0,360,0),0.5f,RotateMode.LocalAxisAdd).SetLoops(3,LoopType.Restart).SetEase(Ease.Linear).OnComplete(()=>
+        _gameManager.characterWithAnim.transform.DORotate(new Vector3(0,360,0),0.5f,RotateMode.LocalAxisAdd).SetLoops(3,LoopType.Restart).SetEase(Ease.Linear).OnComplete(()=>
             {
-                Instantiate(_gameManager.smoke,_gameManager.dogWithAnim.transform.position+new Vector3(0,5,0),Quaternion.identity);
-                _gameManager.dogWithAnim.SetActive(false);
+                Instantiate(_gameManager.smoke,_gameManager.characterWithAnim.transform.position+new Vector3(0,5,0),Quaternion.identity);
+                _gameManager.characterWithAnim.SetActive(false);
             });
     }
 }

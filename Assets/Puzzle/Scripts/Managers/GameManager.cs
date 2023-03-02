@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public Material[] materials1;
     public Material[] materials2;
     public int currentPuzzlePiece = 0;
-    public GameObject dog,dogWithAnim,smoke;
+    public GameObject character,characterWithAnim,smoke;
     public bool isPuzzleComplate = false;
     public float rotationSpeed = 0.1f;
     public float puzzleMoveSpeed = 0.8f;
