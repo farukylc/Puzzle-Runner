@@ -15,7 +15,7 @@ public class RunnerButtons : MonoBehaviour
 
     public void goToCatPuzzle()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
 
     }
 
