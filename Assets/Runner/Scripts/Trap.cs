@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        switch (other.tag)
+        {
+            case "Player":
+                Debug.Log("Collision detected");
+                other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
+                    other.transform.position.z - 10f), 0.5f);
+                break;
+            
+        }
     }
 }
