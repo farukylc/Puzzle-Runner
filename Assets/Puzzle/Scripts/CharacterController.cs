@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CharacterController : MonoBehaviour
 {
     GameManager _gameManager;
+    SceneControlManager _sceneManager;
     private Touch touch;
     Vector3 prevPos = Vector3.zero;
     Vector3 posDelta = Vector3.zero;
@@ -13,6 +14,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         _gameManager = GameManager.instance;
+        _sceneManager = SceneControlManager.instance;
     }
 
     [System.Obsolete]
@@ -44,6 +46,7 @@ public class CharacterController : MonoBehaviour
             {
                 Instantiate(_gameManager.smoke,_gameManager.characterWithAnim.transform.position+new Vector3(0,5,0),Quaternion.identity);
                 _gameManager.characterWithAnim.SetActive(false);
+                _gameManager.characterWithAnim.transform.DOMove(Vector3.zero,0.4f).OnComplete(()=>_sceneManager.NextLevel());
             });
     }
 }
