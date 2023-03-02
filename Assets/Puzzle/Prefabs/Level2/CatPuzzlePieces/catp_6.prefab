@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2964998024659910999}
   - component: {fileID: 1219118253056576208}
   - component: {fileID: -7358978525983648050}
+  - component: {fileID: -9103424402624888501}
   m_Layer: 0
   m_Name: catp_6
   m_TagString: Untagged
@@ -97,3 +98,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceIndex: 1
+--- !u!95 &-9103424402624888501
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6352424642461093416}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b52bb859ca57c6042808b1258684e4f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
