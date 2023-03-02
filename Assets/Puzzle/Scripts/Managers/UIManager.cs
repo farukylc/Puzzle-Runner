@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     }
     public void OnClickSet2()
     {
-        _gameManager.dogWithAnim.GetComponent<DogController>().DogRotate();
+        _gameManager.characterWithAnim.GetComponent<CharacterController>().CharacterRotate();
         // for (int i = 0; i < _gameManager.puzzlePieces.Length; i++)
         //     {
         //         _gameManager.puzzlePieces[i].GetComponent<Renderer>().material = _gameManager.materials2[i];

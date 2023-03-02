@@ -34,7 +34,7 @@ public class PuzzleControl : MonoBehaviour
         currentPiece = _gameManager.puzzlePieces[_gameManager.currentPuzzlePiece];//siradaki puzzle parcasi
         currentPiece.GetComponent<Animator>().enabled = false;
         currentPiece.layer = 0;
-        currentPiece.transform.SetParent(_gameManager.dog.transform);
+        currentPiece.transform.SetParent(_gameManager.character.transform);
 
         currentPiece.transform.DOMove(targetPoint.transform.position,_gameManager.puzzleMoveSpeed);
         currentPiece.transform.DORotateQuaternion(targetPoint.transform.rotation,_gameManager.puzzleMoveSpeed);
@@ -44,8 +44,8 @@ public class PuzzleControl : MonoBehaviour
             if(_gameManager.currentPuzzlePiece==_gameManager.puzzlePieces.Length-1)//son puzzle parcasi yerine gitti ise
             {
                 _gameManager.isPuzzleComplate = true;
-                _gameManager.dog.gameObject.SetActive(false);
-                _gameManager.dogWithAnim.gameObject.SetActive(true);
+                _gameManager.character.gameObject.SetActive(false);
+                _gameManager.characterWithAnim.gameObject.SetActive(true);
             }
             _gameManager.currentPuzzlePiece++;
             _gameManager.puzzlePieceTargetPositions[_gameManager.currentPuzzlePiece].SetActive(true);
