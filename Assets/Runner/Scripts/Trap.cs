@@ -17,6 +17,9 @@ public class Trap : MonoBehaviour
                 Debug.Log("Collision detected");
                 other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
                     other.transform.position.z - 10f), 0.5f);
+
+                scoreUpdate();
+
                 break;
             
             case "Cat":
@@ -24,7 +27,23 @@ public class Trap : MonoBehaviour
                 Debug.Log("Collision detected");
                 other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
                     other.transform.position.z - 10f), 0.5f);
+                
+                    scoreUpdate();
                 break;
         }
+    }
+
+    private void scoreUpdate()
+    {
+        PlayerCollect.playerCollectScript.collectedLegos--;
+        PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
+                
+        Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
+                
+        PlayerCollect.playerCollectScript.collectedItems.Remove(
+            PlayerCollect.playerCollectScript.collectedItems[
+                PlayerCollect.playerCollectScript.collectedItems.Count-1]);
+        
+        PlayerCollect.playerCollectScript .waypoint.transform.position -= new Vector3(0, 0.44f, 0);
     }
 }

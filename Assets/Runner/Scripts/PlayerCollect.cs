@@ -12,9 +12,12 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public int collectedLegos = 0;
     [SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
+    [SerializeField] public int bonusScore = 0;
+    
+    //UI
     [SerializeField] private GameObject smoke;
     [SerializeField] private int goldAmount = 0;
-    [SerializeField] private Slider scoreSlider;
+    [SerializeField] public Slider scoreSlider;
     [SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
@@ -22,8 +25,11 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private Sprite winObject;
     [SerializeField] private TextMeshProUGUI targetScoreText;
     [SerializeField] private TextMeshProUGUI bonusScoreText;
-    [SerializeField] public int bonusScore = 0;
-    [SerializeField] private GameObject waypoint;
+    //UI
+    
+    //Stack
+    [SerializeField] public GameObject waypoint;
+    [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     private void Start()
     {
         scoreSlider.maxValue = maxScore;
@@ -58,6 +64,7 @@ public class PlayerCollect : MonoBehaviour
         other.GetComponent<LegoAnimation>().enabled = false;
         other.GetComponent<BoxCollider>().enabled = false;
         waypoint.transform.position += new Vector3(0, 0.44f, 0);
+        collectedItems.Add(other.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,11 +79,11 @@ public class PlayerCollect : MonoBehaviour
                 
                 collectedLegos = collectedLegos + 1;
 
-                if (collectedLegos <= targetScore)
-                {
-                    targetScoreText.text = collectedLegos.ToString() +"/" +targetScore.ToString();
-                }
-                else if (targetScore <= collectedLegos && collectedLegos<= maxScore)
+                // if (collectedLegos <= targetScore)
+                // {
+                //     targetScoreText.text = collectedLegos.ToString() +"/" +targetScore.ToString();
+                // }
+                if (targetScore <= collectedLegos && collectedLegos<= maxScore)
                 {
                     bonusScore++;
                     bonusScoreText.text = bonusScore.ToString() +"/" +targetScore.ToString();
