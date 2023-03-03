@@ -53,7 +53,7 @@ public class ObjectBuilder : MonoBehaviour
             case "Player":
                 buildFunction();
                 Debug.Log("Köpek Alana Girdi");
-                finalStack();
+                // InvokeRepeating("finalStack",0.1f,0.01f);
                 scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
                 
                 break;
@@ -78,25 +78,25 @@ public class ObjectBuilder : MonoBehaviour
         
     }
 
-    [SerializeField] private GameObject finalWP;
-    private void finalStack()
-    {
-        // foreach (var lego in PlayerCollect.playerCollectScript.collectedItems)
-        // {
-        //     
-        //     
-        // }
-
-        for (int i = 0; i < PlayerCollect.playerCollectScript.collectedItems.Count; i++)
-        {
-            PlayerCollect.playerCollectScript.collectedItems[i].transform.DOLocalJump(finalWP.transform.localPosition, 4f, 1, 1f);
-            PlayerCollect.playerCollectScript.collectedItems[i].transform.SetParent(transform.gameObject.transform);
-            PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale = PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale / 1.25f;
-            PlayerCollect.playerCollectScript.collectedItems[i].transform.localRotation = Quaternion.Euler(0,90,0);
-            finalWP.transform.position += new Vector3(0, 0.44f, 0);
-        }
-        
-        
-        
-    }
+    // [SerializeField] private GameObject finalWP;
+    // private int i = 0;
+    // private void finalStack()
+    // {
+    //     if (i < PlayerCollect.playerCollectScript.collectedItems.Count)
+    //     {
+    //         PlayerCollect.playerCollectScript.collectedItems[i].transform.DOLocalJump(finalWP.transform.localPosition, 4f, 1, 0.01f).OnComplete((
+    //             () =>
+    //             {
+    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.SetParent(transform.gameObject.transform);
+    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale = PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale / 1.25f;
+    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.localRotation = Quaternion.Euler(0,90,0);
+    //                 finalWP.transform.position += new Vector3(0, 0.44f, 0);
+    //                 i++;
+    //             }
+    //         ));
+    //         
+    //         
+    //     }
+    // }
+    
 }
