@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
@@ -13,6 +14,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] public GameObject winPanel;
     [SerializeField] private GameObject scoreBar;
     [SerializeField] private TextMeshProUGUI goldAmountText;
+    [SerializeField] private CinemachineVirtualCamera cam1;
     
 
     private void Start()
@@ -55,6 +57,7 @@ public class ObjectBuilder : MonoBehaviour
                 Debug.Log("Köpek Alana Girdi");
                 // InvokeRepeating("finalStack",0.1f,0.01f);
                 scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
+                cam1.gameObject.SetActive(false);
                 
                 break;
             
@@ -77,26 +80,6 @@ public class ObjectBuilder : MonoBehaviour
         
         
     }
-
-    // [SerializeField] private GameObject finalWP;
-    // private int i = 0;
-    // private void finalStack()
-    // {
-    //     if (i < PlayerCollect.playerCollectScript.collectedItems.Count)
-    //     {
-    //         PlayerCollect.playerCollectScript.collectedItems[i].transform.DOLocalJump(finalWP.transform.localPosition, 4f, 1, 0.01f).OnComplete((
-    //             () =>
-    //             {
-    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.SetParent(transform.gameObject.transform);
-    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale = PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale / 1.25f;
-    //                 PlayerCollect.playerCollectScript.collectedItems[i].transform.localRotation = Quaternion.Euler(0,90,0);
-    //                 finalWP.transform.position += new Vector3(0, 0.44f, 0);
-    //                 i++;
-    //             }
-    //         ));
-    //         
-    //         
-    //     }
-    // }
+    
     
 }
