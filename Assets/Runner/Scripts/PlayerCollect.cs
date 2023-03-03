@@ -19,6 +19,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private GameObject smoke;
     [SerializeField] private int goldAmount = 0;
     [SerializeField] public Slider scoreSlider;
+    [SerializeField] private TextMeshProUGUI goldAmountText;
     
    
     //[SerializeField] private int maxScore;
@@ -86,11 +87,7 @@ public class PlayerCollect : MonoBehaviour
                 {
                     isObjectOpen = true;
                 }
-                if (isObjectOpen)//targetScore <= collectedLegos && collectedLegos<= maxScore
-                {
-                    bonusScore++;
-
-                }
+                
                 
                 scoreSlider.value = collectedLegos;
                 
@@ -114,7 +111,8 @@ public class PlayerCollect : MonoBehaviour
             
             
             case "Gold":
-                
+                goldAmount++;
+                goldAmountText.text = goldAmount.ToString();
                 
                 break;
         }
