@@ -2061,6 +2061,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb9d3b21bdb14b62bd9e4bf65d2f776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &709684569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709684570}
+  m_Layer: 0
+  m_Name: WP
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &709684570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709684569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.02, z: -0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6432655023302812063}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &725567420 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3847230970059043619, guid: 2e91dc9e477384fc29b463e9bad3065e, type: 3}
@@ -6941,6 +6972,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1727327160, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727327161, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.075
+      objectReference: {fileID: 0}
     - target: {fileID: 112075490553396296, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7113,6 +7152,42 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6432655023302812066, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: tapToPlay
+      value: 
+      objectReference: {fileID: 213085076}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: qmImage
+      value: 
+      objectReference: {fileID: 725567420}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: goldIcon
+      value: 
+      objectReference: {fileID: 1536543078}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: legoIcon
+      value: 
+      objectReference: {fileID: 1480670815}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: waypoint
+      value: 
+      objectReference: {fileID: 709684569}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: winObject
+      value: 
+      objectReference: {fileID: 21300000, guid: bb532bfd13c9845a9bff010897476a23, type: 3}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: scoreSlider
+      value: 
+      objectReference: {fileID: 1034420694}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: bonusScoreText
+      value: 
+      objectReference: {fileID: 1623357925}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: targetScoreText
+      value: 
+      objectReference: {fileID: 1423093841}
     - target: {fileID: 6548603592882814598, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7416,6 +7491,7 @@ MonoBehaviour:
   targetScoreText: {fileID: 1423093841}
   bonusScoreText: {fileID: 1623357925}
   bonusScore: 0
+  waypoint: {fileID: 0}
 --- !u!114 &6432655023302812070
 MonoBehaviour:
   m_ObjectHideFlags: 0

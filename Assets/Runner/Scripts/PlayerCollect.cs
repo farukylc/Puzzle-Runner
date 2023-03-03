@@ -12,23 +12,35 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public int collectedLegos = 0;
     [SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
+    [SerializeField] public int bonusScore = 0;
+    [SerializeField] public bool isObjectOpen = false;
+     
+    //UI
     [SerializeField] private GameObject smoke;
     [SerializeField] private int goldAmount = 0;
-    [SerializeField] private Slider scoreSlider;
-    [SerializeField] private int maxScore;
+    [SerializeField] public Slider scoreSlider;
+    [SerializeField] private TextMeshProUGUI goldAmountText;
+    
+   
+    //[SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Image qmImage;
     [SerializeField] private Sprite winObject;
-    [SerializeField] private TextMeshProUGUI targetScoreText;
-    [SerializeField] private TextMeshProUGUI bonusScoreText;
-    [SerializeField] public int bonusScore = 0;
-
+    
+    
+    
+    //Stack
+    [SerializeField] public GameObject waypoint;
+    [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
+    
+    
+    
+    
     private void Start()
     {
-        scoreSlider.maxValue = maxScore;
-        targetScoreText.text = "0/" + targetScore.ToString();
-        bonusScoreText.text = "0/" + (maxScore - targetScore).ToString();
+        scoreSlider.maxValue = targetScore;
+       
         playerCollectScript = this;
         InvokeRepeating("qmAnimation",1,1);
     }
@@ -48,27 +60,34 @@ public class PlayerCollect : MonoBehaviour
         if(collectedLegos < targetScore)
             qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
     }
-    
+
+    private void stackFunction(Collider other)
+    {
+        other.transform.DOLocalJump(waypoint.transform.localPosition, 4f, 1, 0.2f);
+        other.transform.SetParent(transform.gameObject.transform);
+        other.transform.localScale = other.transform.localScale / 1.25f;
+        other.transform.localRotation = Quaternion.Euler(0,90,0);
+        other.GetComponent<LegoAnimation>().enabled = false;
+        other.GetComponent<BoxCollider>().enabled = false;
+        waypoint.transform.position += new Vector3(0, 0.44f, 0);
+        collectedItems.Add(other.gameObject);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
             case "CollectableLego":
-                GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
-                other.gameObject.SetActive(false);
                 
+               
+                stackFunction(other);
                 collectedLegos = collectedLegos + 1;
 
-                if (collectedLegos <= targetScore)
+                if (collectedLegos == targetScore)
                 {
-                    targetScoreText.text = collectedLegos.ToString() +"/" +targetScore.ToString();
+                    isObjectOpen = true;
                 }
-                else if (targetScore <= collectedLegos && collectedLegos<= maxScore)
-                {
-                    bonusScore++;
-                    bonusScoreText.text = bonusScore.ToString() +"/" +targetScore.ToString();
-                }
+                
                 
                 scoreSlider.value = collectedLegos;
                 
@@ -89,10 +108,20 @@ public class PlayerCollect : MonoBehaviour
 
                 }
                 break;
+            
+            
+            case "Gold":
+                goldAmount++;
+                goldAmountText.text = goldAmount.ToString();
+                
+                break;
         }
 
+        
        
     }
+    
+    
 }
 
 
