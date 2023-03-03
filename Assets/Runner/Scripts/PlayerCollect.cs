@@ -64,7 +64,7 @@ public class PlayerCollect : MonoBehaviour
 
     private void stackFunction(Collider other)
     {
-        other.transform.DOLocalJump(waypoint.transform.localPosition, 4f, 1, 0.2f);
+        other.transform.DOLocalJump(waypoint.transform.localPosition, 1.5f, 1, 0.2f);
         other.transform.SetParent(transform.gameObject.transform);
         other.transform.localScale = other.transform.localScale / 1.25f;
         other.transform.localRotation = Quaternion.Euler(0,90,0);
