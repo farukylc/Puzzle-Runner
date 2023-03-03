@@ -56,7 +56,8 @@ public class PlayerCollect : MonoBehaviour
         other.transform.localScale = other.transform.localScale / 1.25f;
         other.transform.localRotation = Quaternion.Euler(0,90,0);
         other.GetComponent<LegoAnimation>().enabled = false;
-        waypoint.transform.position += new Vector3(0, 0.48f, 0);
+        other.GetComponent<BoxCollider>().enabled = false;
+        waypoint.transform.position += new Vector3(0, 0.44f, 0);
     }
 
     private void OnTriggerEnter(Collider other)

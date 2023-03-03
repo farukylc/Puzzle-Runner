@@ -1585,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294480898455205805, guid: ba7578e4f726e4fb2a6a386e95a67f30, type: 3}
       propertyPath: m_Size.y
-      value: 6.893533
+      value: 4.058325
       objectReference: {fileID: 0}
     - target: {fileID: 294480898455205805, guid: ba7578e4f726e4fb2a6a386e95a67f30, type: 3}
       propertyPath: m_Size.z
@@ -1597,7 +1597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294480898455205805, guid: ba7578e4f726e4fb2a6a386e95a67f30, type: 3}
       propertyPath: m_Center.y
-      value: 1.739351
+      value: 0.32174683
       objectReference: {fileID: 0}
     - target: {fileID: 294480898455205805, guid: ba7578e4f726e4fb2a6a386e95a67f30, type: 3}
       propertyPath: m_Center.z
@@ -2191,6 +2191,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb9d3b21bdb14b62bd9e4bf65d2f776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &783282339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783282340}
+  m_Layer: 0
+  m_Name: Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783282340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783282339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 2.83, z: -0.091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 564804748420623945}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806492957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3174753226823477466, guid: 62be2d974f183984da41ee12d1686c5b, type: 3}
@@ -4622,6 +4653,7 @@ MonoBehaviour:
   targetScoreText: {fileID: 1018104654}
   bonusScoreText: {fileID: 1933324237}
   bonusScore: 0
+  waypoint: {fileID: 783282339}
 --- !u!114 &564804748420623955
 MonoBehaviour:
   m_ObjectHideFlags: 0
