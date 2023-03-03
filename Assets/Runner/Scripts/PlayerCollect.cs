@@ -13,12 +13,13 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
     [SerializeField] public int bonusScore = 0;
-    
+    [SerializeField] public bool isObjectOpen = false;
+     
     //UI
     [SerializeField] private GameObject smoke;
     [SerializeField] private int goldAmount = 0;
     [SerializeField] public Slider scoreSlider;
-    [SerializeField] private int maxScore;
+    //[SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Image qmImage;
@@ -30,11 +31,11 @@ public class PlayerCollect : MonoBehaviour
     //Stack
     [SerializeField] public GameObject waypoint;
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
+    
     private void Start()
     {
-        scoreSlider.maxValue = maxScore;
-        targetScoreText.text = "0/" + targetScore.ToString();
-        bonusScoreText.text = "0/" + (maxScore - targetScore).ToString();
+        scoreSlider.maxValue = targetScore;
+       
         playerCollectScript = this;
         InvokeRepeating("qmAnimation",1,1);
     }
@@ -72,21 +73,22 @@ public class PlayerCollect : MonoBehaviour
         switch (other.tag)
         {
             case "CollectableLego":
-                // GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
+                
                
                 stackFunction(other);
                 
                 
                 collectedLegos = collectedLegos + 1;
 
-                // if (collectedLegos <= targetScore)
-                // {
-                //     targetScoreText.text = collectedLegos.ToString() +"/" +targetScore.ToString();
-                // }
-                if (targetScore <= collectedLegos && collectedLegos<= maxScore)
+                if (collectedLegos == targetScore)
+                {
+                    isObjectOpen = true;
+                }
+                if (isObjectOpen)//targetScore <= collectedLegos && collectedLegos<= maxScore
                 {
                     bonusScore++;
-                    bonusScoreText.text = bonusScore.ToString() +"/" +targetScore.ToString();
+                    
+
                 }
                 
                 scoreSlider.value = collectedLegos;

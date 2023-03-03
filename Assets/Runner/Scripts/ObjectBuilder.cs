@@ -18,10 +18,10 @@ public class ObjectBuilder : MonoBehaviour
     {
         objectBuilderScript = this;
     }
-
+    // PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore
     private void buildFunction()
     {
-        if (PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore)
+        if (PlayerCollect.playerCollectScript.isObjectOpen)
         {
             var sequence = DOTween.Sequence();
             int pieceIndex = 0;

@@ -35,15 +35,22 @@ public class Trap : MonoBehaviour
 
     private void scoreUpdate()
     {
-        PlayerCollect.playerCollectScript.collectedLegos--;
-        PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
-                
-        Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
-                
-        PlayerCollect.playerCollectScript.collectedItems.Remove(
-            PlayerCollect.playerCollectScript.collectedItems[
-                PlayerCollect.playerCollectScript.collectedItems.Count-1]);
+       
+       
+        if (PlayerCollect.playerCollectScript.collectedItems.Count !=0)
+        {
+            PlayerCollect.playerCollectScript.collectedLegos--;
+            PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
+            Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
+            PlayerCollect.playerCollectScript.collectedItems.Remove(
+                PlayerCollect.playerCollectScript.collectedItems[
+                    PlayerCollect.playerCollectScript.collectedItems.Count-1]);
+            PlayerCollect.playerCollectScript .waypoint.transform.position -= new Vector3(0, 0.44f, 0);
+        }
         
-        PlayerCollect.playerCollectScript .waypoint.transform.position -= new Vector3(0, 0.44f, 0);
+                
+        
+        
+       
     }
 }
