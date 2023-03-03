@@ -14,17 +14,20 @@ public class VoidTrap : MonoBehaviour
         {
             case "Player":
                 
-                transform.gameObject.GetComponent<MeshRenderer>().material =
-                    PlayerCollect.playerCollectScript.collectedItems[^1].transform.gameObject
-                        .GetComponent<MeshRenderer>().material;
-                Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject);
-                PlayerCollect.playerCollectScript.collectedItems.Remove(
-                    PlayerCollect.playerCollectScript.collectedItems[^1]);
+                if (PlayerCollect.playerCollectScript.collectedItems.Count != 0)
+                {
+                    transform.gameObject.GetComponent<MeshRenderer>().material =
+                        PlayerCollect.playerCollectScript.collectedItems[^1].transform.gameObject
+                            .GetComponent<MeshRenderer>().material;
+                    Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject);
+                    PlayerCollect.playerCollectScript.collectedItems.Remove(
+                        PlayerCollect.playerCollectScript.collectedItems[^1]);
                 
-                PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0.44f, 0);
+                    PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0.44f, 0);
                 
-                transform.gameObject.GetComponent<MeshRenderer>().enabled = true;
-                Debug.Log("hebele hübele");
+                    transform.gameObject.GetComponent<MeshRenderer>().enabled = true;
+
+                }
                 break;
         }
     }
