@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4996282639351244773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4996282639351244775}
+  - component: {fileID: 4996282639351244774}
+  m_Layer: 0
+  m_Name: Lego Paint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4996282639351244775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996282639351244773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.93303, y: -2.029684, z: 78.91369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4996282639351244774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996282639351244773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fd71348a75d40cabdfd64d39230aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 65255540d92d02145b58ae0eb7a2fc4c, type: 2}
+  - {fileID: 2100000, guid: fccd397ab8bd48b47b4fed66e3beb01c, type: 2}
+  - {fileID: 2100000, guid: 88cb91cceac3b934ca42a34f059cfb39, type: 2}
+  - {fileID: 2100000, guid: 5b011f0dfaf56fd469a71975d505958b, type: 2}
+  - {fileID: 2100000, guid: 98ea886ad870c644a9a6e81239ac8d44, type: 2}
+  - {fileID: 2100000, guid: 6cbd39902dc2c3d4499cb9be17246cca, type: 2}
+  - {fileID: 2100000, guid: 715b608c85b52a747b7d33cea49a9dcf, type: 2}
+  - {fileID: 2100000, guid: 58639bb1e7a3b594f92a984fc47ddf7a, type: 2}
+  - {fileID: 2100000, guid: 926cf93691cb10b468dc3615d4643f17, type: 2}
+  - {fileID: 2100000, guid: f87a54af069610a41b6d76769fa1893f, type: 2}
+  - {fileID: 2100000, guid: d33f1c43a37959448b72b50fdf638e6c, type: 2}
+  legosOnScene:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

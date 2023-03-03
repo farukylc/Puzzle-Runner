@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969022585340924445, guid: cd3a1d5972c0849d2b7ed41e55f4f8ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.97
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8969022585340924445, guid: cd3a1d5972c0849d2b7ed41e55f4f8ca, type: 3}
       propertyPath: m_LocalPosition.y
@@ -498,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969022585340924445, guid: cd3a1d5972c0849d2b7ed41e55f4f8ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.9
+      value: 114.1
       objectReference: {fileID: 0}
     - target: {fileID: 8969022585340924445, guid: cd3a1d5972c0849d2b7ed41e55f4f8ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1528,7 +1528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510241399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -34.6497, z: -1.1044617}
+  m_LocalPosition: {x: -3.27, y: -41.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2158,6 +2158,147 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3231989550950706157, guid: 9e1d65be4afc0714c863f81653518328, type: 3}
   m_PrefabInstance: {fileID: 934027502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &935694707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4996282639351244773, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_Name
+      value: Lego Paint
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[0]
+      value: 
+      objectReference: {fileID: 3053452975968652443}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[1]
+      value: 
+      objectReference: {fileID: 510241399}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[2]
+      value: 
+      objectReference: {fileID: 1764174283}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[3]
+      value: 
+      objectReference: {fileID: 1926746099}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[4]
+      value: 
+      objectReference: {fileID: 1037051199}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[5]
+      value: 
+      objectReference: {fileID: 1975541567}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[6]
+      value: 
+      objectReference: {fileID: 1060408289}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[7]
+      value: 
+      objectReference: {fileID: 1587686723}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[8]
+      value: 
+      objectReference: {fileID: 146279444}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[9]
+      value: 
+      objectReference: {fileID: 1821689173}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[10]
+      value: 
+      objectReference: {fileID: 1881287356}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[11]
+      value: 
+      objectReference: {fileID: 5836509}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[12]
+      value: 
+      objectReference: {fileID: 1423431472}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[13]
+      value: 
+      objectReference: {fileID: 1049200224}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[14]
+      value: 
+      objectReference: {fileID: 1639933770}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[15]
+      value: 
+      objectReference: {fileID: 2065033710}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[16]
+      value: 
+      objectReference: {fileID: 1432877667}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[17]
+      value: 
+      objectReference: {fileID: 352934921}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[18]
+      value: 
+      objectReference: {fileID: 1115359607}
+    - target: {fileID: 4996282639351244774, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: legosOnScene.Array.data[19]
+      value: 
+      objectReference: {fileID: 896759284}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 42.93303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.029684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 78.91369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996282639351244775, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ca4acd46ebdc4868a89adbed07c76a7, type: 3}
 --- !u!1 &942541124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6524285478479034467, guid: 8be76606e44f64032bdd2c7513133359, type: 3}
@@ -2196,7 +2337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037051199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -28.6497, z: -1.1044636}
+  m_LocalPosition: {x: -3.27, y: -35.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2492,7 +2633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060408289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -24.6497, z: -1.1044636}
+  m_LocalPosition: {x: -3.27, y: -31.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3160,7 +3301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587686723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -22.649696, z: -1.1044617}
+  m_LocalPosition: {x: -3.27, y: -29.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3452,7 +3593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764174283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -32.6497, z: -1.1044617}
+  m_LocalPosition: {x: -3.27, y: -39.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3898,7 +4039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926746099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -30.6497, z: -1.1044636}
+  m_LocalPosition: {x: -3.27, y: -37.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4172,7 +4313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975541567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -26.6497, z: -1.1044636}
+  m_LocalPosition: {x: -3.27, y: -33.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4739,7 +4880,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedLegos: 0
   legoIcon: {fileID: 1344094959}
-  bonusScore: 0
   isObjectOpen: 0
   smoke: {fileID: 5258952844299559212, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
   goldAmount: 0
@@ -4871,7 +5011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3053452975968652443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -36.6497, z: -1.1044617}
+  m_LocalPosition: {x: -3.27, y: -43.3, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
