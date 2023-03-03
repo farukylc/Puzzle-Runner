@@ -7113,6 +7113,38 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6432655023302812066, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: tapToPlay
+      value: 
+      objectReference: {fileID: 213085076}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: qmImage
+      value: 
+      objectReference: {fileID: 725567420}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: goldIcon
+      value: 
+      objectReference: {fileID: 1536543078}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: legoIcon
+      value: 
+      objectReference: {fileID: 1480670815}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: winObject
+      value: 
+      objectReference: {fileID: 21300000, guid: bb532bfd13c9845a9bff010897476a23, type: 3}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: scoreSlider
+      value: 
+      objectReference: {fileID: 1034420694}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: bonusScoreText
+      value: 
+      objectReference: {fileID: 1623357925}
+    - target: {fileID: 6432655023302812068, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: targetScoreText
+      value: 
+      objectReference: {fileID: 1423093841}
     - target: {fileID: 6548603592882814598, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7416,6 +7448,7 @@ MonoBehaviour:
   targetScoreText: {fileID: 1423093841}
   bonusScoreText: {fileID: 1623357925}
   bonusScore: 0
+  waypoint: {fileID: 0}
 --- !u!114 &6432655023302812070
 MonoBehaviour:
   m_ObjectHideFlags: 0
