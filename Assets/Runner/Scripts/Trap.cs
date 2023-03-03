@@ -41,11 +41,28 @@ public class Trap : MonoBehaviour
         {
             PlayerCollect.playerCollectScript.collectedLegos--;
             PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
-            Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
+            //RustemDeneme
+            GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
+            int throwDistance = -6;
+            if(PlayerCollect.playerCollectScript.collectedItems.Count%2==0)
+                throwDistance = 6;
+            currentObj.transform.DOLocalRotate(new Vector3(-180,90,-90),0.5f).SetEase(Ease.Linear);
+            currentObj.transform.DOScale(currentObj.transform.localScale/2,0.5f).SetEase(Ease.Linear);
+            currentObj.transform.DOLocalJump(new Vector3(currentObj.transform.localPosition.x+throwDistance,1,currentObj.transform.localPosition.z+1),4,1,0.5f).SetEase(Ease.Linear).OnComplete(()=>{
+
+                Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
             PlayerCollect.playerCollectScript.collectedItems.Remove(
                 PlayerCollect.playerCollectScript.collectedItems[
                     PlayerCollect.playerCollectScript.collectedItems.Count-1]);
             PlayerCollect.playerCollectScript .waypoint.transform.position -= new Vector3(0, 0.44f, 0);
+
+            });
+            //RustemDeneme
+            // Destroy(PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1].gameObject); 
+            // PlayerCollect.playerCollectScript.collectedItems.Remove(
+            //     PlayerCollect.playerCollectScript.collectedItems[
+            //         PlayerCollect.playerCollectScript.collectedItems.Count-1]);
+            // PlayerCollect.playerCollectScript .waypoint.transform.position -= new Vector3(0, 0.44f, 0);
         }
         
                 
