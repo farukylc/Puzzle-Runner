@@ -21,7 +21,7 @@ public class PlayerJump : MonoBehaviour
             case "WallLine":
 
                 anim.SetBool("isJumping", true);
-                transform.DOJump(transform.position + new Vector3(0, 0, 7f), 2.5f, 1, 1, false).SetEase(Ease.Linear);
+                transform.DOJump(transform.position + new Vector3(0, 0, 10f), 2.5f, 1, 1, false).SetEase(Ease.Linear);
                 break;
         }
     }
