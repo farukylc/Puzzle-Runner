@@ -12,12 +12,13 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public int collectedLegos = 0;
     [SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
-    [SerializeField] public int bonusScore = 0;
+    private bool goldPunch = false;
+    // [SerializeField] public int bonusScore = 0;
     [SerializeField] public bool isObjectOpen = false;
      
     //UI
     [SerializeField] private GameObject smoke;
-    [SerializeField] private int goldAmount = 0;
+    [SerializeField] public int goldAmount = 0;
     [SerializeField] public Slider scoreSlider;
     [SerializeField] private TextMeshProUGUI goldAmountText;
     
@@ -99,20 +100,22 @@ public class PlayerCollect : MonoBehaviour
                         ));
 
                 }
-                else if (!isPunch)
-                {
-                    isPunch = true;
-                    goldIcon.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f).OnComplete((() => 
-                            isPunch = false
-                        ));
-
-                }
+               
                 break;
             
             
             case "Gold":
                 goldAmount++;
                 goldAmountText.text = goldAmount.ToString();
+                Destroy(other.gameObject);
+                if (!goldPunch)
+                {
+                    goldPunch = true;
+                    goldIcon.transform.DOPunchScale(Vector3.one * 1f, 0.5f, 1, 1f).OnComplete((() => 
+                            goldPunch = false
+                        ));
+
+                }
                 
                 break;
         }
