@@ -23,7 +23,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private TextMeshProUGUI targetScoreText;
     [SerializeField] private TextMeshProUGUI bonusScoreText;
     [SerializeField] public int bonusScore = 0;
-
+    [SerializeField] private GameObject waypoint;
     private void Start()
     {
         scoreSlider.maxValue = maxScore;
@@ -48,15 +48,26 @@ public class PlayerCollect : MonoBehaviour
         if(collectedLegos < targetScore)
             qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
     }
-    
+
+    private void stackFunction(Collider other)
+    {
+        other.transform.DOLocalJump(waypoint.transform.localPosition, 4f, 1, 0.2f);
+        other.transform.SetParent(transform.gameObject.transform);
+        other.transform.localScale = other.transform.localScale / 1.25f;
+        other.transform.localRotation = Quaternion.Euler(0,90,0);
+        other.GetComponent<LegoAnimation>().enabled = false;
+        waypoint.transform.position += new Vector3(0, 0.48f, 0);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
             case "CollectableLego":
-                GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
-                other.gameObject.SetActive(false);
+                // GameObject newSomoke = Instantiate(smoke,other.transform.position,Quaternion.identity);
+               
+                stackFunction(other);
+                
                 
                 collectedLegos = collectedLegos + 1;
 
@@ -93,6 +104,8 @@ public class PlayerCollect : MonoBehaviour
 
        
     }
+    
+    
 }
 
 
