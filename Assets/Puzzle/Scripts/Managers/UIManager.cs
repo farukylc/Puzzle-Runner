@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
     GameManager _gameManager;
     SceneControlManager _sceneManager;
     public GameObject nextPreviousButtons,characterObjects;
+    public Image runButtonImage;
+    public Button runButton; 
+    public void Awake() 
+    {
+        instance = this;
+    }
     void Start()
     {
         _gameManager = GameManager.instance; 
@@ -45,5 +53,14 @@ public class UIManager : MonoBehaviour
     public void ButtonPreviousPuzzle()
     {
         _sceneManager.PreviousPuzzleLevel();
+    }
+    public void FillAmount()
+    {
+        Debug.Log($"{(_gameManager.currentPuzzlePiece+1)/(float)_gameManager.puzzlePieces.Length}");
+        runButtonImage.DOFillAmount((_gameManager.currentPuzzlePiece+1)/(float)_gameManager.puzzlePieces.Length,_gameManager.puzzleMoveSpeed);
+    }
+    public void ActivetedButton()
+    {
+        runButton.interactable = true;
     }
 }

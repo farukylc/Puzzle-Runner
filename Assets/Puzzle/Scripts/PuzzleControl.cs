@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class PuzzleControl : MonoBehaviour
 {
     GameManager _gameManager;
+    UIManager _uIManager;
     GameObject targetPoint;
     float xScale, yScale, zScale;
     //public float speed = 1f;
     bool isMoving = false;
     public int puzzlePieceIndex;
     GameObject currentPiece;
-
     void Start ()
     {
         _gameManager = GameManager.instance; 
+        _uIManager = UIManager.instance;
     }
     void Update ()
     {
@@ -36,6 +38,8 @@ public class PuzzleControl : MonoBehaviour
         currentPiece.layer = 0;
         currentPiece.transform.SetParent(_gameManager.character.transform);
 
+        _uIManager.FillAmount();
+
         currentPiece.transform.DOMove(targetPoint.transform.position,_gameManager.puzzleMoveSpeed);
         currentPiece.transform.DORotateQuaternion(targetPoint.transform.rotation,_gameManager.puzzleMoveSpeed);
         currentPiece.transform.DOScale(new Vector3(xScale,yScale,zScale)*2, _gameManager.puzzleMoveSpeed).OnComplete((() =>
@@ -46,6 +50,7 @@ public class PuzzleControl : MonoBehaviour
                 _gameManager.isPuzzleComplate = true;
                 _gameManager.character.gameObject.SetActive(false);
                 _gameManager.characterWithAnim.gameObject.SetActive(true);
+                _uIManager.ActivetedButton();
             }
             _gameManager.currentPuzzlePiece++;
             _gameManager.puzzlePieceTargetPositions[_gameManager.currentPuzzlePiece].SetActive(true);
