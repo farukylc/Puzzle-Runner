@@ -19,18 +19,22 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private GameObject smoke;
     [SerializeField] private int goldAmount = 0;
     [SerializeField] public Slider scoreSlider;
+    
+   
     //[SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
     [SerializeField] private Image qmImage;
     [SerializeField] private Sprite winObject;
-    [SerializeField] private TextMeshProUGUI targetScoreText;
-    [SerializeField] private TextMeshProUGUI bonusScoreText;
-    //UI
+    
+    
     
     //Stack
     [SerializeField] public GameObject waypoint;
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
+    
+    
+    
     
     private void Start()
     {
@@ -76,8 +80,6 @@ public class PlayerCollect : MonoBehaviour
                 
                
                 stackFunction(other);
-                
-                
                 collectedLegos = collectedLegos + 1;
 
                 if (collectedLegos == targetScore)
@@ -87,7 +89,6 @@ public class PlayerCollect : MonoBehaviour
                 if (isObjectOpen)//targetScore <= collectedLegos && collectedLegos<= maxScore
                 {
                     bonusScore++;
-                    
 
                 }
                 
@@ -110,8 +111,15 @@ public class PlayerCollect : MonoBehaviour
 
                 }
                 break;
+            
+            
+            case "Gold":
+                
+                
+                break;
         }
 
+        
        
     }
     
