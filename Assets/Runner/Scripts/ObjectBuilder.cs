@@ -31,7 +31,7 @@ public class ObjectBuilder : MonoBehaviour
                 
                 sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
                     0.25f)).OnComplete((() =>
-                    
+                        
                         StartCoroutine("delay")
                     ));
             
@@ -53,6 +53,7 @@ public class ObjectBuilder : MonoBehaviour
             case "Player":
                 buildFunction();
                 Debug.Log("Köpek Alana Girdi");
+                finalStack();
                 scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
                 
                 break;
@@ -73,6 +74,28 @@ public class ObjectBuilder : MonoBehaviour
         winPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         UIAnimations.UIAnimationsScript.goldAnimation();
+        
+        
+    }
+
+    [SerializeField] private GameObject finalWP;
+    private void finalStack()
+    {
+        // foreach (var lego in PlayerCollect.playerCollectScript.collectedItems)
+        // {
+        //     
+        //     
+        // }
+
+        for (int i = 0; i < PlayerCollect.playerCollectScript.collectedItems.Count; i++)
+        {
+            PlayerCollect.playerCollectScript.collectedItems[i].transform.DOLocalJump(finalWP.transform.localPosition, 4f, 1, 1f);
+            PlayerCollect.playerCollectScript.collectedItems[i].transform.SetParent(transform.gameObject.transform);
+            PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale = PlayerCollect.playerCollectScript.collectedItems[i].transform.localScale / 1.25f;
+            PlayerCollect.playerCollectScript.collectedItems[i].transform.localRotation = Quaternion.Euler(0,90,0);
+            finalWP.transform.position += new Vector3(0, 0.44f, 0);
+        }
+        
         
         
     }
