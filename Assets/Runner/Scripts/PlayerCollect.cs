@@ -13,12 +13,12 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
     private bool goldPunch = false;
-    [SerializeField] public int bonusScore = 0;
+    // [SerializeField] public int bonusScore = 0;
     [SerializeField] public bool isObjectOpen = false;
      
     //UI
     [SerializeField] private GameObject smoke;
-    [SerializeField] private int goldAmount = 0;
+    [SerializeField] public int goldAmount = 0;
     [SerializeField] public Slider scoreSlider;
     [SerializeField] private TextMeshProUGUI goldAmountText;
     

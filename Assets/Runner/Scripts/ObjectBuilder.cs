@@ -13,6 +13,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] public GameObject winPanel;
     [SerializeField] private GameObject scoreBar;
     [SerializeField] private TextMeshProUGUI goldAmountText;
+    
 
     private void Start()
     {
@@ -46,25 +47,28 @@ public class ObjectBuilder : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
         switch (other.tag)
         {
             case "Player":
                 buildFunction();
                 Debug.Log("Köpek Alana Girdi");
-                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
+                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
+                
                 break;
             
             case "Cat":
                 buildFunction();
                 Debug.Log("Kedi Alan Girdi");
-                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 200f,2);
+                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
+               
                 break;
         }
     }
 
     IEnumerator delay()
     {
-        goldAmountText.text = PlayerCollect.playerCollectScript.bonusScore.ToString();
+        goldAmountText.text = PlayerCollect.playerCollectScript.goldAmount.ToString();
         yield return new WaitForSeconds(1.5f);
         winPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
