@@ -32,6 +32,16 @@ public class CharacterController : MonoBehaviour
     {
         if(_gameManager.isPuzzleComplate)
         {
+            //with touchScreen
+            // if(Input.touchCount == 1)
+            // {
+            //     Touch touch = Input.GetTouch(0);
+            //     if(touch.phase == TouchPhase.Moved)
+            //     {
+            //         transform.Rotate(0f,touch.deltaPosition.x*_gameManager.rotationSpeed*-1,0f);
+            //     }
+            // }
+            //with mouse
             if(Input.GetMouseButton(0))
             {
                 posDelta = Input.mousePosition - prevPos;
