@@ -56,7 +56,6 @@ public class UIManager : MonoBehaviour
     }
     public void FillAmount()
     {
-        Debug.Log($"{(_gameManager.currentPuzzlePiece+1)/(float)_gameManager.puzzlePieces.Length}");
         runButtonImage.DOFillAmount((_gameManager.currentPuzzlePiece+1)/(float)_gameManager.puzzlePieces.Length,_gameManager.puzzleMoveSpeed);
     }
     public void ActivetedButton()
