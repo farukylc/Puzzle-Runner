@@ -29,7 +29,7 @@ public class Gate : MonoBehaviour
                 
             break;
             
-            case  "CollectableLego":
+            case  "CollectableLego"://Gate Image acilir, collectedItems daki son nesne way pointe tasinir
                 legoDeposit++;
                 if(legoDeposit >= legoNeedForObject+1)
                     break;
