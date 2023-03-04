@@ -36,7 +36,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     
     
-    
+    private List<GameObject> objects = new List<GameObject>();
     
     private void Start()
     {
@@ -62,27 +62,58 @@ public class PlayerCollect : MonoBehaviour
             qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
     }
 
-    private void stackFunction(Collider other)
+    // private void stackFunction(Collider other)
+    // {
+    //     other.transform.DOLocalJump(waypoint.transform.localPosition, 1.5f, 1, 0.2f);
+    //     other.transform.SetParent(transform.gameObject.transform);
+    //     other.transform.localScale = other.transform.localScale / 1.25f;
+    //     other.transform.localRotation = Quaternion.Euler(0,90,0);
+    //     other.GetComponent<LegoAnimation>().enabled = false;
+    //     other.GetComponent<BoxCollider>().enabled = false;
+    //     waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
+    //     collectedItems.Add(other.gameObject);
+    // }
+    public void Collect(GameObject obj)
     {
-        // other.transform.DOLocalJump(waypoint.transform.localPosition, 1.5f, 1, 0.2f);
-        other.transform.position = waypoint.transform.position;
-        other.transform.SetParent(transform.gameObject.transform);
-        other.transform.localScale = other.transform.localScale / 1.25f;
-        other.transform.localRotation = Quaternion.Euler(0,90,0);
-        other.GetComponent<LegoAnimation>().enabled = false;
-        //other.GetComponent<BoxCollider>().enabled = false;
-        waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
-        collectedItems.Add(other.gameObject);
+        if(!objects.Contains(obj))
+        {
+        //objectCount++;
+        obj.transform.parent = transform.parent.GetChild(0).transform;
+        objects.Add(obj);
+        objects[objects.Count-1].transform.localPosition = new Vector3(0,0,objects.Count*0.5f);
+        if(objects.Count == 1)
+        {
+            objects[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
+        }
+        else
+        {
+            objects[objects.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(objects[objects.Count - 2].transform);
+        }
+        StartCoroutine(MakeObjectsBigger());
+        }
     }
-    
+    public IEnumerator MakeObjectsBigger()
+    {
+        for (int i = objects.Count-1; i > 0; i--)
+        {
+            int index = i;
+            Vector3 scale = Vector3.one;
+            scale*=1.5f;
+            objects[index].transform.DOScale(scale,0.1f).OnComplete(()=>objects[index].transform.DOScale(Vector3.one,0.1f));
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
             case "CollectableLego":
                 
-               
-                stackFunction(other);
+                Collect(other.gameObject);
+                
+                
+                // stackFunction(other);
                 collectedLegos = collectedLegos + 1;
 
                 if (collectedLegos == targetScore)
