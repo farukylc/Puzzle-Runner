@@ -12,6 +12,9 @@ public class Trap : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "CollectableLego":
+                scoreUpdate();
+            break;
             case "Player":
                 //
                 Debug.Log("Collision detected");
@@ -22,14 +25,14 @@ public class Trap : MonoBehaviour
 
                 break;
             
-            case "Cat":
+            // case "Cat":
                 
-                Debug.Log("Collision detected");
-                other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
-                    other.transform.position.z - 10f), 0.5f);
+            //     Debug.Log("Collision detected");
+            //     other.transform.DOMove(new Vector3(other.transform.position.x, other.transform.position.y,
+            //         other.transform.position.z - 10f), 0.5f);
                 
-                    scoreUpdate();
-                break;
+            //         scoreUpdate();
+            //     break;
         }
     }
 

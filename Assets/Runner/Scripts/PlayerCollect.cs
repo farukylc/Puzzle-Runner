@@ -78,6 +78,7 @@ public class PlayerCollect : MonoBehaviour
         if(!objects.Contains(obj))
         {
         //objectCount++;
+        collectedItems.Add(obj);
         obj.transform.parent = transform.parent.GetChild(0).transform;
         objects.Add(obj);
         
@@ -92,6 +93,21 @@ public class PlayerCollect : MonoBehaviour
         }
         StartCoroutine(MakeObjectsBigger());
         }
+    }
+    public void DropObject()
+    {
+        if(objects.Count==0)
+        {
+
+        }
+        else
+        {
+            //objectCount--;
+            GameObject lastObject = objects[objects.Count-1];
+            lastObject.SetActive(false);
+            lastObject.transform.parent = null;
+            objects.Remove(lastObject);
+        }     
     }
     public IEnumerator MakeObjectsBigger()
     {
