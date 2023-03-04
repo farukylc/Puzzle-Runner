@@ -73,7 +73,7 @@ public class PlayerCollect : MonoBehaviour
         waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
         collectedItems.Add(other.gameObject);
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
