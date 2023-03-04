@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (isStart == true)
         {
-            gameObject.transform.Translate(0,0,speed*Time.deltaTime);
+            gameObject.transform.parent.transform.Translate(0,0,speed*Time.deltaTime);
         }
         
         PlayerClamp();
