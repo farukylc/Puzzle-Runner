@@ -62,17 +62,17 @@ public class PlayerCollect : MonoBehaviour
             qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
     }
 
-    private void stackFunction(Collider other)
-    {
-        other.transform.DOLocalJump(waypoint.transform.localPosition, 1.5f, 1, 0.2f);
-        other.transform.SetParent(transform.gameObject.transform);
-        other.transform.localScale = other.transform.localScale / 1.25f;
-        other.transform.localRotation = Quaternion.Euler(0,90,0);
-        other.GetComponent<LegoAnimation>().enabled = false;
-        other.GetComponent<BoxCollider>().enabled = false;
-        waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
-        collectedItems.Add(other.gameObject);
-    }
+    // private void stackFunction(Collider other)
+    // {
+    //     other.transform.DOLocalJump(waypoint.transform.localPosition, 1.5f, 1, 0.2f);
+    //     other.transform.SetParent(transform.gameObject.transform);
+    //     other.transform.localScale = other.transform.localScale / 1.25f;
+    //     other.transform.localRotation = Quaternion.Euler(0,90,0);
+    //     other.GetComponent<LegoAnimation>().enabled = false;
+    //     other.GetComponent<BoxCollider>().enabled = false;
+    //     waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
+    //     collectedItems.Add(other.gameObject);
+    // }
     public void Collect(GameObject obj)
     {
         if(!objects.Contains(obj))
@@ -114,24 +114,24 @@ public class PlayerCollect : MonoBehaviour
                 
                 
                 // stackFunction(other);
-                // collectedLegos = collectedLegos + 1;
+                collectedLegos = collectedLegos + 1;
 
-                // if (collectedLegos == targetScore)
-                // {
-                //     isObjectOpen = true;
-                // }
+                if (collectedLegos == targetScore)
+                {
+                    isObjectOpen = true;
+                }
                 
                 
-                // scoreSlider.value = collectedLegos;
+                scoreSlider.value = collectedLegos;
                 
-                // if (!isPunch && collectedLegos < targetScore)
-                // {
-                //     isPunch = true;
-                //     legoIcon.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f).OnComplete((() => 
-                //             isPunch = false
-                //         ));
+                if (!isPunch && collectedLegos < targetScore)
+                {
+                    isPunch = true;
+                    legoIcon.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f).OnComplete((() => 
+                            isPunch = false
+                        ));
 
-                // }
+                }
                
                 break;
             
