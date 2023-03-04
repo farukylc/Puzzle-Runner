@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DG.Tweening;
 public class Gate : MonoBehaviour
 {
     [SerializeField] private GameObject givenObject;
@@ -31,12 +31,13 @@ public class Gate : MonoBehaviour
             
             case  "CollectableLego":
                 legoDeposit++;
-                if(legoDeposit >= legoNeedForObject)
+                if(legoDeposit >= legoNeedForObject+1)
                     break;
-                gateImage.fillAmount += legoDeposit/(float)legoNeedForObject;
-                gateImageBackground.fillAmount -= legoDeposit/(float)legoNeedForObject;
+                gateImage.DOFillAmount(legoDeposit/(float)legoNeedForObject,0.3f);
+                gateImageBackground.DOFillAmount(1-legoDeposit/(float)legoNeedForObject,0.3f);
                 GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
                 currentObj.GetComponent<SmoothDamp>().enabled = false;
+                currentObj.tag = "Untagged";
                 currentObj.transform.position = gateWP.transform.position;
                 currentObj.transform.SetParent(transform);
                 gateWP.transform.position += new Vector3(0, 0.5f, 0);
