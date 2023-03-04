@@ -70,7 +70,7 @@ public class PlayerCollect : MonoBehaviour
         other.transform.localRotation = Quaternion.Euler(0,90,0);
         other.GetComponent<LegoAnimation>().enabled = false;
         other.GetComponent<BoxCollider>().enabled = false;
-        waypoint.transform.position += new Vector3(0, 0.44f, 0);
+        waypoint.transform.position += new Vector3(0, 0f, 1f); //y 0.44f
         collectedItems.Add(other.gameObject);
     }
 
