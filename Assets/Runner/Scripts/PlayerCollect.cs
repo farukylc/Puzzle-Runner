@@ -36,8 +36,6 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     
     
-    public List<GameObject> objects = new List<GameObject>();
-    
     private void Start()
     {
         scoreSlider.maxValue = targetScore;
@@ -75,32 +73,48 @@ public class PlayerCollect : MonoBehaviour
     // }
     public void Collect(GameObject obj)
     {
-        if(!objects.Contains(obj))
+        if(!collectedItems.Contains(obj))
         {
         //objectCount++;
         obj.transform.parent = transform.parent.GetChild(0).transform;
-        objects.Add(obj);
+        collectedItems.Add(obj);
         
-        objects[objects.Count-1].transform.localPosition = new Vector3(0,0,objects.Count*0.5f);
-        if(objects.Count == 1)
+        collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.5f);
+        if(collectedItems.Count == 1)
         {
-            objects[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
+            collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
         }
         else
         {
-            objects[objects.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(objects[objects.Count - 2].transform);
+            collectedItems[collectedItems.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(collectedItems[collectedItems.Count - 2].transform);
         }
-        StartCoroutine(MakeObjectsBigger());
+        StartCoroutine(MakecollectedItemsBigger());
         }
     }
-    public IEnumerator MakeObjectsBigger()
+    public void DropObject()
     {
-        for (int i = objects.Count-1; i > 0; i--)
+        if(collectedItems.Count==0)
+        {
+
+        }
+        else
+        {
+            //objectCount--;
+            GameObject lastObject = collectedItems[collectedItems.Count-1];
+            lastObject.SetActive(false);
+            lastObject.transform.parent = null;
+            collectedItems.Remove(lastObject);
+            Destroy(lastObject);
+        }     
+    }
+    public IEnumerator MakecollectedItemsBigger()
+    {
+        for (int i = collectedItems.Count-1; i > 0; i--)
         {
             int index = i;
             Vector3 scale = Vector3.one;
             scale*=1.5f;
-            objects[index].transform.DOScale(scale,0.1f).OnComplete(()=>objects[index].transform.DOScale(Vector3.one,0.1f));
+            collectedItems[index].transform.DOScale(scale,0.1f).OnComplete(()=>collectedItems[index].transform.DOScale(Vector3.one,0.1f));
             yield return new WaitForSeconds(0.05f);
         }
     }

@@ -77,8 +77,6 @@ public class ObjectBuilder : MonoBehaviour
         winPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         UIAnimations.UIAnimationsScript.goldAnimation();
-        
-        
     }
     
     
