@@ -36,7 +36,7 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     
     
-    private List<GameObject> objects = new List<GameObject>();
+    public List<GameObject> objects = new List<GameObject>();
     
     private void Start()
     {
@@ -80,6 +80,7 @@ public class PlayerCollect : MonoBehaviour
         //objectCount++;
         obj.transform.parent = transform.parent.GetChild(0).transform;
         objects.Add(obj);
+        
         objects[objects.Count-1].transform.localPosition = new Vector3(0,0,objects.Count*0.5f);
         if(objects.Count == 1)
         {

@@ -31,13 +31,15 @@ public class Gate : MonoBehaviour
             case  "CollectableLego":
 
                 legoDeposit++;
-                PlayerCollect.playerCollectScript.collectedItems[^1].transform.position = gateWP.transform.position;
-                PlayerCollect.playerCollectScript.collectedItems[^1].gameObject.transform.SetParent(transform);
+                PlayerCollect.playerCollectScript.objects[^1].transform.position = gateWP.transform.position;
+                PlayerCollect.playerCollectScript.objects[^1].gameObject.transform.SetParent(transform);
                 gateWP.transform.position += new Vector3(0, 0.5f, 0);
-                 PlayerCollect.playerCollectScript.collectedItems.Remove(
-                   PlayerCollect.playerCollectScript.collectedItems[^1]);
+                 PlayerCollect.playerCollectScript.objects.Remove(
+                   PlayerCollect.playerCollectScript.objects[^1]);
                 
                 PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
+
+                other.gameObject.GetComponent<SmoothDamp>().enabled = false;
                 
                 break;
         }
