@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4460277, g: 0.62477654, b: 0.7245043, a: 1}
+  m_IndirectSpecularColor: {r: 0.44600135, g: 0.624972, b: 0.72263163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6705,10 +6705,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1013330858818954219, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbcabc58e5891b747a72aa5bba9c2191, type: 2}
+    - target: {fileID: 2144868150275656942, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6832831657845f74b9c610fdeda275b3, type: 2}
     - target: {fileID: 4196247187245488249, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4535615304930562948, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6832831657845f74b9c610fdeda275b3, type: 2}
     - target: {fileID: 5408576122675611751, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6717,6 +6729,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6174468381626747403, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6832831657845f74b9c610fdeda275b3, type: 2}
     - target: {fileID: 6432655023302812066, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: tapToPlay
       value: 
@@ -6761,6 +6777,14 @@ PrefabInstance:
       propertyPath: targetScoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6761934618663389211, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bbcabc58e5891b747a72aa5bba9c2191, type: 2}
+    - target: {fileID: 7110386971864557909, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6832831657845f74b9c610fdeda275b3, type: 2}
     - target: {fileID: 7204662432821945767, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6809,7 +6833,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cbd39902dc2c3d4499cb9be17246cca, type: 2}
+  - {fileID: 2100000, guid: 65255540d92d02145b58ae0eb7a2fc4c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6855,7 +6879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5346753692238379929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: -0.94}
+  m_LocalPosition: {x: 0, y: 26.93, z: -0.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
