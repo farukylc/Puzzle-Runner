@@ -9,6 +9,9 @@ public class Gate : MonoBehaviour
     [SerializeField] private int legoNeedForObject;
     [SerializeField] private int legoDeposit;
 
+
+    [SerializeField] private GameObject gateWP;
+
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
@@ -28,7 +31,9 @@ public class Gate : MonoBehaviour
             case  "CollectableLego":
 
                 legoDeposit++;
-                Destroy(other.gameObject);
+                PlayerCollect.playerCollectScript.collectedItems[^1].transform.position = gateWP.transform.position;
+                PlayerCollect.playerCollectScript.collectedItems[^1].gameObject.transform.SetParent(transform);
+                gateWP.transform.position += new Vector3(0, 0.5f, 0);
                  PlayerCollect.playerCollectScript.collectedItems.Remove(
                    PlayerCollect.playerCollectScript.collectedItems[^1]);
                 
