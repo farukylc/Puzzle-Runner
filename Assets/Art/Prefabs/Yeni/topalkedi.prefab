@@ -520,6 +520,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4677915628702903328}
+  - component: {fileID: 5642583561060040124}
+  - component: {fileID: 6623516377838266360}
+  - component: {fileID: 9044257955779125920}
   m_Layer: 0
   m_Name: topalkedi
   m_TagString: Untagged
@@ -549,6 +552,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5642583561060040124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449526893896660634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacfbd8749b9c4f09bac75149b7c029f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  tapToPlay: {fileID: 3511459032979237718, guid: 7f1232bdd652342dc9cef77a260225f9, type: 3}
+--- !u!54 &6623516377838266360
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449526893896660634}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &9044257955779125920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449526893896660634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.137356, y: 1.9213138, z: 3.0406828}
+  m_Center: {x: -0.0114530325, y: 1.101589, z: 0.1471982}
 --- !u!1 &5463148451375493330
 GameObject:
   m_ObjectHideFlags: 0
