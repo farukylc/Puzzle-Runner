@@ -30,9 +30,10 @@ public class GameManager : MonoBehaviour
     {
         _jsonController.JsonLoad();
         currentLevel = _jsonController.user1.level;//en son oynanan level
+        isBackFoot = _jsonController.user1.isFootOpen;
+        isHead = _jsonController.user1.isHeadOpen;
         if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
         if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
-
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -58,15 +59,11 @@ public class GameManager : MonoBehaviour
         Material []newMaterials = new Material[materials.Length];
         for (int i = 0; i < materials.Length; i++)
         {
-                newMaterials[i] = transparentMaterial;
+            newMaterials[i] = transparentMaterial;
         }
         obj.GetComponent<Renderer>().sharedMaterials = newMaterials;
-    } 
-    public void HeadEmpty()
-    {
-        head.SetActive(false);
     }
-    public void LevelEndSave()
+    public void PuzzleLevelEndSave()
     {
         _jsonController.user1.level = currentLevel;
         //_jsonController.user1.forwardSpeed = forwardSpeed;
@@ -74,6 +71,18 @@ public class GameManager : MonoBehaviour
         //_jsonController.user1.throwRate = throwRate;
         //_jsonController.user1.range = range;
         //_jsonController.user1.totalScore += gameScore;
+        _jsonController.JsonSave();
+    }
+    public void RunnerLevelEndSave()
+    {
+        _jsonController.user1.level = currentLevel;
+        //_jsonController.user1.forwardSpeed = forwardSpeed;
+        //_jsonController.user1.currentThrowDigit = currentThrowDigit;
+        //_jsonController.user1.throwRate = throwRate;
+        //_jsonController.user1.range = range;
+        //_jsonController.user1.totalScore += gameScore;
+        _jsonController.user1.isFootOpen = isBackFoot;
+        _jsonController.user1.isHeadOpen = isHead;
         _jsonController.JsonSave();
     }
 }

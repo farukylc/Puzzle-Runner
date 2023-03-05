@@ -30,8 +30,9 @@ public class SceneControlManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-4);
     }
-    public void NextLevel()
+    public void NextLevel()//datalari kayit eder runner sahnesine gecer
     {
+        GameManager.instance.PuzzleLevelEndSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
