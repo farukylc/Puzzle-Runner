@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject backFoot,head,backFootWithAnim,headWithAnim;
     public bool isBackFoot = true,
                 isHead = true;
-    public Material TransparentMaterial;
+    public Material transparentMaterial;
     public void Awake() 
     {
         instance = this;
@@ -29,9 +29,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _jsonController.JsonLoad();
-        currentLevel = _jsonController.user1.level;
-        if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);
-        if(!isHead) EmptyObject(head,headWithAnim);
+        currentLevel = _jsonController.user1.level;//en son oynanan level
+        if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
+        if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
+
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -50,15 +51,16 @@ public class GameManager : MonoBehaviour
         //     }
         // }
     }
-    public void EmptyObject(GameObject obj,GameObject obj2)
+    public void EmptyObject(GameObject obj,GameObject obj2)//nesneyi animasyonlu karakterde kapatir, scroll daki nesnenin material lari transparan yapar
     {
         obj2.SetActive(false);
-        List<Material> materials = new List<Material>();
-        obj.GetComponent<Renderer>().GetMaterials(materials);
-        for (int i = 0; i < materials.Count; i++)
+        Material []materials = obj.GetComponent<Renderer>().sharedMaterials;
+        Material []newMaterials = new Material[materials.Length];
+        for (int i = 0; i < materials.Length; i++)
         {
-                materials[i] = TransparentMaterial;
+                newMaterials[i] = transparentMaterial;
         }
+        obj.GetComponent<Renderer>().sharedMaterials = newMaterials;
     } 
     public void HeadEmpty()
     {
