@@ -91,7 +91,7 @@ public class PlayerCollect : MonoBehaviour
         {
             collectedItems[collectedItems.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(collectedItems[collectedItems.Count - 2].transform);
         }
-        StartCoroutine(MakecollectedItemsBigger());
+        // StartCoroutine(MakecollectedItemsBigger());
         }
     }
     public void DropObject()

@@ -37,9 +37,7 @@ public class Gate : MonoBehaviour
                 Destroy(currentObj.gameObject);
                 if (legoDeposit == legoNeedForObject)
                 {
-
-                    isObjectOpen = true;
-
+                    // isObjectOpen = true;
                 }
                 
             break;
