@@ -48,5 +48,11 @@ public class UIAnimations : MonoBehaviour
             ));
     }
 
+
+    public void NewCharacterPanelEnabler() //Gateden gelen veri ile UIdaki açılan parçaları renklendirir.
+    {
+        
+        
+    }
    
 }
