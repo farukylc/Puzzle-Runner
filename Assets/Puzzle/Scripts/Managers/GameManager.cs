@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
     public bool isCharacterComplate = false;
     public float rotationSpeed = 0.1f;
     public float puzzleMoveSpeed = 0.8f;
-
+    public GameObject backFoot,head;
+    public bool isBackFoot = true,
+                isHead = true;
     public void Awake() 
     {
         instance = this;
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
     {
         _jsonController.JsonLoad();
         currentLevel = _jsonController.user1.level;
+        if(!isBackFoot) BackFootEmpty();
+        if(!isHead) HeadEmpty();
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -44,6 +48,14 @@ public class GameManager : MonoBehaviour
         //         puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
         //     }
         // }
+    }
+    public void BackFootEmpty()
+    {
+        backFoot.SetActive(false);
+    } 
+    public void HeadEmpty()
+    {
+        head.SetActive(false);
     }
     public void LevelEndSave()
     {

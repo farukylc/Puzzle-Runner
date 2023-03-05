@@ -746,7 +746,7 @@ MonoBehaviour:
   - {fileID: 873849319}
   - {fileID: 951073133}
   - {fileID: 1559024133}
-  - {fileID: 1705964684}
+  - {fileID: 0}
   - {fileID: 792866329}
   puzzlePieceTargetPositions:
   - {fileID: 7169502717014006289}
@@ -768,6 +768,10 @@ MonoBehaviour:
   isCharacterComplate: 0
   rotationSpeed: 0.1
   puzzleMoveSpeed: 0.8
+  backFoot: {fileID: 0}
+  head: {fileID: 0}
+  isBackFoot: 1
+  isHead: 1
 --- !u!1001 &258546783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,6 +786,10 @@ PrefabInstance:
     - target: {fileID: 849894027640315748, guid: 7a0fa16bdc29c7444952881567c593db, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 849894027640315748, guid: 7a0fa16bdc29c7444952881567c593db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3956856427278066535, guid: 7a0fa16bdc29c7444952881567c593db, type: 3}
       propertyPath: m_RootOrder
@@ -839,7 +847,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2353480843972076188, guid: 7a0fa16bdc29c7444952881567c593db, type: 3}
   m_PrefabInstance: {fileID: 258546783}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705964684}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9809c0ead53bb544ad87a2f89b7d6e8, type: 3}
@@ -5038,11 +5046,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698909002}
   m_CullTransparentMesh: 1
---- !u!1 &1705964684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 849894027640315748, guid: 7a0fa16bdc29c7444952881567c593db, type: 3}
-  m_PrefabInstance: {fileID: 258546783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1709153951
 GameObject:
   m_ObjectHideFlags: 0
