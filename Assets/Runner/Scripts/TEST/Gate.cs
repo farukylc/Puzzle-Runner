@@ -12,7 +12,9 @@ public class Gate : MonoBehaviour
     [SerializeField] private Image gateImage;
     [SerializeField] private Image gateImageBackground;
 
-    [SerializeField] private bool isObjectOpen = false;
+    [SerializeField] public bool isObjectOpen = false;
+    [SerializeField] private Image ObjectUIImage;
+    
     //[SerializeField] private GameObject gateWP;
 
     private void OnTriggerEnter(Collider other)
@@ -24,23 +26,27 @@ public class Gate : MonoBehaviour
                 legoDeposit++;
                 if(legoDeposit >= legoNeedForObject+1)
                     break;
+                
                 gateImage.DOFillAmount(legoDeposit/(float)legoNeedForObject,0.3f);
                 gateImageBackground.DOFillAmount(1-legoDeposit/(float)legoNeedForObject,0.3f);
+
+                //UI Açılan Parça Resmi Güncelleme
+                ObjectUIImage.DOFillAmount(legoDeposit/(float)legoNeedForObject,0.3f);
+                
                 GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
                 currentObj.GetComponent<SmoothDamp>().enabled = false;
                 currentObj.tag = "Untagged";
-
+                
                 PlayerCollect.playerCollectScript.collectedItems.Remove(
                    PlayerCollect.playerCollectScript.collectedItems[^1]);
                 PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
-                
                 Destroy(currentObj.gameObject);
+                
                 if (legoDeposit == legoNeedForObject)
                 {
                     // isObjectOpen = true;
                 }
-                
-            break;
+                break;
         }
     }
 }

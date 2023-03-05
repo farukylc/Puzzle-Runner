@@ -3179,6 +3179,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2514465205969674324, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
   m_PrefabInstance: {fileID: 163412934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &672054658 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7567075917167899984, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+  m_PrefabInstance: {fileID: 876958085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692756321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3511459032347916717, guid: 7f1232bdd652342dc9cef77a260225f9, type: 3}
@@ -3959,9 +3970,21 @@ PrefabInstance:
       value: NewCharacterPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7567075917167899984, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567075917167899984, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 435a91fc6d108494d99cfa39f1f185fa, type: 3}
+      objectReference: {fileID: 21300000, guid: 2fb3e8e1cab3249a7977db6e6364d0fd, type: 3}
+    - target: {fileID: 7567075917167899984, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567075917167899984, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7567075917167899985, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 50
@@ -3973,6 +3996,10 @@ PrefabInstance:
     - target: {fileID: 7567075917167899985, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -242
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567075917167899986, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
+      propertyPath: m_Name
+      value: NewPiece1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ccf9431118dc41aeb9243cf1068eb2a, type: 3}
@@ -6032,8 +6059,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: ObjectUIImage
+      value: 
+      objectReference: {fileID: 672054658}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: legoNeedForObject
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8144,7 +8175,7 @@ GameObject:
   - component: {fileID: 2028652667}
   - component: {fileID: 2028652666}
   m_Layer: 5
-  m_Name: NewCharacter (1)
+  m_Name: NewPiece2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8190,12 +8221,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e0d78e57f4de4f52b27e7dc0abcae7c, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 91413e3d306f147a3a81a978669781b4, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
