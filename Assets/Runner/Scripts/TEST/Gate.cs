@@ -12,7 +12,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private Image gateImage;
     [SerializeField] private Image gateImageBackground;
 
-    [SerializeField] private GameObject gateWP;
+    //[SerializeField] private GameObject gateWP;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,9 +38,10 @@ public class Gate : MonoBehaviour
                 GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
                 currentObj.GetComponent<SmoothDamp>().enabled = false;
                 currentObj.tag = "Untagged";
-                currentObj.transform.position = gateWP.transform.position;
+                //currentObj.transform.position = gateWP.transform.position;
+                Destroy(other.gameObject);
                 currentObj.transform.SetParent(transform);
-                gateWP.transform.position += new Vector3(0, 0.5f, 0);
+                //gateWP.transform.position += new Vector3(0, 0.5f, 0);
                 PlayerCollect.playerCollectScript.collectedItems.Remove(
                    PlayerCollect.playerCollectScript.collectedItems[^1]);
                 PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
