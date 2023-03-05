@@ -38,7 +38,6 @@ public class UIAnimations : MonoBehaviour
     {
         goldImageList[currentImageIndex].transform.DOMove(goldIconTarget.transform.position, 0.2f).OnComplete((() =>
                 {
-                    
                     currentImageIndex++;
                     if (currentImageIndex < goldImageList.Count)
                     {
@@ -47,12 +46,4 @@ public class UIAnimations : MonoBehaviour
                 }
             ));
     }
-
-
-    public void NewCharacterPanelEnabler() //Gateden gelen veri ile UIdaki açılan parçaları renklendirir.
-    {
-        
-        
-    }
-   
 }
