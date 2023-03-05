@@ -24,27 +24,29 @@ public class ObjectBuilder : MonoBehaviour
     // PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore
     private void buildFunction()
     {
-        if (PlayerCollect.playerCollectScript.isObjectOpen)
+        // if (PlayerCollect.playerCollectScript.isObjectOpen)
+        // {
+        //    
+        // }
+        
+        var sequence = DOTween.Sequence();
+        int pieceIndex = 0;
+        foreach (var objectPiece in objectPieces)
         {
-            var sequence = DOTween.Sequence();
-            int pieceIndex = 0;
-            foreach (var objectPiece in objectPieces)
-            {
                 
-                sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
-                    0.25f)).OnComplete((() =>
+            sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
+                0.25f)).OnComplete((() =>
                         
-                        StartCoroutine("delay")
-                    ));
+                    StartCoroutine("delay")
+                ));
             
-                pieceIndex++;
-            }
+            pieceIndex++;
         }
 
-        else
-        {
-            Debug.Log("You Lose");
-        }
+        // else
+        // {
+        //     Debug.Log("You Lose");
+        // }
         
     }
     private void OnTriggerEnter(Collider other)

@@ -73,9 +73,12 @@ public class PlayerCollect : MonoBehaviour
     // }
     public void Collect(GameObject obj)
     {
+        collectedLegos = collectedLegos + 1;
+        scoreSlider.value = collectedLegos;
         if(!collectedItems.Contains(obj))
         {
         //objectCount++;
+        
         obj.transform.parent = transform.parent.GetChild(0).transform;
         collectedItems.Add(obj);
         
@@ -129,7 +132,7 @@ public class PlayerCollect : MonoBehaviour
                 
                 
                 // stackFunction(other);
-                collectedLegos = collectedLegos + 1;
+                
 
                 if (collectedLegos == targetScore)
                 {
@@ -137,7 +140,7 @@ public class PlayerCollect : MonoBehaviour
                 }
                 
                 
-                scoreSlider.value = collectedLegos;
+                
                 
                 if (!isPunch && collectedLegos < targetScore)
                 {
