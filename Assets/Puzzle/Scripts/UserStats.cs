@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class UserStats
 {
+    
     public string userName;
     public int level;
     public float forwardSpeed;
@@ -16,12 +17,16 @@ public class UserStats
     public int throwRangeUpdateValue;
     public int score;
     public int totalScore;
+    public bool isCatFootOpen;
+    public bool isCatHeadOpen;
 
     public UserStats()
     {
 
     }
-    public UserStats(string userName, int level, float forwardSpeed, int currentThrowDigit,int throwValueUpdateValue, float throwRate,int throwRateUpdateValue, float range, int throwRangeUpdateValue, int score, int totalScore)
+    public UserStats(string userName, int level, float forwardSpeed, int currentThrowDigit,
+        int throwValueUpdateValue, float throwRate,int throwRateUpdateValue, float range, int throwRangeUpdateValue, int score, int totalScore,
+        bool isCatFootOpen,bool isCatHeadOpen)
     {
         this.userName = userName;
         this.level = level;
@@ -34,6 +39,8 @@ public class UserStats
         this.throwRangeUpdateValue = throwRangeUpdateValue;
         this.score = score;
         this.totalScore = totalScore;
+        this.isCatFootOpen = isCatFootOpen;
+        this.isCatHeadOpen = isCatHeadOpen;
     }
 }
 
