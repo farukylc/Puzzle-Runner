@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     public bool isCharacterComplate = false;
     public float rotationSpeed = 0.1f;
     public float puzzleMoveSpeed = 0.8f;
-    public GameObject backFoot,head;
+    public GameObject backFoot,head,backFootWithAnim,headWithAnim;
     public bool isBackFoot = true,
                 isHead = true;
+    public Material TransparentMaterial;
     public void Awake() 
     {
         instance = this;
@@ -29,8 +30,8 @@ public class GameManager : MonoBehaviour
     {
         _jsonController.JsonLoad();
         currentLevel = _jsonController.user1.level;
-        if(!isBackFoot) BackFootEmpty();
-        if(!isHead) HeadEmpty();
+        if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);
+        if(!isHead) EmptyObject(head,headWithAnim);
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -49,9 +50,15 @@ public class GameManager : MonoBehaviour
         //     }
         // }
     }
-    public void BackFootEmpty()
+    public void EmptyObject(GameObject obj,GameObject obj2)
     {
-        backFoot.SetActive(false);
+        obj2.SetActive(false);
+        List<Material> materials = new List<Material>();
+        obj.GetComponent<Renderer>().GetMaterials(materials);
+        for (int i = 0; i < materials.Count; i++)
+        {
+                materials[i] = TransparentMaterial;
+        }
     } 
     public void HeadEmpty()
     {
