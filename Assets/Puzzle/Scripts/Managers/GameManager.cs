@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public JsonController _jsonController;
+    public int currentLevel = 1;
     public GameObject[] puzzlePieces;
     public GameObject[] puzzlePieceTargetPositions;
     public Material[] materials1;
@@ -23,17 +25,34 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        
+        _jsonController.JsonLoad();
+        currentLevel = _jsonController.user1.level;
+        // forwardSpeed = _jsonController.user1.forwardSpeed;
+        // currentThrowDigit = _jsonController.user1.currentThrowDigit;
+        // throwRate = _jsonController.user1.throwRate;
+        // range = _jsonController.user1.range;
+        // textScore.text = _jsonController.user1.totalScore.ToString();
+        // currentThrowDigitValue = currentThrowDigit;
     }
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            for (int i = 0; i < puzzlePieces.Length; i++)
-            {
-                puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
-            }
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     for (int i = 0; i < puzzlePieces.Length; i++)
+        //     {
+        //         puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
+        //     }
+        // }
+    }
+    public void LevelEndSave()
+    {
+        _jsonController.user1.level = currentLevel;
+        //_jsonController.user1.forwardSpeed = forwardSpeed;
+        //_jsonController.user1.currentThrowDigit = currentThrowDigit;
+        //_jsonController.user1.throwRate = throwRate;
+        //_jsonController.user1.range = range;
+        //_jsonController.user1.totalScore += gameScore;
+        _jsonController.JsonSave();
     }
 }
