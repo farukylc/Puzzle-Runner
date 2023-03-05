@@ -12,22 +12,13 @@ public class Gate : MonoBehaviour
     [SerializeField] private Image gateImage;
     [SerializeField] private Image gateImageBackground;
 
-    [SerializeField] private GameObject gateWP;
+    [SerializeField] private bool isObjectOpen = false;
+    //[SerializeField] private GameObject gateWP;
 
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
-            case "Player":
-
-                if (legoDeposit == legoNeedForObject)
-                {
-                    
-                    Debug.Log("Obje Verildi");
-                    
-                }
-                
-            break;
             
             case  "CollectableLego"://Gate Image acilir, collectedItems daki son nesne way pointe tasinir
                 legoDeposit++;
@@ -38,12 +29,18 @@ public class Gate : MonoBehaviour
                 GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
                 currentObj.GetComponent<SmoothDamp>().enabled = false;
                 currentObj.tag = "Untagged";
-                currentObj.transform.position = gateWP.transform.position;
-                currentObj.transform.SetParent(transform);
-                gateWP.transform.position += new Vector3(0, 0.5f, 0);
+
                 PlayerCollect.playerCollectScript.collectedItems.Remove(
                    PlayerCollect.playerCollectScript.collectedItems[^1]);
                 PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
+                
+                Destroy(currentObj.gameObject);
+                if (legoDeposit == legoNeedForObject)
+                {
+
+                    isObjectOpen = true;
+
+                }
                 
             break;
         }
