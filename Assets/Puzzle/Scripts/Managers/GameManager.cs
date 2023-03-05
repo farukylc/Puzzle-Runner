@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public JsonController _jsonController;
+    public bool isPuzzle = true;
     public int currentLevel = 1;
     public GameObject[] puzzlePieces;
     public GameObject[] puzzlePieceTargetPositions;
@@ -32,8 +33,11 @@ public class GameManager : MonoBehaviour
         currentLevel = _jsonController.user1.level;//en son oynanan level
         isBackFoot = _jsonController.user1.isFootOpen;
         isHead = _jsonController.user1.isHeadOpen;
-        if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
-        if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
+        if(isPuzzle)
+        {
+            if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
+            if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
+        }
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
