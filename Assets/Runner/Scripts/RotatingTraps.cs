@@ -17,9 +17,7 @@ public class RotatingTraps : MonoBehaviour
 
     void Update()
     {
-        
         RotateFunc();
-        
     }
 
     private void RotateFunc()
@@ -46,9 +44,6 @@ public class RotatingTraps : MonoBehaviour
 
                     }
                  ));
-            
-            
-            
         }
     }
     

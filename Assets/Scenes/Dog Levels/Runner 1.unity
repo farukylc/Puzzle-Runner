@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4460277, g: 0.62477654, b: 0.7245043, a: 1}
+  m_IndirectSpecularColor: {r: 0.44600135, g: 0.624972, b: 0.72263163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10041,10 +10041,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1013330858818954219, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 421dc2a30c007964585bef520dd392d8, type: 2}
+    - target: {fileID: 2144868150275656942, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f02d22c76f2bf4346ac92901684949b3, type: 2}
     - target: {fileID: 4196247187245488249, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4535615304930562948, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f02d22c76f2bf4346ac92901684949b3, type: 2}
     - target: {fileID: 5408576122675611751, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10053,6 +10065,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6174468381626747403, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f02d22c76f2bf4346ac92901684949b3, type: 2}
     - target: {fileID: 6432655023302812066, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: tapToPlay
       value: 
@@ -10097,6 +10113,14 @@ PrefabInstance:
       propertyPath: targetScoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6761934618663389211, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 421dc2a30c007964585bef520dd392d8, type: 2}
+    - target: {fileID: 7110386971864557909, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f02d22c76f2bf4346ac92901684949b3, type: 2}
     - target: {fileID: 7204662432821945767, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10105,6 +10129,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628980529006170482, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 097cff4ec61207847af3942d89e72852, type: 2}
     - target: {fileID: 8750457695833696118, guid: 32da0c2cc4a2048738d8055816bff441, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10243,8 +10271,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7318778, y: 0.9501767, z: 1.1973315}
-  m_Center: {x: -0.04417813, y: -3.9673936, z: -0.1633429}
+  m_Size: {x: 2.7318778, y: 1.9087429, z: 1.3327179}
+  m_Center: {x: -0.04417813, y: -4.446676, z: -0.09564972}
 --- !u!1001 &8661206571438583205
 PrefabInstance:
   m_ObjectHideFlags: 0
