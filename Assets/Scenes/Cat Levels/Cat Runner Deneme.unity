@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4fbaa1a470c5598498d3f0e87a14f456, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.39462075, g: 0.78090197, b: 1.9495603, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2389,17 +2389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb9d3b21bdb14b62bd9e4bf65d2f776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1018104654 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4889561020766326373, guid: 2e91dc9e477384fc29b463e9bad3065e, type: 3}
-  m_PrefabInstance: {fileID: 448683798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1041740033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1041740033, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
@@ -3962,17 +3951,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4840454448611831224, guid: a441cd042f5934bff8de132e486a4255, type: 3}
   m_PrefabInstance: {fileID: 616746137}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1933324237 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6920898329538460520, guid: 2e91dc9e477384fc29b463e9bad3065e, type: 3}
-  m_PrefabInstance: {fileID: 448683798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1940007719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4489,18 +4467,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedLegos: 0
   legoIcon: {fileID: 1344094959}
+  isObjectOpen: 0
   smoke: {fileID: 5258952844299559212, guid: a8f6e934aa0774cbcacf9731ad66b44f, type: 3}
   goldAmount: 0
   scoreSlider: {fileID: 448683800}
-  maxScore: 18
+  goldAmountText: {fileID: 0}
   targetScore: 9
   goldIcon: {fileID: 1798837794}
   qmImage: {fileID: 1120763660}
   winObject: {fileID: 21300000, guid: a783c93e8b207499296e6d11ba5c4420, type: 3}
-  targetScoreText: {fileID: 1018104654}
-  bonusScoreText: {fileID: 1933324237}
-  bonusScore: 0
   waypoint: {fileID: 745076461}
+  collectedItems: []
 --- !u!114 &564804748420623955
 MonoBehaviour:
   m_ObjectHideFlags: 0
