@@ -12,7 +12,9 @@ public class Gate : MonoBehaviour
     [SerializeField] private Image gateImage;
     [SerializeField] private Image gateImageBackground;
 
-    [SerializeField] public bool isObjectOpen = false;
+    [SerializeField] public bool isObjectOpen = false,
+                                 isHeadGate = false,
+                                 isFootGate = false;
     [SerializeField] private Image ObjectUIImage;
     
     //[SerializeField] private GameObject gateWP;
@@ -20,8 +22,7 @@ public class Gate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
-        {
-            
+        { 
             case  "CollectableLego"://Gate Image acilir, collectedItems daki son nesne way pointe tasinir
                 legoDeposit++;
                 if(legoDeposit >= legoNeedForObject+1)
@@ -44,9 +45,11 @@ public class Gate : MonoBehaviour
                 
                 if (legoDeposit == legoNeedForObject)
                 {
-                    // isObjectOpen = true;
+                    isObjectOpen = true;
+                    if(isHeadGate) GameManager.instance.isHead = true;
+                    else if(isFootGate) GameManager.instance.isBackFoot = true;
                 }
-                break;
+            break;
         }
     }
 }
