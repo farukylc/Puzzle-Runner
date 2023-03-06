@@ -43,7 +43,7 @@ public class Trap : MonoBehaviour
         if (PlayerCollect.playerCollectScript.collectedItems.Count !=0)
         {
             PlayerCollect.playerCollectScript.collectedLegos--;
-            PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
+            // PlayerCollect.playerCollectScript.scoreSlider.value = PlayerCollect.playerCollectScript.collectedLegos;
             //RustemDeneme
             GameObject currentObj = PlayerCollect.playerCollectScript.collectedItems[PlayerCollect.playerCollectScript.collectedItems.Count-1];
             currentObj.transform.parent = null;

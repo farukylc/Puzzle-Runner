@@ -40,7 +40,7 @@ public class Gate : MonoBehaviour
                 
                 PlayerCollect.playerCollectScript.collectedItems.Remove(
                    PlayerCollect.playerCollectScript.collectedItems[^1]);
-                PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
+//                PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0f, 1f);
                 Destroy(currentObj.gameObject);
                 
                 if (legoDeposit == legoNeedForObject)

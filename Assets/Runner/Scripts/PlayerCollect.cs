@@ -10,35 +10,35 @@ public class PlayerCollect : MonoBehaviour
 {
     public static PlayerCollect playerCollectScript;
     [SerializeField] public int collectedLegos = 0;
-    [SerializeField] private GameObject legoIcon;
+    //[SerializeField] private GameObject legoIcon;
     private bool isPunch = false;
     private bool goldPunch = false;
     // [SerializeField] public int bonusScore = 0;
     [SerializeField] public bool isObjectOpen = false;
      
     //UI
-    [SerializeField] private GameObject smoke;
+    //[SerializeField] private GameObject smoke;
     [SerializeField] public int goldAmount = 0;
-    [SerializeField] public Slider scoreSlider;
-    [SerializeField] private TextMeshProUGUI goldAmountText;
+    //[SerializeField] public Slider scoreSlider;
+    //[SerializeField] private TextMeshProUGUI goldAmountText;
     
    
     //[SerializeField] private int maxScore;
     [SerializeField] public int targetScore;
     [SerializeField] private Image goldIcon;
-    [SerializeField] private Image qmImage;
-    [SerializeField] private Sprite winObject;
+    //[SerializeField] private Image qmImage;
+    //[SerializeField] private Sprite winObject;
     
     
     
     //Stack
-    [SerializeField] public GameObject waypoint;
+    //[SerializeField] public GameObject waypoint;
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     
     
     private void Start()
     {
-        scoreSlider.maxValue = targetScore;
+        //scoreSlider.maxValue = targetScore;
        
         playerCollectScript = this;
         InvokeRepeating("qmAnimation",1,1);
@@ -49,15 +49,15 @@ public class PlayerCollect : MonoBehaviour
         if (targetScore <= collectedLegos)
         {
             CancelInvoke("qmAnimation");
-            qmImage.sprite = winObject;
+            //qmImage.sprite = winObject;
         }
            
     }
 
     private void qmAnimation()
     {
-        if(collectedLegos < targetScore)
-            qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
+        // if(collectedLegos < targetScore)
+        //     //qmImage.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f);
     }
 
     // private void stackFunction(Collider other)
@@ -74,7 +74,7 @@ public class PlayerCollect : MonoBehaviour
     public void Collect(GameObject obj)
     {
         collectedLegos = collectedLegos + 1;
-        scoreSlider.value = collectedLegos;
+        //scoreSlider.value = collectedLegos;
         
         if(!collectedItems.Contains(obj))
         {
@@ -141,9 +141,9 @@ public class PlayerCollect : MonoBehaviour
                 if (!isPunch && collectedLegos < targetScore)
                 {
                     isPunch = true;
-                    legoIcon.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f).OnComplete((() => 
-                            isPunch = false
-                        ));
+                    // legoIcon.transform.DOPunchScale(Vector3.one * 0.5f, 0.5f, 1, 1f).OnComplete((() => 
+                    //         isPunch = false
+                    //     ));
 
                 }
                
@@ -152,7 +152,7 @@ public class PlayerCollect : MonoBehaviour
             
             case "Gold":
                 goldAmount++;
-                goldAmountText.text = goldAmount.ToString();
+                // goldAmountText.text = goldAmount.ToString();
                 Destroy(other.gameObject);
                 if (!goldPunch)
                 {
