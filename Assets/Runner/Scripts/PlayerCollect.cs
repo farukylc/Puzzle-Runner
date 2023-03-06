@@ -75,10 +75,12 @@ public class PlayerCollect : MonoBehaviour
     {
         collectedLegos = collectedLegos + 1;
         scoreSlider.value = collectedLegos;
+        
         if(!collectedItems.Contains(obj))
         {
-        //objectCount++;
-        
+            
+            obj.transform.localRotation = Quaternion.Euler(0,90,0);
+        obj.GetComponent<LegoAnimation>().enabled = false;
         obj.transform.parent = transform.parent.GetChild(0).transform;
         collectedItems.Add(obj);
         
@@ -129,7 +131,7 @@ public class PlayerCollect : MonoBehaviour
             case "CollectableLego":
                 
                 Collect(other.gameObject);
-                other.gameObject.GetComponent<LegoAnimation>().enabled = false;
+               
                 // stackFunction(other);
                 if (collectedLegos == targetScore)
                 {
