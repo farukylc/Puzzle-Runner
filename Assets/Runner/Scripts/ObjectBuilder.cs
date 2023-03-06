@@ -24,10 +24,6 @@ public class ObjectBuilder : MonoBehaviour
     // PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore
     private void buildFunction()
     {
-        // if (PlayerCollect.playerCollectScript.isObjectOpen)
-        // {
-        //    
-        // }
         
         var sequence = DOTween.Sequence();
         int pieceIndex = 0;
@@ -42,11 +38,6 @@ public class ObjectBuilder : MonoBehaviour
             
             pieceIndex++;
         }
-
-        // else
-        // {
-        //     Debug.Log("You Lose");
-        // }
         
     }
     private void OnTriggerEnter(Collider other)
