@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jsonController: {fileID: 1763306583}
+  isPuzzle: 1
   currentLevel: 1
   puzzlePieces:
   - {fileID: 210742929}
@@ -5510,8 +5511,8 @@ MonoBehaviour:
     throwRangeUpdateValue: 0
     score: 0
     totalScore: 0
-    isCatFootOpen: 0
-    isCatHeadOpen: 0
+    isFootOpen: 0
+    isHeadOpen: 0
 --- !u!4 &1763306584
 Transform:
   m_ObjectHideFlags: 0
