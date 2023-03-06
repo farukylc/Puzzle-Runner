@@ -78,11 +78,16 @@ public class GameManager : MonoBehaviour
         }
         obj.GetComponent<Renderer>().sharedMaterials = newMaterials;
     }
-    public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer
+    public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer, sahnedeki collectable lari bulup aktif karakteri atar
     {
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
         RLMove.instance.playerTransform = obj.transform;
+        GameObject[] collectables = GameObject.FindGameObjectsWithTag("CollectableLego");
+        foreach (var item in collectables)
+        {
+            item.GetComponent<SmoothDamp>().SetPlayer(obj);
+        }
     }
     public void PuzzleLevelEndSave()
     {

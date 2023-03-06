@@ -78,22 +78,22 @@ public class PlayerCollect : MonoBehaviour
         
         if(!collectedItems.Contains(obj))
         {
-            
+           
+            obj.GetComponent<LegoAnimation>().enabled = false;
+            obj.transform.parent = transform.parent.GetChild(0).transform; 
             obj.transform.localRotation = Quaternion.Euler(0,90,0);
-        obj.GetComponent<LegoAnimation>().enabled = false;
-        obj.transform.parent = transform.parent.GetChild(0).transform;
-        collectedItems.Add(obj);
-        
-        collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.5f);
-        if(collectedItems.Count == 1)
-        {
-            collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
-        }
-        else
-        {
-            collectedItems[collectedItems.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(collectedItems[collectedItems.Count - 2].transform);
-        }
-        // StartCoroutine(MakecollectedItemsBigger());
+            collectedItems.Add(obj);
+            
+            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.5f);
+            if(collectedItems.Count == 1)
+            {
+                collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
+            }
+            else
+            {
+                collectedItems[collectedItems.Count - 1].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(collectedItems[collectedItems.Count - 2].transform);
+            }
+            // StartCoroutine(MakecollectedItemsBigger());
         }
     }
     public void DropObject()
