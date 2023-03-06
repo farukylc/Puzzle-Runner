@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jsonController: {fileID: 1384318328}
+  isPuzzle: 1
   currentLevel: 1
   puzzlePieces:
   - {fileID: 1163066948}
@@ -769,6 +770,13 @@ MonoBehaviour:
   isCharacterComplate: 0
   rotationSpeed: 0.1
   puzzleMoveSpeed: 0.8
+  backFoot: {fileID: 0}
+  head: {fileID: 0}
+  backFootWithAnim: {fileID: 0}
+  headWithAnim: {fileID: 0}
+  isBackFoot: 1
+  isHead: 1
+  transparentMaterial: {fileID: 0}
 --- !u!1 &328655222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,6 +3305,8 @@ MonoBehaviour:
     throwRangeUpdateValue: 0
     score: 0
     totalScore: 0
+    isFootOpen: 0
+    isHeadOpen: 0
 --- !u!4 &1384318329
 Transform:
   m_ObjectHideFlags: 0
