@@ -129,19 +129,13 @@ public class PlayerCollect : MonoBehaviour
             case "CollectableLego":
                 
                 Collect(other.gameObject);
-                
-                
+                other.gameObject.GetComponent<LegoAnimation>().enabled = false;
                 // stackFunction(other);
-                
-
                 if (collectedLegos == targetScore)
                 {
                     isObjectOpen = true;
                 }
-                
-                
-                
-                
+
                 if (!isPunch && collectedLegos < targetScore)
                 {
                     isPunch = true;
@@ -166,7 +160,6 @@ public class PlayerCollect : MonoBehaviour
                         ));
 
                 }
-                
                 break;
         }
 

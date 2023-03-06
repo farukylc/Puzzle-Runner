@@ -854,6 +854,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 187129692, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
   m_PrefabInstance: {fileID: 163412934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &203946310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203946311}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203946311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203946310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.23, z: 11.639}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1927515292}
+  - {fileID: 328285911}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204800310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1527,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 420464509}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!65 &293855465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1845,6 +1879,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3847230970495267655, guid: 2e91dc9e477384fc29b463e9bad3065e, type: 3}
   m_PrefabInstance: {fileID: 448683798}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &328285911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
+  m_PrefabInstance: {fileID: 1594567409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &357993058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2186,7 +2225,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 1470896620}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!65 &395940483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3572,7 +3612,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 1909940086}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!65 &723141641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4467,7 +4508,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 318992495}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!65 &881605319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6913,11 +6955,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 203946311}
     m_Modifications:
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6925,11 +6967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.639
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6937,15 +6979,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5166493028909099748, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7749,7 +7791,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 824405814}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!1 &1771417674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 880303769160798756, guid: 50c16b95abe97584d8b9c785b05e7c9c, type: 3}
@@ -7901,7 +7944,8 @@ MonoBehaviour:
   legoDeposit: 0
   gateImage: {fileID: 0}
   gateImageBackground: {fileID: 0}
-  gateWP: {fileID: 1318878192}
+  isObjectOpen: 0
+  ObjectUIImage: {fileID: 0}
 --- !u!65 &1808558365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8408,6 +8452,54 @@ Transform:
   m_Father: {fileID: 723141644}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1927515291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927515292}
+  - component: {fileID: 1927515293}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1927515292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927515291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 203946311}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1927515293
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927515291}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1940007719
 PrefabInstance:
   m_ObjectHideFlags: 0
