@@ -34,12 +34,12 @@ MonoBehaviour:
     - gameObject: {fileID: 2711216198116367235, guid: ea5291617d7042c48a75064bda750b76, type: 3}
       color: {r: 0.64114827, g: 1, b: 0.34449756, a: 0.14901961}
   alternatingBackground:
-    enabled: 1
+    enabled: 0
     color: {r: 1, g: 0.1745283, b: 0.1745283, a: 0.08}
   separator:
     enabled: 1
-    startString: '>'
-    color: {r: 0, g: 1, b: 1, a: 0.41960785}
+    startString: '-'
+    color: {r: 0, g: 0.754717, b: 0.754717, a: 0.41960785}
   tree:
     enabled: 1
     drawOverlayOnColoredPrefabs: 1
