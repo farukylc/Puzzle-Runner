@@ -19,9 +19,15 @@ public class GameManager : MonoBehaviour
     public float rotationSpeed = 0.1f;
     public float puzzleMoveSpeed = 0.8f;
     public GameObject backFoot,head,backFootWithAnim,headWithAnim;
+    public Material transparentMaterial;
+    [Header("---------------")]
+    [Header("----Runner-----")]
+    public GameObject characterWithNormal;
+    public GameObject characterWithoutHead;
+    public GameObject characterWithoutLeg;
     public bool isBackFoot = true,
                 isHead = true;
-    public Material transparentMaterial;
+    
     public void Awake() 
     {
         instance = this;
@@ -37,6 +43,11 @@ public class GameManager : MonoBehaviour
         {
             if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
             if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
+        }
+        else if(!isPuzzle)
+        {
+            if(!isBackFoot) ChangeCharacter(characterWithoutLeg);// arka ayak toplanamadi ise
+            if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
         }
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
@@ -66,6 +77,12 @@ public class GameManager : MonoBehaviour
             newMaterials[i] = transparentMaterial;
         }
         obj.GetComponent<Renderer>().sharedMaterials = newMaterials;
+    }
+    public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer
+    {
+        characterWithNormal.SetActive(false);
+        obj.SetActive(true);
+        RLMove.instance.playerTransform = obj.transform;
     }
     public void PuzzleLevelEndSave()
     {
