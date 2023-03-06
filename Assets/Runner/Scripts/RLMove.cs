@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class RLMove : MonoBehaviour, IDragHandler
 {
+    public static RLMove instance;
     public Transform playerTransform;
-
+    public void Awake() 
+    {
+        instance = this;
+    }
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 pos = playerTransform.position;

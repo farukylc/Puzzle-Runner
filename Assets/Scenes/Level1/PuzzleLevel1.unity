@@ -774,9 +774,12 @@ MonoBehaviour:
   head: {fileID: 0}
   backFootWithAnim: {fileID: 0}
   headWithAnim: {fileID: 0}
+  transparentMaterial: {fileID: 0}
+  characterWithNormal: {fileID: 0}
+  characterWithoutHead: {fileID: 0}
+  characterWithoutLeg: {fileID: 0}
   isBackFoot: 1
   isHead: 1
-  transparentMaterial: {fileID: 0}
 --- !u!1 &328655222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4905,7 +4908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00055949966, y: 0}
+  m_AnchoredPosition: {x: 80, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742271155
