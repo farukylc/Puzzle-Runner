@@ -12,9 +12,10 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private List<GameObject> objectPieces = new List<GameObject>();
     [SerializeField] private List<GameObject> targetPositionObject = new List<GameObject>();
     [SerializeField] public GameObject winPanel;
-    [SerializeField] private GameObject scoreBar;
+    [SerializeField] private GameObject objectiveBar;
     [SerializeField] private TextMeshProUGUI goldAmountText;
     [SerializeField] private CinemachineVirtualCamera cam1;
+    [SerializeField] private GameObject movementPanel;
     
 
     private void Start()
@@ -46,18 +47,21 @@ public class ObjectBuilder : MonoBehaviour
         switch (other.tag)
         {
             case "Player":
+                movementPanel.SetActive(false);
+                transform.DOMove(new Vector3(0, transform.position.y, transform.position.z), 2);
                 buildFunction();
                 Debug.Log("Köpek Alana Girdi");
                 // InvokeRepeating("finalStack",0.1f,0.01f);
-                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
+                objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 410f,5);
                 cam1.gameObject.SetActive(false);
+              
                 
                 break;
             
             case "Cat":
                 buildFunction();
                 Debug.Log("Kedi Alan Girdi");
-                scoreBar.transform.DOLocalMoveY(scoreBar.transform.localPosition.y + 400f,2);
+                objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 400f,2);
                
                 break;
         }
