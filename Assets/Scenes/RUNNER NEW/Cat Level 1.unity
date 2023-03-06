@@ -2108,6 +2108,14 @@ PrefabInstance:
       propertyPath: waypoint
       value: 
       objectReference: {fileID: 413108710}
+    - target: {fileID: 1395659815613558441, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395659815613558441, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.59
+      objectReference: {fileID: 0}
     - target: {fileID: 4944447349584038227, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2164,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7399880367295403677, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9f03261d037fe4e861786f0bf9dee0, type: 3}
 --- !u!4 &413108709 stripped
@@ -7135,7 +7147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583897712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 3.02}
+  m_LocalPosition: {x: 0, y: 0.43, z: 2.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

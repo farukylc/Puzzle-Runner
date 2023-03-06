@@ -11,7 +11,7 @@ public class LegoToLego : MonoBehaviour
         {
             case  "CollectableLego":
                 PlayerCollect.playerCollectScript.collectedItems.Add(other.gameObject);
-                other.gameObject.transform.position = PlayerCollect.playerCollectScript.waypoint.transform.position;
+                //other.gameObject.transform.position = PlayerCollect.playerCollectScript.waypoint.transform.position;
                 break;
         }
     }

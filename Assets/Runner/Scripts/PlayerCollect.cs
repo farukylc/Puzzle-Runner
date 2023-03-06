@@ -32,7 +32,7 @@ public class PlayerCollect : MonoBehaviour
     
     
     //Stack
-    [SerializeField] public GameObject waypoint;
+    //[SerializeField] public GameObject waypoint;
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
     
     

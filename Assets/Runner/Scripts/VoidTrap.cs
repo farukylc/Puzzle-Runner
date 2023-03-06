@@ -23,7 +23,7 @@ public class VoidTrap : MonoBehaviour
                     PlayerCollect.playerCollectScript.collectedItems.Remove(
                         PlayerCollect.playerCollectScript.collectedItems[^1]);
                 
-                    PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0.44f, 0);
+                    //PlayerCollect.playerCollectScript.waypoint.transform.position -= new Vector3(0, 0.44f, 0);
                 
                     transform.gameObject.GetComponent<MeshRenderer>().enabled = true;
 
