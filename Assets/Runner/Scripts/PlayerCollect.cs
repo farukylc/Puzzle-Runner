@@ -84,7 +84,7 @@ public class PlayerCollect : MonoBehaviour
             obj.transform.localRotation = Quaternion.Euler(0,90,0);
             collectedItems.Add(obj);
             
-            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.5f);
+            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*1f);
             if(collectedItems.Count == 1)
             {
                 collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
