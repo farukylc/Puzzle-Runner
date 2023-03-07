@@ -24,7 +24,6 @@ public class PlayerCollect : MonoBehaviour
     private void Start()
     {
         playerCollectScript = this;
-        InvokeRepeating("qmAnimation",1,1);
     }
     
     
