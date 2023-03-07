@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.6156863, g: 0.6627451, b: 0.78431374, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 77715b8b6b248994891d3ccad1ad330b, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b254f73ae2cd0644fa8b73da8f897bd6, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44572568, g: 0.62473226, b: 0.7240137, a: 1}
+  m_IndirectSpecularColor: {r: 0.58222234, g: 0.8021674, b: 0.86173284, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2175,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359052821461569174, guid: 6c882ea8097645449993f8d9f39a0970, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0158238
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4359052821461569174, guid: 6c882ea8097645449993f8d9f39a0970, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6688,7 +6688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359052821461569174, guid: 6c882ea8097645449993f8d9f39a0970, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0158238
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 4359052821461569174, guid: 6c882ea8097645449993f8d9f39a0970, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7311,6 +7311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedLegos: 0
+  goldPunch: 0
   isObjectOpen: 0
   goldAmount: 0
   goldIcon: {fileID: 0}
@@ -7678,6 +7679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedLegos: 0
+  goldPunch: 0
   isObjectOpen: 0
   goldAmount: 0
   goldIcon: {fileID: 0}
