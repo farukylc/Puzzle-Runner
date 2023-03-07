@@ -5,11 +5,12 @@ using UnityEngine;
 public class SmoothDamp : MonoBehaviour
 {
     public Transform currentLeadTransform;
-    private PlayerCollect _playerCollect;
+    PlayerCollect _playerCollect;
     private float currentVelocity=0.0f;
     void Start()
     {
-        _playerCollect = GameObject.FindWithTag("Player").GetComponent<PlayerCollect>();
+        //_playerCollect = GameObject.FindWithTag("Player").GetComponent<PlayerCollect>();
+        //_playerCollect = RLMove.instance.playerTransform.gameObject.GetComponent<PlayerCollect>();
     }
 
     // Update is called once per frame
@@ -42,5 +43,9 @@ public class SmoothDamp : MonoBehaviour
         // {
         //     _player.DropObject();
         // }
+    }
+    public void SetPlayer(GameObject obj)
+    {
+        _playerCollect = obj.GetComponent<PlayerCollect>();
     }
 }
