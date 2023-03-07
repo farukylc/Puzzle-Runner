@@ -6678,6 +6678,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: isHeadGate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: isObjectOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: ObjectUIImage
       value: 
       objectReference: {fileID: 672054658}
@@ -6687,7 +6695,7 @@ PrefabInstance:
       objectReference: {fileID: 524072180}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: legoNeedForObject
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7360,6 +7368,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: isFootGate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: isObjectOpen
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
