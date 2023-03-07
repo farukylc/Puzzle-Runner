@@ -623,7 +623,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: 07dae8e3043553d4fa3e2a5a0318e79c, type: 2}
   - {fileID: 2100000, guid: 17a2aaf0497f1c14a95e9bd8746bdc93, type: 2}
   - {fileID: -3689160693104885922, guid: 5b6390f2a7f3a954694f2e9dab197659, type: 3}
-  - {fileID: 4423325995472933232, guid: 5b6390f2a7f3a954694f2e9dab197659, type: 3}
+  - {fileID: 2100000, guid: 1eb291e9066129747b11f0ff212f17f1, type: 2}
   - {fileID: 2100000, guid: edda42701d262614f909e64fb479c9fe, type: 2}
   - {fileID: 2100000, guid: 2c3740146478f9d4eaa9a0d8d293d6d9, type: 2}
   m_StaticBatchInfo:
@@ -750,10 +750,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedLegos: 0
+  goldPunch: 0
   isObjectOpen: 0
   goldAmount: 0
-  targetScore: 0
   goldIcon: {fileID: 0}
+  goldAmountText: {fileID: 0}
   collectedItems: []
 --- !u!54 &2470246119492817857
 Rigidbody:
