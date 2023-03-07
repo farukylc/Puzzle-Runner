@@ -284,6 +284,10 @@ PrefabInstance:
       value: Chicken
       objectReference: {fileID: 0}
     - target: {fileID: 1279566349785156690, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279566349785156690, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -1544,7 +1548,7 @@ PrefabInstance:
     - target: {fileID: 1820526461469755854, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 9b93fcf929e9a4b708a09a05aa6de360, type: 2}
+      objectReference: {fileID: 9100000, guid: 0c7ee3a34c2b9414c96dd3590108f4bc, type: 2}
     - target: {fileID: 1912409695340762856, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1587,6 +1591,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912409695340762856, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076781658325393398, guid: 842bf1bfaed09b848ab6df56aaddbc30, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
