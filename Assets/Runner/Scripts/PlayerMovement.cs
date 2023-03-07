@@ -23,8 +23,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameManager.instance.isBackFoot = false;
-            GameManager.instance.isHead = false;
             isStart = true; 
             tapToPlay.SetActive(false);
             anim.SetBool("isStarted",true);

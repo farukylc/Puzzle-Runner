@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
             else if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
             else ChangeCharacter(characterWithNormal);
         }
+        isBackFoot = false;
+        isHead = false;
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -105,6 +107,7 @@ public class GameManager : MonoBehaviour
     }
     public void RunnerLevelEndSave()
     {
+        Debug.Log("Kayit oldu");
         _jsonController.user1.level = currentLevel;
         //_jsonController.user1.forwardSpeed = forwardSpeed;
         //_jsonController.user1.currentThrowDigit = currentThrowDigit;
