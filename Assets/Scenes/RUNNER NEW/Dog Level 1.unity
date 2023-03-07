@@ -6682,8 +6682,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 672054658}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: objectiveText
+      value: 
+      objectReference: {fileID: 524072180}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: legoNeedForObject
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7362,6 +7366,10 @@ PrefabInstance:
       propertyPath: ObjectUIImage
       value: 
       objectReference: {fileID: 2028652666}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: objectiveText
+      value: 
+      objectReference: {fileID: 1816684888}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 60
