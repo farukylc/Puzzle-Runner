@@ -47,8 +47,11 @@ public class GameManager : MonoBehaviour
         else if(!isPuzzle)
         {
             if(!isBackFoot) ChangeCharacter(characterWithoutLeg);// arka ayak toplanamadi ise
-            if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
+            else if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
+            else ChangeCharacter(characterWithNormal);
         }
+        isBackFoot = false;
+        isHead = false;
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -80,12 +83,15 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer, sahnedeki collectable lari bulup aktif karakteri atar
     {
+        Debug.Log("Change character calisti");
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
+        GameObject.FindWithTag("Cinemachine").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = obj.transform;
         RLMove.instance.playerTransform = obj.transform;
         GameObject[] collectables = GameObject.FindGameObjectsWithTag("CollectableLego");
         foreach (var item in collectables)
         {
+            Debug.Log("collectable bulundu");
             item.GetComponent<SmoothDamp>().SetPlayer(obj);
         }
     }
@@ -101,12 +107,18 @@ public class GameManager : MonoBehaviour
     }
     public void RunnerLevelEndSave()
     {
+        Debug.Log("Kayit oldu");
         _jsonController.user1.level = currentLevel;
         //_jsonController.user1.forwardSpeed = forwardSpeed;
         //_jsonController.user1.currentThrowDigit = currentThrowDigit;
         //_jsonController.user1.throwRate = throwRate;
         //_jsonController.user1.range = range;
         //_jsonController.user1.totalScore += gameScore;
+        if(!isBackFoot && !isHead)
+        {
+            if(Random.Range(0,2)%2==0) isHead = true;
+            else isBackFoot = true;
+        }
         _jsonController.user1.isFootOpen = isBackFoot;
         _jsonController.user1.isHeadOpen = isHead;
         _jsonController.JsonSave();

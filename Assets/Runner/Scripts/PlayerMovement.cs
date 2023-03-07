@@ -6,14 +6,11 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
 public class PlayerMovement : MonoBehaviour
 {
     private bool isStart = false;
     private Animator anim;
-    [SerializeField]
-    public int speed = 15;
-
+    [SerializeField] public int speed = 15;
     //[SerializeField] private CinemachineVirtualCamera mainCamera;
     [SerializeField] private GameObject tapToPlay;
     
@@ -30,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
             tapToPlay.SetActive(false);
             anim.SetBool("isStarted",true);
         }
-        
         
         if (isStart == true)
         {

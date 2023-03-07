@@ -17,5 +17,4 @@ public class LegoColor : MonoBehaviour
                 materials[Random.Range(0, materials.Count)];
         }
     }
-    
 }
