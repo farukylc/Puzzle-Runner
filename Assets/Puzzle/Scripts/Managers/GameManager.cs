@@ -109,7 +109,8 @@ public class GameManager : MonoBehaviour
         //_jsonController.user1.totalScore += gameScore;
         if(!isBackFoot && !isHead)
         {
-            
+            if(Random.Range(0,2)%2==0) isHead = true;
+            else isBackFoot = true;
         }
         _jsonController.user1.isFootOpen = isBackFoot;
         _jsonController.user1.isHeadOpen = isHead;
