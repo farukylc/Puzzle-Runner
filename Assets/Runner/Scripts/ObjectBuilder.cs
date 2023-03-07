@@ -17,7 +17,6 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera cam1;
     [SerializeField] private GameObject movementPanel;
     
-
     private void Start()
     {
         objectBuilderScript = this;
@@ -25,25 +24,19 @@ public class ObjectBuilder : MonoBehaviour
     // PlayerCollect.playerCollectScript.collectedLegos >= PlayerCollect.playerCollectScript.targetScore
     private void buildFunction()
     {
-        
         var sequence = DOTween.Sequence();
         int pieceIndex = 0;
         foreach (var objectPiece in objectPieces)
-        {
-                
+        { 
             sequence.Append(objectPiece.transform.DOMove(targetPositionObject[pieceIndex].transform.position,
                 0.25f)).OnComplete((() =>
-                        
                     StartCoroutine("delay")
                 ));
-            
             pieceIndex++;
         }
-        
     }
     private void OnTriggerEnter(Collider other)
     {
-        
         switch (other.tag)
         {
             case "Player":
@@ -54,16 +47,13 @@ public class ObjectBuilder : MonoBehaviour
                 // InvokeRepeating("finalStack",0.1f,0.01f);
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 410f,5);
                 cam1.gameObject.SetActive(false);
-              
-                
-                break;
+            break;
             
             case "Cat":
                 buildFunction();
                 Debug.Log("Kedi Alan Girdi");
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 400f,2);
-               
-                break;
+            break;
         }
     }
 
@@ -75,6 +65,4 @@ public class ObjectBuilder : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         UIAnimations.UIAnimationsScript.goldAnimation();
     }
-    
-    
 }

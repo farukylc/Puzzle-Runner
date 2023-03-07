@@ -107,6 +107,10 @@ public class GameManager : MonoBehaviour
         //_jsonController.user1.throwRate = throwRate;
         //_jsonController.user1.range = range;
         //_jsonController.user1.totalScore += gameScore;
+        if(!isBackFoot && !isHead)
+        {
+            
+        }
         _jsonController.user1.isFootOpen = isBackFoot;
         _jsonController.user1.isHeadOpen = isHead;
         _jsonController.JsonSave();

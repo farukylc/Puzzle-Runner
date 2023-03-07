@@ -8,7 +8,6 @@ public class SceneManagerScript : MonoBehaviour
     public void nextLevel()
     {
         GameManager.instance.RunnerLevelEndSave();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);     
     }
 }

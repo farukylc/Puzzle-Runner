@@ -26,7 +26,6 @@ public class PlayerCollect : MonoBehaviour
         playerCollectScript = this;
     }
     
-    
     public void Collect(GameObject obj)
     {
         collectedLegos = collectedLegos + 1;
@@ -38,7 +37,7 @@ public class PlayerCollect : MonoBehaviour
             obj.transform.localRotation = Quaternion.Euler(0,90,0);
             collectedItems.Add(obj);
             
-            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*1f);
+            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.7f);
             if(collectedItems.Count == 1)
             {
                 collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);
@@ -50,6 +49,7 @@ public class PlayerCollect : MonoBehaviour
             // StartCoroutine(MakecollectedItemsBigger());
         }
     }
+
     public void DropObject()
     {
         if(collectedItems.Count==0)
@@ -65,6 +65,7 @@ public class PlayerCollect : MonoBehaviour
             Destroy(lastObject);
         }     
     }
+
     public IEnumerator MakecollectedItemsBigger()
     {
         for (int i = collectedItems.Count-1; i > 0; i--)
@@ -82,10 +83,8 @@ public class PlayerCollect : MonoBehaviour
         switch (other.tag)
         {
             case "CollectableLego":
-                
                 Collect(other.gameObject);
-                
-                break;
+            break;
             
             case "Gold":
                 goldAmount++;
@@ -100,12 +99,9 @@ public class PlayerCollect : MonoBehaviour
                         ));
 
                 }
-                break;
+            break;
         }
-
     }
-    
-    
 }
 
 
