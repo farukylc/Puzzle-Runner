@@ -69,6 +69,7 @@ public class SmoothDamp : MonoBehaviour
     }
     public void SetPlayer(GameObject obj)
     {
+        Debug.Log("SetPlayer calisti");
         _playerCollect = obj.GetComponent<PlayerCollect>();
     }
 }

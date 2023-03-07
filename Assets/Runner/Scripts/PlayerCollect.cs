@@ -28,8 +28,7 @@ public class PlayerCollect : MonoBehaviour
     
     public void Collect(GameObject obj)
     {
-        collectedLegos = collectedLegos + 1;
-       
+        collectedLegos++;
         if(!collectedItems.Contains(obj))
         {
             obj.GetComponent<LegoAnimation>().enabled = false;
@@ -37,7 +36,8 @@ public class PlayerCollect : MonoBehaviour
             obj.transform.localRotation = Quaternion.Euler(0,90,0);
             collectedItems.Add(obj);
             
-            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.7f);
+            collectedItems[collectedItems.Count-1].transform.localPosition = new Vector3(0,0,collectedItems.Count*0.7f); 
+            
             if(collectedItems.Count == 1)
             {
                 collectedItems[0].gameObject.GetComponent<SmoothDamp>().SetCurrentLeadTransform(transform);

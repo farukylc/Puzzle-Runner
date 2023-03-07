@@ -47,7 +47,8 @@ public class GameManager : MonoBehaviour
         else if(!isPuzzle)
         {
             if(!isBackFoot) ChangeCharacter(characterWithoutLeg);// arka ayak toplanamadi ise
-            if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
+            else if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
+            else ChangeCharacter(characterWithNormal);
         }
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer, sahnedeki collectable lari bulup aktif karakteri atar
     {
+        Debug.Log("Change character calisti");
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
         GameObject.FindWithTag("Cinemachine").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = obj.transform;
@@ -87,6 +89,7 @@ public class GameManager : MonoBehaviour
         GameObject[] collectables = GameObject.FindGameObjectsWithTag("CollectableLego");
         foreach (var item in collectables)
         {
+            Debug.Log("collectable bulundu");
             item.GetComponent<SmoothDamp>().SetPlayer(obj);
         }
     }
