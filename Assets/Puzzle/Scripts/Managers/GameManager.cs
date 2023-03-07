@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     {
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
+        GameObject.FindWithTag("Cinemachine").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = obj.transform;
         RLMove.instance.playerTransform = obj.transform;
         GameObject[] collectables = GameObject.FindGameObjectsWithTag("CollectableLego");
         foreach (var item in collectables)
