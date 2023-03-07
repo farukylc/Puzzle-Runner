@@ -7156,7 +7156,7 @@ PrefabInstance:
     - target: {fileID: 6227663493330858213, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 435a91fc6d108494d99cfa39f1f185fa, type: 3}
+      objectReference: {fileID: 21300000, guid: e5c9353efff2f4b8289821abe1d78811, type: 3}
     - target: {fileID: 6227663494265773363, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Name
       value: Gate (2)
@@ -7171,7 +7171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4533474
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7233,6 +7233,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 66c64fff4c39b4c9aa9bff37d7652f27, type: 3}
+    - target: {fileID: 6521086658272726464, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.031999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773771895733236740, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.032
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
 --- !u!4 &1467451036 stripped
@@ -7996,7 +8004,7 @@ PrefabInstance:
     - target: {fileID: 6227663493330858213, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2e0d78e57f4de4f52b27e7dc0abcae7c, type: 3}
+      objectReference: {fileID: 21300000, guid: f9c78cf49a382400f8fc6211eb4dfcb5, type: 3}
     - target: {fileID: 6227663494265773363, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Name
       value: Gate (3)
@@ -8011,7 +8019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4533474
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8057,6 +8065,10 @@ PrefabInstance:
       propertyPath: objectiveText
       value: 
       objectReference: {fileID: 1816684888}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: legoNeedForObject
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 60
@@ -8069,6 +8081,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ae848585dfc384298bfb0d8f3cac18a2, type: 3}
+    - target: {fileID: 6521086658272726464, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773771895733236740, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
 --- !u!1001 &1677304814
