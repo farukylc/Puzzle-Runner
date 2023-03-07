@@ -648,6 +648,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5702312076629957058, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
+      propertyPath: m_text
+      value: 'You Unlocked
+
+        Cat Platform !'
+      objectReference: {fileID: 0}
     - target: {fileID: 5702312077018477478, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
       propertyPath: m_Name
       value: WinPanel
@@ -748,6 +754,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: nextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 5702312077626662081, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
+      propertyPath: m_Name
+      value: Cat Platform Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702312077626662083, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e2bdb17395f0d4bb7bfe0c067b594e7a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c435691033684e66a3d87f254a44bdf, type: 3}
 --- !u!4 &168224936 stripped
@@ -7149,7 +7163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773363, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_RootOrder
@@ -7200,6 +7214,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 672054658}
     - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: objectiveText
+      value: 
+      objectReference: {fileID: 524072180}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: legoNeedForObject
       value: 10
       objectReference: {fileID: 0}
@@ -7214,7 +7232,7 @@ PrefabInstance:
     - target: {fileID: 6227663494464302347, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2fb3e8e1cab3249a7977db6e6364d0fd, type: 3}
+      objectReference: {fileID: 21300000, guid: 66c64fff4c39b4c9aa9bff37d7652f27, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
 --- !u!4 &1467451036 stripped
@@ -7985,7 +8003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773363, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6227663494265773368, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_RootOrder
@@ -8035,6 +8053,10 @@ PrefabInstance:
       propertyPath: ObjectUIImage
       value: 
       objectReference: {fileID: 2028652666}
+    - target: {fileID: 6227663494265773372, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
+      propertyPath: objectiveText
+      value: 
+      objectReference: {fileID: 1816684888}
     - target: {fileID: 6227663494464302346, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 60
@@ -8046,7 +8068,7 @@ PrefabInstance:
     - target: {fileID: 6227663494464302347, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 91413e3d306f147a3a81a978669781b4, type: 3}
+      objectReference: {fileID: 21300000, guid: ae848585dfc384298bfb0d8f3cac18a2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2951efa941d405aa7635e9bb9125f4, type: 3}
 --- !u!1001 &1677304814
