@@ -11,13 +11,13 @@ public class PlayerCollect : MonoBehaviour
     public static PlayerCollect playerCollectScript;
     [SerializeField] public int collectedLegos = 0;
     private bool isPunch = false;
-    private bool goldPunch = false;
+    public bool goldPunch = false;
     [SerializeField] public bool isObjectOpen = false;
      
     //UI
     [SerializeField] public int goldAmount = 0;
-    [SerializeField] private Image goldIcon;
-    [SerializeField] private TextMeshProUGUI goldAmountText;
+    [SerializeField] public Image goldIcon;
+    [SerializeField] public TextMeshProUGUI goldAmountText;
     
     //Lists
     [SerializeField] public List<GameObject> collectedItems = new List<GameObject>();
