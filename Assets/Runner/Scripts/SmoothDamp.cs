@@ -39,6 +39,24 @@ public class SmoothDamp : MonoBehaviour
         {
             _playerCollect.Collect(other.gameObject);
         }
+
+        // if (other.CompareTag("Gold"))
+        // {
+        //     PlayerCollect.playerCollectScript.goldAmount++;
+        //     Destroy(other.gameObject);
+        //
+        //     PlayerCollect.playerCollectScript.goldAmountText.text = goldAmount.ToString();
+        //     if (!goldPunch)
+        //     {
+        //         goldPunch = true;
+        //         goldIcon.transform.DOPunchScale(Vector3.one * 1f, 0.5f, 1, 1f).OnComplete((() => 
+        //                 goldPunch = false
+        //             ));
+        //
+        //     }
+        //     break;
+        // }
+        //
         // else if(other.CompareTag("Obstacle1"))
         // {
         //     _player.DropObject();

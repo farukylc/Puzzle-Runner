@@ -1360,11 +1360,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!1 &274802564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2851207321927856471, guid: 9e1d65be4afc0714c863f81653518328, type: 3}
-  m_PrefabInstance: {fileID: 1831653283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &280467215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6017,7 +6012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340549823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.6, z: 141.76}
+  m_LocalPosition: {x: 2.41, y: 5.6, z: 141.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8498,19 +8493,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3231989550950706157, guid: 9e1d65be4afc0714c863f81653518328, type: 3}
   m_PrefabInstance: {fileID: 1831653283}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1831653285
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274802564}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1872363880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8320872434567833860, guid: 94cda6521986bf34d946ba7d41f779cb, type: 3}
