@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.58222234, g: 0.8021674, b: 0.86173284, a: 1}
+  m_IndirectSpecularColor: {r: 0.5823692, g: 0.8018755, b: 0.86131686, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 241223158}
   m_Layer: 0
   m_Name: CinemachineMain
-  m_TagString: Untagged
+  m_TagString: Cinemachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3262,10 +3262,10 @@ MonoBehaviour:
   headWithAnim: {fileID: 0}
   transparentMaterial: {fileID: 0}
   characterWithNormal: {fileID: 154800684}
-  characterWithoutHead: {fileID: 1224386709}
-  characterWithoutLeg: {fileID: 1075677595}
-  isBackFoot: 0
-  isHead: 0
+  characterWithoutHead: {fileID: 1075677595}
+  characterWithoutLeg: {fileID: 1224386709}
+  isBackFoot: 1
+  isHead: 1
 --- !u!4 &476919754
 Transform:
   m_ObjectHideFlags: 0
