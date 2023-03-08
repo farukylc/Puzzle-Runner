@@ -20,18 +20,18 @@ public class StartManager : MonoBehaviour
     }
     public void StartLastLevel()
     {
-        SceneManager.LoadScene((currentLevel-1));
+        SceneManager.LoadScene((currentLevel));
     }
     public void StartLevel1()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void StartLevel2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void StartLevel3()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }
