@@ -31,6 +31,7 @@ public class SceneControlManager : MonoBehaviour
     }
     public void NextLevel()//datalari kayit eder runner sahnesine gecer
     {
+        GameManager.instance.currentLevel++;
         GameManager.instance.PuzzleLevelEndSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
