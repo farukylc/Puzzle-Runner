@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410098126638601991, guid: 994102f1d0c688b458dd1ff9f737d24a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8410098126638601991, guid: 994102f1d0c688b458dd1ff9f737d24a, type: 3}
       propertyPath: m_LocalScale.x
@@ -3306,6 +3306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1161579983}
     m_Modifications:
+    - target: {fileID: 3212312138979015386, guid: 6d70f8f6ac309af4aa980d5626a868cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8121470788767360007, guid: 6d70f8f6ac309af4aa980d5626a868cc, type: 3}
       propertyPath: m_Name
       value: room2
@@ -3352,6 +3356,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934739289653182141, guid: 6d70f8f6ac309af4aa980d5626a868cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155400540340382768, guid: 6d70f8f6ac309af4aa980d5626a868cc, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7275,7 +7283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7418834218624158035, guid: 60d8c02419b383b4e92afb96bdbf4333, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7418834218624158035, guid: 60d8c02419b383b4e92afb96bdbf4333, type: 3}
       propertyPath: m_LocalScale.x
