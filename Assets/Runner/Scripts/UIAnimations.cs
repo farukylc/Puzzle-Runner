@@ -36,7 +36,7 @@ public class UIAnimations : MonoBehaviour
     private int currentImageIndex = 0;
     public void goldAnimation()
     {
-        goldImageList[currentImageIndex].transform.DOMove(goldIconTarget.transform.position, 0.2f).OnComplete((() =>
+        goldImageList[currentImageIndex].transform.DOMove(goldIconTarget.transform.position, 0.1f).OnComplete((() =>
                 {
                     currentImageIndex++;
                     if (currentImageIndex < goldImageList.Count)
