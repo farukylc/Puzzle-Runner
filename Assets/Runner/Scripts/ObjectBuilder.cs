@@ -16,6 +16,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldAmountText;
     [SerializeField] private CinemachineVirtualCamera cam1;
     [SerializeField] private GameObject movementPanel;
+    [SerializeField] private GameObject tower, towerWP;
     
     private void Start()
     {
@@ -47,6 +48,7 @@ public class ObjectBuilder : MonoBehaviour
                 // InvokeRepeating("finalStack",0.1f,0.01f);
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 410f,5);
                 cam1.gameObject.SetActive(false);
+                tower.transform.DOMoveY(10f, 5);
             break;
             
             case "Cat":
