@@ -36,6 +36,7 @@ public class TouchController : MonoBehaviour
     }
     public void ScrollMove(GameObject target)//parametrenin index degerine gore scroll hareket eder, animasyon baslar
     {
+        if(target.transform.parent == GameManager.instance.character.transform) return;//nesne karaktere tasindi ise
         Debug.Log((float)(target.transform.parent.transform.parent.transform.GetSiblingIndex()+1)/scroll.content.transform.childCount);
         if(target.transform.parent.transform.parent.transform.GetSiblingIndex()==0)//ilk parca ise
             scroll.DOHorizontalNormalizedPos(0,1f).OnComplete(()=>
