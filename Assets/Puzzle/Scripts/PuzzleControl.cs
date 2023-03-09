@@ -23,13 +23,10 @@ public class PuzzleControl : MonoBehaviour
     }
     void Update ()
     {
-        //if(clickTime!=0f)
+        if(clickTime+3f<Time.time & isTimerOpen & !isMoving)
         {
-            if(clickTime+3f<Time.time & isTimerOpen & !isMoving)
-            {
-                isTimerOpen = false;
-                TouchController.instance.ScrollMove(_gameManager.puzzlePieces[_gameManager.currentPuzzlePiece]);
-            }
+            isTimerOpen = false;
+            TouchController.instance.ScrollMove(_gameManager.puzzlePieces[_gameManager.currentPuzzlePiece]);
         }
     }
 
@@ -46,7 +43,8 @@ public class PuzzleControl : MonoBehaviour
         zScale =targetPoint.transform.localScale.z;
 
         currentPiece = _gameManager.puzzlePieces[_gameManager.currentPuzzlePiece];//siradaki puzzle parcasi
-        currentPiece.GetComponent<Animator>().enabled = false;
+        //currentPiece.GetComponent<Animator>().enabled = false;
+        Destroy(currentPiece.GetComponent<Animator>());
         currentPiece.layer = 0;
         currentPiece.transform.SetParent(_gameManager.character.transform);
 
@@ -60,8 +58,8 @@ public class PuzzleControl : MonoBehaviour
             if(_gameManager.currentPuzzlePiece==_gameManager.puzzlePieces.Length-1)//son puzzle parcasi yerine gitti ise
             {
                 _gameManager.isPuzzleComplate = true;
-                _gameManager.character.gameObject.SetActive(false);
-                _gameManager.characterWithAnim.gameObject.SetActive(true);
+                _gameManager.character.SetActive(false);
+                _gameManager.characterWithAnim.SetActive(true);
                 _uIManager.ActivetedButton();
             }
             _gameManager.currentPuzzlePiece++;

@@ -23,7 +23,7 @@ public class TouchController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))//ekrana tiklandiginda panel kapanir, scroll sona dogru hareket eder
         {
             Debug.Log($"{(float)firstPuzzleContent.transform.GetSiblingIndex()/scroll.content.transform.childCount}");
             isStart = true; 
@@ -34,10 +34,15 @@ public class TouchController : MonoBehaviour
                     firstPuzzlePiece.GetComponent<Animator>().enabled = true));
         }
     }
-    public void ScrollMove(GameObject target)
+    public void ScrollMove(GameObject target)//parametrenin index degerine gore scroll hareket eder, animasyon baslar
     {
         Debug.Log((float)(target.transform.parent.transform.parent.transform.GetSiblingIndex()+1)/scroll.content.transform.childCount);
-        scroll.DOHorizontalNormalizedPos((float)(target.transform.parent.transform.parent.transform.GetSiblingIndex()+1)/scroll.content.transform.childCount,1f).OnComplete(()=>
+        if(target.transform.parent.transform.parent.transform.GetSiblingIndex()==0)//ilk parca ise
+            scroll.DOHorizontalNormalizedPos(0,1f).OnComplete(()=>
+                    target.GetComponent<Animator>().enabled = true);
+
+        else
+            scroll.DOHorizontalNormalizedPos((float)(target.transform.parent.transform.parent.transform.GetSiblingIndex()+1)/scroll.content.transform.childCount,1f).OnComplete(()=>
                     target.GetComponent<Animator>().enabled = true);
     }
 }
