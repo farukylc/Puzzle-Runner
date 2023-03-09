@@ -43,12 +43,21 @@ public class ObjectBuilder : MonoBehaviour
             case "Player":
                 movementPanel.SetActive(false);
                 transform.DOMove(new Vector3(0, transform.position.y, transform.position.z), 2);
-                buildFunction();
+                
                 Debug.Log("Köpek Alana Girdi");
-                // InvokeRepeating("finalStack",0.1f,0.01f);
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 410f,5);
                 cam1.gameObject.SetActive(false);
-                tower.transform.DOMoveY(10f, 5);
+                
+                other.gameObject.transform.DOMove(towerWP.transform.position, 2f).OnComplete((() =>
+                {
+                    
+                    other.transform.SetParent(tower.transform);
+                    cam1.enabled = false;
+                    tower.transform.DOLocalMoveY(50f, 4f).OnComplete((() =>
+                        buildFunction()));
+                }
+                    ));
+                
             break;
             
             case "Cat":
