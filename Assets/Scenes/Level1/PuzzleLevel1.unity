@@ -5645,7 +5645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: 0}
+  m_AnchoredPosition: {x: 450, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742271155
@@ -7256,7 +7256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapToBuild: {fileID: 820945553}
-  firstPuzzlePiece: {fileID: 0}
+  firstPuzzlePiece: {fileID: 383886787}
+  firstPuzzleContent: {fileID: 1836718154}
+  scroll: {fileID: 1776945560}
   isStart: 0
 --- !u!114 &2143114677
 MonoBehaviour:

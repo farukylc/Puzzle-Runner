@@ -11,9 +11,11 @@ public class PuzzleControl : MonoBehaviour
     GameObject targetPoint;
     float xScale, yScale, zScale;
     //public float speed = 1f;
-    bool isMoving = false;
+    bool isMoving = false,
+         isTimerOpen = false;
     public int puzzlePieceIndex;
     GameObject currentPiece;
+    float clickTime = 0f;
     void Start ()
     {
         _gameManager = GameManager.instance; 
@@ -21,13 +23,23 @@ public class PuzzleControl : MonoBehaviour
     }
     void Update ()
     {
-
+        //if(clickTime!=0f)
+        {
+            if(clickTime+3f<Time.time & isTimerOpen & !isMoving)
+            {
+                isTimerOpen = false;
+                TouchController.instance.ScrollMove(_gameManager.puzzlePieces[_gameManager.currentPuzzlePiece]);
+            }
+        }
     }
 
     public void buttonClick()
     {
         if(isMoving || _gameManager.currentPuzzlePiece != puzzlePieceIndex) return;//hareket bitene kadar butonlar calismaz
         isMoving = true;
+        isTimerOpen = true;
+        clickTime = Time.time;
+        Debug.Log(clickTime);
         targetPoint = _gameManager.puzzlePieceTargetPositions[_gameManager.currentPuzzlePiece];//siradaki puzzle parcasinin gidecegi konum
         xScale =targetPoint.transform.localScale.x;
         yScale =targetPoint.transform.localScale.y;
@@ -54,7 +66,7 @@ public class PuzzleControl : MonoBehaviour
             }
             _gameManager.currentPuzzlePiece++;
             _gameManager.puzzlePieceTargetPositions[_gameManager.currentPuzzlePiece].SetActive(true);
-            _gameManager.puzzlePieces[_gameManager.currentPuzzlePiece].GetComponent<Animator>().enabled = true;
+            //_gameManager.puzzlePieces[_gameManager.currentPuzzlePiece].GetComponent<Animator>().enabled = true;
                         
             isMoving = false;    
         }));
