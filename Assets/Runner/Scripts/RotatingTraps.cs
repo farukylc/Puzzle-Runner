@@ -12,7 +12,7 @@ public class RotatingTraps : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("rotateFunc",1,7);
+        // InvokeRepeating("rotateFunc",1,7);
     }
 
     void Update()
@@ -36,19 +36,6 @@ public class RotatingTraps : MonoBehaviour
 
         if (mace)
         {
-            // mace = false;
-            // transform.DOLocalRotate(new Vector3(0f, 0, -90f), 0.85f).OnComplete((() =>
-            //         {
-            //             transform.DOLocalRotate(new Vector3(0f, 0, 0f), 0.85f).OnComplete((() =>
-            //                 transform.DOLocalRotate(new Vector3(0f,0f,90f),0.85f).OnComplete((() => 
-            //                     transform.DOLocalRotate(new Vector3(0f, 0, -90f), 0.85f).OnComplete((() => 
-            //                             mace = true))))
-            //                 
-            //                 ));
-            //
-            //         }
-            //      ));
-            
             mace = false;
             
             transform.DOLocalRotate(new Vector3(0f, 0, 45f), 0.85f).OnComplete((() =>
@@ -57,6 +44,7 @@ public class RotatingTraps : MonoBehaviour
                     mace = true));
             }));
         }
+        
     }
     
 }
