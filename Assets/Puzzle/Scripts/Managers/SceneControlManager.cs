@@ -35,4 +35,11 @@ public class SceneControlManager : MonoBehaviour
         GameManager.instance.PuzzleLevelEndSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+    public void MainPage()//datalari kayit eder runner sahnesine gecer
+    {
+        Debug.Log("main page calisti");
+        GameManager.instance.PuzzleLevelEndSave();
+        SceneManager.LoadScene(0);
+    }
+    
 }
