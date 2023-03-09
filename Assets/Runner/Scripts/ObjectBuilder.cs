@@ -49,8 +49,8 @@ public class ObjectBuilder : MonoBehaviour
                 cam1.gameObject.SetActive(false);
                 
                 other.gameObject.transform.DOMove(towerWP.transform.position, 2f).OnComplete((() =>
-                {
-                    
+                        {
+                            other.transform.DORotate(new Vector3(0f,180f,0), 2);
                     other.transform.SetParent(tower.transform);
                     cam2.gameObject.SetActive(true);
                     //cam2.enabled = true;
@@ -58,14 +58,6 @@ public class ObjectBuilder : MonoBehaviour
                         buildFunction()));
                 }
                     ));
-                
-            break;
-            
-            case "Cat":
-                buildFunction();
-                Debug.Log("Kedi Alan Girdi");
-                objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 400f,2);
-                
                 
             break;
             
