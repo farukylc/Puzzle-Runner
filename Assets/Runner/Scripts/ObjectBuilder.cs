@@ -64,7 +64,13 @@ public class ObjectBuilder : MonoBehaviour
                 buildFunction();
                 Debug.Log("Kedi Alan Girdi");
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 400f,2);
+                
+                
             break;
+            
+            case "CollectableLego":
+                Destroy(other.gameObject);
+                break;
         }
     }
 
