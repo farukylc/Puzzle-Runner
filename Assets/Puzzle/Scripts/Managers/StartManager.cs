@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 public class StartManager : MonoBehaviour
 {
     public JsonController _jsonController;
+    public GameObject buttonContinue; 
     int currentLevel;
     void Start()
     {
         _jsonController.JsonLoad();
         currentLevel = _jsonController.user1.level;
+        if(currentLevel>1)
+            buttonContinue.SetActive(true);
+        if(currentLevel==1)
+            StartLevel1();
         //SceneManager.LoadScene((currentLevel-1));
     }
 
