@@ -14,7 +14,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] public GameObject winPanel;
     [SerializeField] private GameObject objectiveBar;
     [SerializeField] private TextMeshProUGUI goldAmountText;
-    [SerializeField] private CinemachineVirtualCamera cam1;
+    [SerializeField] private CinemachineVirtualCamera cam1,cam2;
     [SerializeField] private GameObject movementPanel;
     [SerializeField] private GameObject tower, towerWP;
     
@@ -52,7 +52,8 @@ public class ObjectBuilder : MonoBehaviour
                 {
                     
                     other.transform.SetParent(tower.transform);
-                    cam1.enabled = false;
+                    cam2.gameObject.SetActive(true);
+                    //cam2.enabled = true;
                     tower.transform.DOLocalMoveY(50f, 4f).OnComplete((() =>
                         buildFunction()));
                 }
