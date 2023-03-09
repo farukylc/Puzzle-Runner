@@ -14,7 +14,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] public GameObject winPanel;
     [SerializeField] private GameObject objectiveBar;
     [SerializeField] private TextMeshProUGUI goldAmountText;
-    [SerializeField] private CinemachineVirtualCamera cam1;
+    [SerializeField] private CinemachineVirtualCamera cam1,cam2;
     [SerializeField] private GameObject movementPanel;
     [SerializeField] private GameObject tower, towerWP;
     
@@ -43,19 +43,27 @@ public class ObjectBuilder : MonoBehaviour
             case "Player":
                 movementPanel.SetActive(false);
                 transform.DOMove(new Vector3(0, transform.position.y, transform.position.z), 2);
-                buildFunction();
+                
                 Debug.Log("Köpek Alana Girdi");
-                // InvokeRepeating("finalStack",0.1f,0.01f);
                 objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 410f,5);
                 cam1.gameObject.SetActive(false);
-                tower.transform.DOMoveY(10f, 5);
+                
+                other.gameObject.transform.DOMove(towerWP.transform.position, 2f).OnComplete((() =>
+                        {
+                            other.transform.DORotate(new Vector3(0f,180f,0), 2);
+                    other.transform.SetParent(tower.transform);
+                    cam2.gameObject.SetActive(true);
+                    //cam2.enabled = true;
+                    tower.transform.DOLocalMoveY(50f, 4f).OnComplete((() =>
+                        buildFunction()));
+                }
+                    ));
+                
             break;
             
-            case "Cat":
-                buildFunction();
-                Debug.Log("Kedi Alan Girdi");
-                objectiveBar.transform.DOLocalMoveY(objectiveBar.transform.localPosition.y + 400f,2);
-            break;
+            case "CollectableLego":
+                Destroy(other.gameObject);
+                break;
         }
     }
 

@@ -7,6 +7,7 @@ public class StartManager : MonoBehaviour
 {
     public JsonController _jsonController;
     public GameObject buttonContinue; 
+    public Animator _animator;
     int currentLevel;
     void Start()
     {
@@ -29,7 +30,8 @@ public class StartManager : MonoBehaviour
     }
     public void StartLevel1()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadLevel(1));
+        //SceneManager.LoadScene(1);
     }
     public void StartLevel2()
     {
@@ -38,5 +40,11 @@ public class StartManager : MonoBehaviour
     public void StartLevel3()
     {
         SceneManager.LoadScene(5);
+    }
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        _animator.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(levelIndex);
     }
 }
