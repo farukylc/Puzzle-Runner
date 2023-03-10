@@ -35,11 +35,13 @@ public class StartManager : MonoBehaviour
     }
     public void StartLevel2()
     {
-        SceneManager.LoadScene(3);
+        StartCoroutine(LoadLevel(3));
+        //SceneManager.LoadScene(3);
     }
     public void StartLevel3()
     {
-        SceneManager.LoadScene(5);
+        StartCoroutine(LoadLevel(5));
+        //SceneManager.LoadScene(5);
     }
     IEnumerator LoadLevel(int levelIndex)
     {
