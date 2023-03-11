@@ -16,7 +16,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldAmountText;
     [SerializeField] private CinemachineVirtualCamera cam1,cam2;
     [SerializeField] private GameObject movementPanel;
-    [SerializeField] private GameObject tower, towerWP;
+    [SerializeField] private GameObject tower, towerWP, puzzleBoxPoint;
     
     private void Start()
     {
@@ -62,7 +62,10 @@ public class ObjectBuilder : MonoBehaviour
             break;
             
             case "CollectableLego":
-                Destroy(other.gameObject);
+                //kutuya firlatma
+                    other.transform.DOJump(puzzleBoxPoint.transform.position,3,1,0.5f).SetEase(Ease.Linear).OnComplete(()=> Destroy(other.gameObject));
+                //
+                //Destroy(other.gameObject);
                 break;
         }
     }
