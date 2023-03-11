@@ -54,7 +54,7 @@ public class ObjectBuilder : MonoBehaviour
                     other.transform.SetParent(tower.transform);
                     cam2.gameObject.SetActive(true);
                     //cam2.enabled = true;
-                    tower.transform.DOLocalMoveY(50f, 4f).OnComplete((() =>
+                    tower.transform.DOLocalMoveY(PlayerCollect.playerCollectScript.collectedItems.Count*2f, 4f).OnComplete((() =>
                         buildFunction()));
                 }
                     ));
