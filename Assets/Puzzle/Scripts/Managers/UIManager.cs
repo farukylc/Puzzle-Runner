@@ -41,10 +41,6 @@ public class UIManager : MonoBehaviour
     public void ButtonRun()
     {
         _gameManager.characterWithAnim.GetComponent<CharacterController>().CharacterRotate();
-        // for (int i = 0; i < _gameManager.puzzlePieces.Length; i++)
-        //     {
-        //         _gameManager.puzzlePieces[i].GetComponent<Renderer>().material = _gameManager.materials2[i];
-        //     }
     }
     public void ButtonNextPuzzle()
     {
