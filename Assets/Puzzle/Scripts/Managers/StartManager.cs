@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class StartManager : MonoBehaviour
                       level3QuestionMark,
                       level3Objects,
                       level3Case;
+    public Button level2btn,
+                  level3btn;
     public Animator _animator;
     int currentLevel;
     void Start()
@@ -39,6 +42,7 @@ public class StartManager : MonoBehaviour
                 Level2Design();
             break;
             case 3:
+                level2btn.interactable = true;
                 Level2Design();
                 Level3Design();
             break;
@@ -48,6 +52,7 @@ public class StartManager : MonoBehaviour
                 Level4Design();
             break;
             case 5:
+                level3btn.interactable = true;
                 Level2Design();
                 Level3Design();
                 Level4Design();
