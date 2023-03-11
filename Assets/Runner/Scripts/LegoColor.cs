@@ -25,8 +25,9 @@ public class LegoColor : MonoBehaviour
 
         for (int i = 0; i < scoreWall.Count; i++)
         {
-            
-            Debug.Log(wallFloat + 0.1);
+            scoreWall[i].gameObject.GetComponent<MeshRenderer>().material.color =
+                scoreWallColor[Random.Range(0, scoreWallColor.Count)].color;
+
         }
     }
 }
