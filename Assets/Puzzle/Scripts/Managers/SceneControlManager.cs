@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneControlManager : MonoBehaviour
 {
     public static SceneControlManager instance;
-    Scene []puzzleScenes; 
-    int currentPuzzleSceneIndex = 0;
     public void Awake() 
     {
         instance = this;
