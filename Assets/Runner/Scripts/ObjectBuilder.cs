@@ -49,7 +49,7 @@ public class ObjectBuilder : MonoBehaviour
                 cam1.gameObject.SetActive(false);
                 
                 other.gameObject.transform.DOMove(towerWP.transform.position, 2f).OnComplete((() =>
-                        {
+                        { 
                             other.transform.DORotate(new Vector3(0f,180f,0), 2);
                     other.transform.SetParent(tower.transform);
                     cam2.gameObject.SetActive(true);

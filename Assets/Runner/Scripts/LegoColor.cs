@@ -22,12 +22,12 @@ public class LegoColor : MonoBehaviour
                 materials[Random.Range(0, materials.Count)];
         }
 
-        for (int i = 0; i < scoreWall.Count; i++)
-        {
-            scoreWall[i].gameObject.GetComponent<MeshRenderer>().material.color =
-                scoreWallColor[Random.Range(0, scoreWallColor.Count)].color;
-
-        }
+        // for (int i = 0; i < scoreWall.Count; i++)
+        // {
+        //     scoreWall[i].gameObject.GetComponent<MeshRenderer>().material.color =
+        //         scoreWallColor[Random.Range(0, scoreWallColor.Count)].color;
+        //
+        // }
 
         for (int i = 0; i < scoreWall.Count; i++)
         {
