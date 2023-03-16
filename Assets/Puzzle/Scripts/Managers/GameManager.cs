@@ -27,12 +27,12 @@ public class GameManager : MonoBehaviour
     public GameObject characterWithoutLeg;
     public bool isBackFoot = true,
                 isHead = true;
-    
-    public void Awake() 
+
+    public void Awake()
     {
         instance = this;
     }
-    
+
     void Start()
     {
         _jsonController.JsonLoad();
@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour
         {
             if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
             if(!isHead) EmptyObject(head,headWithAnim);// kafa toplanamadi ise
+            // if(currentLevel>5)
+            // {
+            //     for(int i = 0; i < puzzlePieces.Length; i++)
+            //     {
+            //         puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
+            //     }
+            // }
         }
         else if(!isPuzzle)
         {
@@ -52,6 +59,7 @@ public class GameManager : MonoBehaviour
         }
         isBackFoot = false;
         isHead = false;
+       
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
         // throwRate = _jsonController.user1.throwRate;
@@ -59,7 +67,7 @@ public class GameManager : MonoBehaviour
         // textScore.text = _jsonController.user1.totalScore.ToString();
         // currentThrowDigitValue = currentThrowDigit;
     }
-    
+
     void Update()
     {
         // if(Input.GetKeyDown(KeyCode.Space))
