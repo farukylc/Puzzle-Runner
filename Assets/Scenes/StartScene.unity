@@ -1403,7 +1403,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 382905968}
   m_OnClick:
     m_PersistentCalls:
@@ -1805,7 +1805,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 471924195}
   m_OnClick:
     m_PersistentCalls:
@@ -2267,7 +2267,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 546200378}
   m_OnClick:
     m_PersistentCalls:
@@ -3128,7 +3128,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 748238298}
   m_OnClick:
     m_PersistentCalls:
@@ -4496,7 +4496,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1123131594}
   m_OnClick:
     m_PersistentCalls:
@@ -5345,7 +5345,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1439063942}
   m_OnClick:
     m_PersistentCalls:
@@ -6013,6 +6013,8 @@ MonoBehaviour:
   level3QuestionMark: {fileID: 831621390}
   level3Objects: {fileID: 1757799035}
   level3Case: {fileID: 512516183}
+  level2btn: {fileID: 471924194}
+  level3btn: {fileID: 2059090849}
   _animator: {fileID: 670799971}
 --- !u!4 &1564566395
 Transform:
@@ -7138,7 +7140,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2059090850}
   m_OnClick:
     m_PersistentCalls:

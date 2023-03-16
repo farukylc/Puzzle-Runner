@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &50147531
 Transform:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50147530}
   m_LocalRotation: {x: 0.0000000046908837, y: 0.9766955, z: -0.000000021346363, w: 0.21462974}
-  m_LocalPosition: {x: -2.2496643, y: 0.13999939, z: -23.374626}
+  m_LocalPosition: {x: -2.2496643, y: 0.13999939, z: -23}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -929,7 +929,7 @@ MonoBehaviour:
   head: {fileID: 1955387260}
   backFootWithAnim: {fileID: 1955387260}
   headWithAnim: {fileID: 1955387260}
-  transparentMaterial: {fileID: 2100000, guid: 36d4d2548186a804a80443444d73161b, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: ea6ce0e3855b08e48be76a2bda93c16a, type: 2}
   characterWithNormal: {fileID: 0}
   characterWithoutHead: {fileID: 0}
   characterWithoutLeg: {fileID: 0}
@@ -2973,7 +2973,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923877344}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

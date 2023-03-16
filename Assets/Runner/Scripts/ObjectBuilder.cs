@@ -16,7 +16,7 @@ public class ObjectBuilder : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldAmountText;
     [SerializeField] private CinemachineVirtualCamera cam1,cam2;
     [SerializeField] private GameObject movementPanel;
-    [SerializeField] private GameObject tower, towerWP;
+    [SerializeField] private GameObject tower, towerWP, puzzleBoxPoint;
     
     private void Start()
     {
@@ -49,12 +49,12 @@ public class ObjectBuilder : MonoBehaviour
                 cam1.gameObject.SetActive(false);
                 
                 other.gameObject.transform.DOMove(towerWP.transform.position, 2f).OnComplete((() =>
-                        {
+                        { 
                             other.transform.DORotate(new Vector3(0f,180f,0), 2);
                     other.transform.SetParent(tower.transform);
                     cam2.gameObject.SetActive(true);
                     //cam2.enabled = true;
-                    tower.transform.DOLocalMoveY(50f, 4f).OnComplete((() =>
+                    tower.transform.DOLocalMoveY(PlayerCollect.playerCollectScript.collectedItems.Count*2f, 4f).OnComplete((() =>
                         buildFunction()));
                 }
                     ));
@@ -62,7 +62,10 @@ public class ObjectBuilder : MonoBehaviour
             break;
             
             case "CollectableLego":
-                Destroy(other.gameObject);
+                //kutuya firlatma
+                    other.transform.DOJump(puzzleBoxPoint.transform.position,3,1,0.5f).SetEase(Ease.Linear).OnComplete(()=> Destroy(other.gameObject));
+                //
+                //Destroy(other.gameObject);
                 break;
         }
     }
