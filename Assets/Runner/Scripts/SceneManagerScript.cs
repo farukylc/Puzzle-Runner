@@ -9,6 +9,6 @@ public class SceneManagerScript : MonoBehaviour
     {
         GameManager.instance.currentLevel++;
         GameManager.instance.RunnerLevelEndSave();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);     
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%6);     
     }
 }
