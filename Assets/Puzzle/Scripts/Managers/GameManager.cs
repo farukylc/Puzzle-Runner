@@ -91,7 +91,6 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeCharacter(GameObject obj)//Puzzle da acilan karakteri runner sahnesinde aktif eder sag-sol kontrolu icin gecerli karakteri secer, sahnedeki collectable lari bulup aktif karakteri atar
     {
-        Debug.Log("Change character calisti");
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
         GameObject.FindWithTag("Cinemachine").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = obj.transform;
