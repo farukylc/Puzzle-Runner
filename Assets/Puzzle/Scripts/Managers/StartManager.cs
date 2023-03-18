@@ -8,6 +8,7 @@ public class StartManager : MonoBehaviour
 {
     public JsonController _jsonController;
     public GameObject buttonContinue,
+                      level1hand,
                       level1Objects,
                       level1Case,
                       level2Image,
@@ -18,6 +19,9 @@ public class StartManager : MonoBehaviour
                       level3QuestionMark,
                       level3Objects,
                       level3Case;
+    private bool Level2Button = false,
+                 Level3Button = false,
+                 Level4Button = false;
     public Button level2btn,
                   level3btn;
     public Animator _animator;
@@ -36,13 +40,14 @@ public class StartManager : MonoBehaviour
         switch(currentLevel)
         {
             case 1:
-                StartLevel1();
+                level1hand.SetActive(true);
             break;
             case 2:
                 Level2Design();
             break;
             case 3:
                 level2btn.interactable = true;
+                Level2Button = true;
                 Level2Design();
                 Level3Design();
             break;
@@ -53,17 +58,50 @@ public class StartManager : MonoBehaviour
             break;
             case 5:
                 level3btn.interactable = true;
+                Level3Button = true;
                 Level2Design();
                 Level3Design();
                 Level4Design();
                 Level5Design();
             break;
         }
+        if(currentLevel>5)
+        {
+            Level2Button = true;
+            Level3Button = true;
+            Level2Design();
+            Level3Design();
+            Level4Design();
+            Level5Design();
+        }
         //SceneManager.LoadScene((currentLevel-1));
     }
 
     void Update()
     {
+        //if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        if(Input.GetMouseButton(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray,out hit))
+            {
+                switch (hit.transform.tag)
+                {
+                    case "level1":
+                        StartLevel1();
+                    break;
+                    case "level2":
+                        if(Level2Button)
+                            StartLevel2();
+                    break;
+                    case "level3":
+                        if(Level3Button)
+                            StartLevel3();
+                    break;
+                }
+            }   
+        } 
         
     }
     public void StartLastLevel()
