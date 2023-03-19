@@ -58,6 +58,7 @@ public class StartManager : MonoBehaviour
             break;
             case 5:
                 level3btn.interactable = true;
+                Level2Button = true;
                 Level3Button = true;
                 Level2Design();
                 Level3Design();
@@ -106,7 +107,10 @@ public class StartManager : MonoBehaviour
     }
     public void StartLastLevel()
     {
-        SceneManager.LoadScene((currentLevel));
+        if(currentLevel<7)
+            SceneManager.LoadScene(currentLevel);
+        else
+            SceneManager.LoadScene(((currentLevel%7)+1));
     }
     public void StartLevel1()
     {

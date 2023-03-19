@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
     public GameObject characterWithoutHead;
     public GameObject characterWithoutLeg;
     public bool isBackFoot = true,
-                isHead = true;
+                isHead = true,
+                isCharacter1Change = false,
+                isCharacter2Change = false,
+                isCharacter3Change = false;
 
     public void Awake()
     {
@@ -39,6 +42,9 @@ public class GameManager : MonoBehaviour
         currentLevel = _jsonController.user1.level;//en son oynanan level
         isBackFoot = _jsonController.user1.isFootOpen;
         isHead = _jsonController.user1.isHeadOpen;
+        isCharacter1Change = _jsonController.user1.isCharacter1Change;
+        isCharacter2Change = _jsonController.user1.isCharacter2Change;
+        isCharacter3Change = _jsonController.user1.isCharacter3Change;
         if(isPuzzle)
         {
             if(!isBackFoot) EmptyObject(backFoot,backFootWithAnim);// arka ayak toplanamadi ise
@@ -116,6 +122,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Kayit oldu");
         _jsonController.user1.level = currentLevel;
+        _jsonController.user1.isCharacter1Change = isCharacter1Change;
+        _jsonController.user1.isCharacter2Change = isCharacter2Change;
+        _jsonController.user1.isCharacter3Change = isCharacter3Change;
         //_jsonController.user1.forwardSpeed = forwardSpeed;
         //_jsonController.user1.currentThrowDigit = currentThrowDigit;
         //_jsonController.user1.throwRate = throwRate;

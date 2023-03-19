@@ -19,6 +19,9 @@ public class UserStats
     public int totalScore;
     public bool isFootOpen;
     public bool isHeadOpen;
+    public bool isCharacter1Change;
+    public bool isCharacter2Change;
+    public bool isCharacter3Change;
 
     public UserStats()
     {
@@ -26,7 +29,7 @@ public class UserStats
     }
     public UserStats(string userName, int level, float forwardSpeed, int currentThrowDigit,
         int throwValueUpdateValue, float throwRate,int throwRateUpdateValue, float range, int throwRangeUpdateValue, int score, int totalScore,
-        bool isFootOpen,bool isHeadOpen)
+        bool isFootOpen, bool isHeadOpen, bool isCharacter1Change, bool isCharacter2Change, bool isCharacter3Change)
     {
         this.userName = userName;
         this.level = level;
@@ -41,6 +44,9 @@ public class UserStats
         this.totalScore = totalScore;
         this.isFootOpen = isFootOpen;
         this.isHeadOpen = isHeadOpen;
+        this.isCharacter1Change = isCharacter1Change;
+        this.isCharacter2Change = isCharacter2Change;
+        this.isCharacter3Change = isCharacter3Change;
     }
 }
 

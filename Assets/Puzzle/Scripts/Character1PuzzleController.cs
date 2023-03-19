@@ -9,7 +9,7 @@ public class Character1PuzzleController : MonoBehaviour
     public Material[] materials1;
     void Start()
     {
-        if(GameManager.instance.currentLevel%7==0)
+        if(GameManager.instance.isCharacter1Change)
             {
                 for(int i = 0; i < puzzlePieces.Length; i++)
                 {
