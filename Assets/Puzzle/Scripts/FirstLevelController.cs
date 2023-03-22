@@ -1,20 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class FirstLevelController : MonoBehaviour
+public class FirstLevelController : MonoBehaviour,IDragHandler
 {
-    void Start()
+    public static FirstLevelController instance;
+    public GameObject scrollAnim, touchAnim, tocuhPanel;
+
+    public void Awake() 
     {
-        if(GameManager.instance.currentLevel == 1)
-        {
-            
-        }
+        instance = this;    
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+
+    }
     void Update()
     {
-        
+
+    }
+    public void OnDrag(PointerEventData eventData)
+    {
+        Debug.Log("calisti");
+        tocuhPanel.SetActive(false);
+        touchAnim.SetActive(false);
     }
 }

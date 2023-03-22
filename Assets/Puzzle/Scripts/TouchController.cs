@@ -23,15 +23,24 @@ public class TouchController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))//ekrana tiklandiginda panel kapanir, scroll sona dogru hareket eder
+        if (Input.GetMouseButtonDown(0))//ekrana tiklandiginda panel kapanir, scroll sona dogru hareket eder, ilk levele ozel scroll ve touch animasyonu calisir
         {
+            if(GameManager.instance.currentLevel==1)
+                FirstLevelController.instance.scrollAnim.SetActive(true);
             Debug.Log($"{(float)firstPuzzleContent.transform.GetSiblingIndex()/scroll.content.transform.childCount}");
             isStart = true; 
             tapToBuild.SetActive(false);
             gameObject.SetActive(false);
             scroll.DOHorizontalNormalizedPos(1,3f).OnComplete(()=>
                 scroll.DOHorizontalNormalizedPos((float)(firstPuzzleContent.transform.GetSiblingIndex()+1)/scroll.content.transform.childCount,1f).OnComplete(()=>
-                    firstPuzzlePiece.GetComponent<Animator>().enabled = true));
+                {
+                   if(GameManager.instance.currentLevel==1)
+                   {
+                        FirstLevelController.instance.scrollAnim.SetActive(false);
+                        FirstLevelController.instance.touchAnim.SetActive(true);
+                   }
+                   firstPuzzlePiece.GetComponent<Animator>().enabled = true;
+                }));
         }
     }
     public void ScrollMove(GameObject target)//parametrenin index degerine gore scroll hareket eder, animasyon baslar
