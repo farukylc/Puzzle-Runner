@@ -906,6 +906,9 @@ MonoBehaviour:
   characterWithoutLeg: {fileID: 0}
   isBackFoot: 0
   isHead: 1
+  isCharacter1Change: 0
+  isCharacter2Change: 0
+  isCharacter3Change: 0
 --- !u!1001 &236285005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4721,28 +4724,30 @@ MonoBehaviour:
   - {fileID: 76687980}
   - {fileID: 187158516}
   - {fileID: 1044894654}
-  - {fileID: 742188832}
   - {fileID: 1708728902}
+  - {fileID: 742188832}
   - {fileID: 1562803386}
   - {fileID: 1143773161}
   characterPieces:
-  - {fileID: 1367750583}
-  - {fileID: 809148393}
-  - {fileID: 1367750582}
   - {fileID: 1367750581}
-  - {fileID: 533226472}
+  - {fileID: 1367750581}
+  - {fileID: 809148393}
+  - {fileID: 1367750583}
+  - {fileID: 1367750582}
+  - {fileID: 1367750582}
+  - {fileID: 1367750582}
   - {fileID: 1367750580}
+  - {fileID: 533226472}
   materials1:
-  - {fileID: 2100000, guid: 3f1e61b4dccb94123bd7e14d4994187d, type: 2}
-  - {fileID: 2100000, guid: ccb08d2326c8e426e89cf8134fd38ef2, type: 2}
-  - {fileID: 2100000, guid: 4c460122f06154244961f7f1d8ec76fa, type: 2}
-  - {fileID: 2100000, guid: d4954f29ebb334b08a03231dbbd93eca, type: 2}
-  - {fileID: 2100000, guid: 4061a85dc5dea44119966936744e4065, type: 2}
-  - {fileID: 2100000, guid: 0f171c6eeafc140ccaa4cbb55e13d6ce, type: 2}
-  - {fileID: 2100000, guid: 0f171c6eeafc140ccaa4cbb55e13d6ce, type: 2}
-  - {fileID: 2100000, guid: 0f171c6eeafc140ccaa4cbb55e13d6ce, type: 2}
-  - {fileID: 2100000, guid: 0f171c6eeafc140ccaa4cbb55e13d6ce, type: 2}
-  - {fileID: 2100000, guid: 0f171c6eeafc140ccaa4cbb55e13d6ce, type: 2}
+  - {fileID: 2100000, guid: 345bd7bd25aa2364caa97db27321c619, type: 2}
+  - {fileID: 2100000, guid: 345bd7bd25aa2364caa97db27321c619, type: 2}
+  - {fileID: 2100000, guid: 345bd7bd25aa2364caa97db27321c619, type: 2}
+  - {fileID: 2100000, guid: 345bd7bd25aa2364caa97db27321c619, type: 2}
+  - {fileID: 2100000, guid: cd13b548f9321b84fbdb4486cb28e8b0, type: 2}
+  - {fileID: 2100000, guid: 05b3d85191cf0a44aaf6a51a0db6051f, type: 2}
+  - {fileID: 2100000, guid: cd13b548f9321b84fbdb4486cb28e8b0, type: 2}
+  - {fileID: 2100000, guid: cd13b548f9321b84fbdb4486cb28e8b0, type: 2}
+  - {fileID: 2100000, guid: 05b3d85191cf0a44aaf6a51a0db6051f, type: 2}
 --- !u!4 &1339123379
 Transform:
   m_ObjectHideFlags: 0
@@ -4894,7 +4899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a378cfcf4e1c1834295d84c9b3c20c9d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 978242250759333039, guid: a378cfcf4e1c1834295d84c9b3c20c9d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6670,6 +6675,9 @@ MonoBehaviour:
     totalScore: 0
     isFootOpen: 0
     isHeadOpen: 0
+    isCharacter1Change: 0
+    isCharacter2Change: 0
+    isCharacter3Change: 0
 --- !u!4 &1763306584
 Transform:
   m_ObjectHideFlags: 0

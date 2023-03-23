@@ -14,9 +14,12 @@ public class Character1PuzzleController : MonoBehaviour
         {
             for(int i = 0; i < puzzlePieces.Length; i++)
             {
+                Debug.Log("material");
                 puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
                 characterPieces[i].GetComponent<Renderer>().material = materials1[i];
             }
+            puzzlePieces[6].GetComponent<Renderer>().materials[1] = materials1[5];
+            characterPieces[6].GetComponent<Renderer>().materials[1] = materials1[5];
         }
         if(GameManager.instance.currentLevel == 1)
             panel.SetActive(true);
