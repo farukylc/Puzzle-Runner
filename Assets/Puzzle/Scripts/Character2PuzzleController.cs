@@ -16,6 +16,10 @@ public class Character2PuzzleController : MonoBehaviour
                     puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
                     characterPieces[i].GetComponent<Renderer>().material = materials1[i];
                 }
+
+                //ChangeMaterial(characterPieces[4], 1, 4);
+
+
                 Material [] characterMaterials = characterPieces[4].GetComponent<Renderer>().materials;
                 characterMaterials[1] = materials1[4];
                 characterMaterials[2] = materials1[8];
@@ -39,7 +43,12 @@ public class Character2PuzzleController : MonoBehaviour
             }
     }
 
-    // Update is called once per frame
+    void ChangeMaterial(GameObject obj, int materialIndex ,int setMaterialIndex)
+    {
+        var materials = obj.GetComponent<Renderer>().materials;
+        materials[materialIndex] = materials1[setMaterialIndex];
+        obj.GetComponent<Renderer>().materials = materials;
+    }
     void Update()
     {
         

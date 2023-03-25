@@ -9,12 +9,12 @@ public class Character1PuzzleController : MonoBehaviour
     public Material[] materials1;
     public GameObject panel;
     void Start()
-    {
+    {Debug.Log("material");
         if(GameManager.instance.isCharacter1Change)
         {
             for(int i = 0; i < puzzlePieces.Length; i++)
             {
-                Debug.Log("material");
+                
                 puzzlePieces[i].GetComponent<Renderer>().material = materials1[i];
                 characterPieces[i].GetComponent<Renderer>().material = materials1[i];
             }

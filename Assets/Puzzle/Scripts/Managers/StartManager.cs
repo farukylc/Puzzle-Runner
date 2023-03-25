@@ -80,6 +80,7 @@ public class StartManager : MonoBehaviour
 
     void Update()
     {
+        
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)//parmak ile tiklandiginda
         //if(Input.GetMouseButton(0))//mouse ile tiklandiginda
         {

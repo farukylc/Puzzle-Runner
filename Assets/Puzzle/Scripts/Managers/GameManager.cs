@@ -34,10 +34,7 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         instance = this;
-    }
 
-    void Start()
-    {
         _jsonController.JsonLoad();
         currentLevel = _jsonController.user1.level;//en son oynanan level
         isBackFoot = _jsonController.user1.isFootOpen;
