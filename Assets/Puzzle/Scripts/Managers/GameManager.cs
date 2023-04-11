@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public JsonController _jsonController;
     public bool isPuzzle = true;
     public int currentLevel = 1;
+    public int goldAmount = 0;
     public GameObject[] puzzlePieces;
     public GameObject[] puzzlePieceTargetPositions;
     public Material[] materials1;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject characterWithNormal;
     public GameObject characterWithoutHead;
     public GameObject characterWithoutLeg;
+    public RLMove _rLMove;
     public bool isBackFoot = true,
                 isHead = true,
                 isCharacter1Change = false,
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
         currentLevel = _jsonController.user1.level;//en son oynanan level
         isBackFoot = _jsonController.user1.isFootOpen;
         isHead = _jsonController.user1.isHeadOpen;
+        goldAmount = _jsonController.user1.totalScore;
         isCharacter1Change = _jsonController.user1.isCharacter1Change;
         isCharacter2Change = _jsonController.user1.isCharacter2Change;
         isCharacter3Change = _jsonController.user1.isCharacter3Change;
@@ -59,9 +62,11 @@ public class GameManager : MonoBehaviour
             if(!isBackFoot) ChangeCharacter(characterWithoutLeg);// arka ayak toplanamadi ise
             else if(!isHead) ChangeCharacter(characterWithoutHead);// kafa toplanamadi ise
             else ChangeCharacter(characterWithNormal);
+            
+            isBackFoot = false;
+            isHead = false;
         }
-        isBackFoot = false;
-        isHead = false;
+        
        
         // forwardSpeed = _jsonController.user1.forwardSpeed;
         // currentThrowDigit = _jsonController.user1.currentThrowDigit;
@@ -97,7 +102,7 @@ public class GameManager : MonoBehaviour
         characterWithNormal.SetActive(false);
         obj.SetActive(true);
         GameObject.FindWithTag("Cinemachine").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = obj.transform;
-        RLMove.instance.playerTransform = obj.transform;
+        _rLMove.playerTransform = obj.transform;
         GameObject[] collectables = GameObject.FindGameObjectsWithTag("CollectableLego");
         foreach (var item in collectables)
         {
@@ -126,7 +131,7 @@ public class GameManager : MonoBehaviour
         //_jsonController.user1.currentThrowDigit = currentThrowDigit;
         //_jsonController.user1.throwRate = throwRate;
         //_jsonController.user1.range = range;
-        //_jsonController.user1.totalScore += gameScore;
+        _jsonController.user1.totalScore += goldAmount;
         if(!isBackFoot && !isHead)
         {
             if(Random.Range(0,2)%2==0) isHead = true;

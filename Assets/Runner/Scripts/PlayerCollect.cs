@@ -24,6 +24,7 @@ public class PlayerCollect : MonoBehaviour
     private void Start()
     {
         playerCollectScript = this;
+        goldAmountText.text = GameManager.instance.goldAmount.ToString();
     }
     
     public void Collect(GameObject obj)
@@ -87,10 +88,10 @@ public class PlayerCollect : MonoBehaviour
             break;
             
             case "Gold":
-                goldAmount++;
+                GameManager.instance.goldAmount++;
                 Destroy(other.gameObject);
 
-                goldAmountText.text = goldAmount.ToString();
+                goldAmountText.text = GameManager.instance.goldAmount.ToString();
                 if (!goldPunch)
                 {
                     goldPunch = true;

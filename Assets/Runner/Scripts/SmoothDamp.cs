@@ -44,12 +44,12 @@ public class SmoothDamp : MonoBehaviour
 
         if (other.CompareTag("Gold"))
         {
-            PlayerCollect.playerCollectScript.goldAmount++;
+            GameManager.instance.goldAmount++;//PlayerCollect.playerCollectScript
             other.transform.DOLocalMove(PlayerCollect.playerCollectScript.goldAmountText.transform.position, 1f).OnComplete((() => 
                 Destroy(other.gameObject)));
             
         
-            PlayerCollect.playerCollectScript.goldAmountText.text =  PlayerCollect.playerCollectScript.goldAmount.ToString();
+            PlayerCollect.playerCollectScript.goldAmountText.text =  GameManager.instance.goldAmount.ToString();//PlayerCollect.playerCollectScript.
             if (! PlayerCollect.playerCollectScript.goldPunch)
             {
                 PlayerCollect.playerCollectScript.goldPunch = true;

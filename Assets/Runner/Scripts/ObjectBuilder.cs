@@ -74,7 +74,7 @@ public class ObjectBuilder : MonoBehaviour
 
     IEnumerator delay()
     {
-        goldAmountText.text = PlayerCollect.playerCollectScript.goldAmount.ToString();
+        goldAmountText.text = GameManager.instance.goldAmount.ToString();//PlayerCollect.playerCollectScript.
         yield return new WaitForSeconds(1.5f);
         winPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
