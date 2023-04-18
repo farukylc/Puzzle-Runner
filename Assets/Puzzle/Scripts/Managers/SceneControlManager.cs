@@ -34,7 +34,6 @@ public class SceneControlManager : MonoBehaviour
     }
     public void MainPage()//datalari kayit eder runner sahnesine gecer
     {
-        Debug.Log("main page calisti");
         GameManager.instance.PuzzleLevelEndSave();
         SceneManager.LoadScene(0);
     }

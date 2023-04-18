@@ -74,6 +74,7 @@ public class StartManager : MonoBehaviour
             Level3Design();
             Level4Design();
             Level5Design();
+            Level6Design();
         }
         //SceneManager.LoadScene((currentLevel-1));
     }
@@ -108,10 +109,15 @@ public class StartManager : MonoBehaviour
     }
     public void StartLastLevel()
     {
-        if(currentLevel<7)
-            SceneManager.LoadScene(currentLevel);
+        // if(currentLevel<7)
+        //     SceneManager.LoadScene(currentLevel);
+        // else
+        //     SceneManager.LoadScene(((currentLevel%7)+1));
+
+        if(currentLevel%6==0)
+            SceneManager.LoadScene(6);
         else
-            SceneManager.LoadScene(((currentLevel%7)+1));
+            SceneManager.LoadScene(currentLevel%6);
     }
     public void StartLevel1()
     {
@@ -153,5 +159,10 @@ public class StartManager : MonoBehaviour
     {
         level2Case.SetActive(false);  
         level2Objects.SetActive(true);
+    }
+    void Level6Design()
+    {
+        level3Case.SetActive(false);
+        level3Objects.SetActive(true);
     }
 }

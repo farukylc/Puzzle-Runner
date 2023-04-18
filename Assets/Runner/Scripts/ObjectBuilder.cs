@@ -65,6 +65,7 @@ public class ObjectBuilder : MonoBehaviour
             
             case "CollectableLego":
                 //kutuya firlatma
+                    other.transform.SetParent(null);
                     other.transform.DOJump(puzzleBoxPoint.transform.position,3,1,0.5f).SetEase(Ease.Linear).OnComplete(()=> Destroy(other.gameObject));
                 //
                 //Destroy(other.gameObject);
