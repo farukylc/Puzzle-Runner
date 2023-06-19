@@ -17,6 +17,13 @@ The connection between the puzzle and runner categories adds a unique and engagi
 * 🔀 Puzzle-Runner Integration
 * 🏆 Progression System
 
+## Team Members:
+👨‍💻 Developers | 🎨 3D Artist | 🎮 Game Designer
+:-------------- | :---------- | :-------------
+Faruk Yolcu     | Burak Gül   | Ece Güllü
+Rüstem Muhammed Karademir |             |
+
+
 ## 🖼 In-Game Images:
 <div style="display: flex; justify-content: center;">
 <img width="319" alt="Ekran Resmi 2023-06-19 14 45 04" src="https://github.com/farukylc/Puzzle-Runner/assets/99920678/0ed9a12a-052b-44a7-a1ac-42bd877b7bff">
