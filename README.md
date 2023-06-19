@@ -28,3 +28,9 @@ The connection between the puzzle and runner categories adds a unique and engagi
 
   </div>
 
+## 🎥 Gameplay video:
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=k-b8lplZ5ZE">
+    <img src="[https://img.youtube.com/vi/k-b8lplZ5ZE/0.jpg](https://youtu.be/i9BZr4PieW0)" alt="Video" width="560" height="315">
+  </a>
+</p>
